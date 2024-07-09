@@ -32,11 +32,11 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         <!--DataGrid-->
-        <TextBlock Grid.Row="0" Grid.Column="1" Margin="0 25 0 0" HorizontalAlignment="Center" Text="Aggregation table" FontSize="16"
+        <TextBlock Grid.Row="0" Grid.Column="1" Margin="0 25 0 0" HorizontalAlignment="Center" Text="汇总表格" FontSize="16"
                    Foreground="{DynamicResource MaterialDesignBody}"/>
 		<TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="450" x:Name="DragAndDropInfoTextTextBlock"
                    TextAlignment="Center" TextWrapping="Wrap" FontSize="17" Visibility="{Binding ShowHelpText, Converter={StaticResource TrueToVisibleConverter}}"  Grid.ZIndex="1"                     
-                   Text="Drop items here or double click them in the record list to aggregate them manually.&#10;&#10;For automatic aggregation during benchmarks use the settings on the capture page."
+                   Text="拖拽项目到此或双击记录列表中的项目，即可手动汇总。&#10;&#10;请在捕捉页设置基准测试过程中自动汇总。"
                    Foreground="{DynamicResource MaterialDesignBody}"
 				   dragdrop:DragDrop.IsDragSource="False"
 				   dragdrop:DragDrop.IsDropTarget="True"
@@ -109,11 +109,11 @@
             <Button Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Width="150" Height="45" BorderBrush="Transparent"
 					Command="{Binding AggregateIncludeCommand}" IsEnabled="{Binding EnableIncludeButton}"
                     ToolTipService.ShowDuration="25000" Foreground="White" Background="{DynamicResource MaterialDesignToolBackground}">
-                <TextBlock Text="Aggregate&#10;including outliers" TextWrapping="Wrap" TextAlignment="Center"/>
+                <TextBlock Text="汇总&#10;包括离群值" TextWrapping="Wrap" TextAlignment="Center"/>
                 <Button.ToolTip>
                     <ToolTip MaxWidth="200">
                         <TextBlock
-                             Text="Use all entries for aggregation regardless of outliers" 
+                             Text="不考虑离群值，使用所有条目进行汇总" 
                              TextWrapping="Wrap"/>
                     </ToolTip>
                 </Button.ToolTip>
@@ -121,11 +121,11 @@
             <Button Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" Width="150" Height="45" BorderBrush="Transparent"
 					Command="{Binding AggregateExcludeCommand}" IsEnabled="{Binding EnableExcludeButton}"
                     ToolTipService.ShowDuration="25000" Foreground="White" Background="{DynamicResource MaterialDesignToolBackground}">
-                <TextBlock Text="Aggregate excluding outliers" TextWrapping="Wrap"  TextAlignment="Center"/>
+                <TextBlock Text="排除离群值汇总" TextWrapping="Wrap"  TextAlignment="Center"/>
                 <Button.ToolTip>
                     <ToolTip MaxWidth="200">
                         <TextBlock
-                             Text="Only use entires that are not outlies for aggregation" 
+                             Text="汇总时只使用非离群值的输入" 
                              TextWrapping="Wrap"/>
                     </ToolTip>
                 </Button.ToolTip>

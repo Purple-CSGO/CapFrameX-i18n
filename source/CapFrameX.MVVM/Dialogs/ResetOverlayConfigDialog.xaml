@@ -16,7 +16,7 @@
             <ColumnDefinition Width="1*"></ColumnDefinition>
             <ColumnDefinition Width="1*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <TextBlock Margin="10" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" Text="Do you really want to reset the config. Previous settings will be lost!" FontSize="16">
+        <TextBlock Margin="10" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Row="0" Grid.ColumnSpan="2" Text="确认要重制设置？之前的设置会丢失！" FontSize="16">
         </TextBlock>
         <Button Margin="0 0 0 15" Grid.Row="1" Grid.Column="0" Width="80" Height="30" Content="OK"
                 Command="{Binding ResetConfigCommand}">
