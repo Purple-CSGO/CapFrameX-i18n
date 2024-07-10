@@ -162,7 +162,7 @@
                 <ComboBox.ToolTip>
                     <ToolTip MaxWidth="350">
                         <TextBlock
-                             Text="The percentage the FPS of an entry can differ from the median of all entries before being counted as an outlier" 
+                             Text="在被认为是离群值之前，一个项目的平均帧可能和所有项目的中位数不同" 
                              TextWrapping="Wrap"/>
                     </ToolTip>
                 </ComboBox.ToolTip>

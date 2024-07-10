@@ -117,7 +117,7 @@
 									<Grid Margin="0 20 0 20">
 										<StackPanel Orientation="Vertical" Width="190">
 											<StackPanel Orientation="Horizontal">
-												<TextBlock VerticalAlignment="Center" FontSize="18" Foreground="{DynamicResource MaterialDesignBody}">Running processes</TextBlock>
+												<TextBlock VerticalAlignment="Center" FontSize="18" Foreground="{DynamicResource MaterialDesignBody}">正在运行的进程</TextBlock>
 												<Button Margin="5 0 0 0" Padding="0" Width="30" Height="30" BorderThickness="0" ToolTip="Reset and rescan processes"
                                                         Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
                                                         materialDesign:RippleAssist.Feedback="#DD000000"
@@ -138,7 +138,7 @@
 											</Border>
 											<Button Margin="0 10 0 0" HorizontalAlignment="Right" BorderThickness="0" Width="120" Height="45" 
 												Command="{Binding AddToIgonreListCommand}" IsEnabled="{Binding AreButtonsActive}" Foreground="White" Background="{DynamicResource MaterialDesignToolBackground}">
-												<TextBlock Text="Move to ignore list" TextWrapping="Wrap" TextAlignment="Center"/>
+												<TextBlock Text="移动到忽略列表" TextWrapping="Wrap" TextAlignment="Center"/>
 											</Button>
 										</StackPanel>
 									</Grid>
@@ -146,7 +146,7 @@
 								<Border Grid.Column="1" Margin="20 0 0 0" BorderThickness="0.2" BorderBrush="{DynamicResource MaterialDesignBody}">
 									<Grid Margin="0 25 0 20">
 										<StackPanel  Orientation="Vertical" Width="190">
-											<TextBlock Margin="0 0 0 -3" FontSize="18" Foreground="{DynamicResource MaterialDesignBody}">Process ignore list</TextBlock>
+											<TextBlock Margin="0 0 0 -3" FontSize="18" Foreground="{DynamicResource MaterialDesignBody}">进程忽略列表</TextBlock>
 											<Border Margin="0 10 0 0" BorderThickness="0.1" BorderBrush="{DynamicResource MaterialDesignBody}"
                                                 Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
 												<ListView IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding ProcessesToIgnore}" SelectedItem="{Binding SelectedProcessToIgnore}"
@@ -155,7 +155,7 @@
 											</Border>
 											<Button Margin="0 10 0 0" HorizontalAlignment="Right" BorderThickness="0" Width="120" Height="45"
 												Command="{Binding AddToProcessListCommand}" IsEnabled="{Binding AreButtonsActive}" Foreground="White" Background="{DynamicResource MaterialDesignToolBackground}">
-												<TextBlock Text="Remove from ignore list" TextWrapping="Wrap" TextAlignment="Center"/>
+												<TextBlock Text="从忽略列表移除" TextWrapping="Wrap" TextAlignment="Center"/>
 											</Button>
 										</StackPanel>
 									</Grid>
@@ -201,10 +201,10 @@
 						<materialDesign:PackIcon Kind="ContentSaveSettings" Height="15" Width="15" />
 					</Button>
 					<StackPanel Grid.Row="1" Grid.Column="1" Margin="30 0 0 0" Orientation="Horizontal" HorizontalAlignment="Left" ToolTipService.ShowDuration="25000" IsEnabled="{Binding AreButtonsActive}">
-						<TextBlock Text="Global time" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
+						<TextBlock Text="全局时间" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
 						<ToggleButton HorizontalAlignment="Right" Margin="5 0 -30 0" IsChecked="{Binding UseGlobalCaptureTime}"></ToggleButton>
 						<StackPanel.ToolTip >
-							<TextBlock Width="280" Text="Uses the same capture time for all processes.&#xA;Unchecked, when detecting a process this box will be filled with the last saved capture time of that process."
+							<TextBlock Width="280" Text="对所有进程使用相同的捕获时间。&#xA;未选中时，检测进程时，此框将填入该进程最后保存的捕获时间。"
                                        TextWrapping="Wrap"></TextBlock>
 						</StackPanel.ToolTip>
 					</StackPanel>
@@ -256,12 +256,12 @@
 							</Grid.ColumnDefinitions>
 							<!--Global history toogle-->
 							<StackPanel Grid.Row="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Vertical">
-								<TextBlock Text="Run history" Margin="5"/>
+								<TextBlock Text="运行历史记录" Margin="5"/>
 								<ToggleButton IsChecked="{Binding UseRunHistory}" Style="{StaticResource MaterialDesignSwitchToggleButton}" 
 								  ToolTipService.ShowDuration="25000">
 									<ToggleButton.ToolTip>
 										<ToolTip MaxWidth="250">
-											<TextBlock Text="Saves a set number of runs into a history which can also be displayed on the overlay"                               
+											<TextBlock Text="将一些运行结果保存到历史记录中，历史记录也可在叠加器Overlay上显示"                               
 										   TextWrapping="Wrap"/>
 										</ToolTip>
 									</ToggleButton.ToolTip>
@@ -282,8 +282,7 @@
 					              ItemsSource="{Binding Path=NumberOfRunsItemsSource}" ToolTipService.ShowDuration="25000">
 									<ComboBox.ToolTip>
 										<ToolTip StaysOpen="True" MaxWidth="275">
-											<TextBlock Text="The number of runs written into the history.
-											When not using aggregation, any run added to a full history will replace the oldest one." 
+											<TextBlock Text="写进历史记录的运行数量。不使用汇总时，任意添加到完整历史记录的运行会替换最早的记录。" 
 										   TextWrapping="Wrap"/>
 										</ToolTip>
 									</ComboBox.ToolTip>
@@ -331,7 +330,7 @@
 							</Grid>
 							<!--Aggregation of run history toogle-->
 							<StackPanel Margin="0 -20 0 0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top">
-								<TextBlock Text="Aggregation of run history" Margin="5"/>
+								<TextBlock Text="运行历史记录的汇总" Margin="5"/>
 								<ToggleButton IsChecked="{Binding UseAggregation}" Style="{StaticResource MaterialDesignSwitchToggleButton}" IsEnabled="{Binding AggregationButtonEnabled}" 
                                   ToolTipService.ShowDuration="25000">
 									<ToggleButton.ToolTip>
