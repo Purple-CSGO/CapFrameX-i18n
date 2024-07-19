@@ -38,7 +38,7 @@
         <Expander Name="Expander" Margin="0 0 0 0" MaxWidth="365" Grid.RowSpan="2" Grid.Column="0" Panel.ZIndex="1" ExpandDirection="Right" HorizontalAlignment="Left"
                   Foreground="{DynamicResource MaterialDesignBody}" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}" wpf:ExpanderAssist.VerticalHeaderPadding="5">
             <Expander.Header>
-                <TextBlock Text="Observed directory" RenderTransformOrigin=".5,.5" FontSize="14" HorizontalAlignment="Center">
+                <TextBlock Text="保存文件夹" RenderTransformOrigin=".5,.5" FontSize="14" HorizontalAlignment="Center">
                     <TextBlock.LayoutTransform>
                         <RotateTransform Angle="90"/>
                     </TextBlock.LayoutTransform>
@@ -55,7 +55,7 @@
                         <RowDefinition Height="Auto" ></RowDefinition>
                     </Grid.RowDefinitions>
                     <ToggleButton Panel.ZIndex="2" Grid.Row="0" HorizontalAlignment="Right" Padding="0" Margin="0 0 5 -25" IsChecked="{Binding FixedExpanderPosition, Mode=TwoWay}" 
-                        Style="{StaticResource MaterialDesignActionToggleButton}" Height="20" Width="20" ToolTip="Lock expander position" Background="#6ec6ff">
+                        Style="{StaticResource MaterialDesignActionToggleButton}" Height="20" Width="20" ToolTip="锁定扩展位置" Background="#6ec6ff">
                         <materialDesign:PackIcon Kind="PinOff" RenderTransformOrigin=".5,.5">
                             <materialDesign:PackIcon.RenderTransform>
                                 <RotateTransform Angle="90"/>
@@ -69,7 +69,7 @@
                                 </materialDesign:PackIcon>
                         </materialDesign:ToggleButtonAssist.OnContent>
                     </ToggleButton>
-                    <TextBox Grid.Row="1" Margin="10 0 10 0" Width="250" IsReadOnly="True" HorizontalAlignment="Right" materialDesign:HintAssist.Hint="Root capture folder" materialDesign:HintAssist.IsFloating="True"
+                    <TextBox Grid.Row="1" Margin="10 0 10 0" Width="250" IsReadOnly="True" HorizontalAlignment="Right" materialDesign:HintAssist.Hint="捕获根目录" materialDesign:HintAssist.IsFloating="True"
                              Text="{Binding DataContext.RootDirectory, ElementName=ControlViewControl, Mode=OneWay}" TextWrapping="NoWrap" PreviewMouseDown="RootFolder_PreviewMouseDown" materialDesign:HintAssist.HintOpacity=".8"
                              ToolTip="{Binding DataContext.RootDirectory, ElementName=ControlViewControl, Mode=OneWay}"/>
                     <Button Grid.Row="1" Margin="5 0 0 5" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
@@ -88,9 +88,9 @@
                                   Drop="TrvStructure_Drop">
                             <TreeView.ContextMenu>
                                 <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                    <MenuItem Header="Open folder" Command="{Binding OpenObservedFolderCommand}"/>
-                                    <MenuItem Header="Delete folder" Command="{Binding DeleteFolderCommand}"/>
-                                    <MenuItem Header="Create new subfolder" Command="{Binding OpenCreateSubFolderDialogCommand}"/>
+                                    <MenuItem Header="打开文件夹" Command="{Binding OpenObservedFolderCommand}"/>
+                                    <MenuItem Header="删除文件夹" Command="{Binding DeleteFolderCommand}"/>
+                                    <MenuItem Header="创建子文件夹" Command="{Binding OpenCreateSubFolderDialogCommand}"/>
                                 </ContextMenu>
                             </TreeView.ContextMenu>
                         </TreeView>
@@ -156,11 +156,11 @@
                                     <ColumnDefinition Width="100"/>
                                     <ColumnDefinition Width="50"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="Date / Time" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="日期 / 时间" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="0" Grid.Column="1" IsChecked="{Binding ShowCreationDate}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="Comment" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="注释" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="1" Grid.Column="1" IsChecked="{Binding ShowComment}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="Aggregated" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="已合并" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="2" Grid.Column="1" IsChecked="{Binding ShowIsAggregated}" Style="{StaticResource MaterialDesignSwitchToggleButton}" />
                                 <TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="CPU" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="3" Grid.Column="1" IsChecked="{Binding ShowCpuName}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>

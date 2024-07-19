@@ -44,28 +44,28 @@
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding CaptureIsChecked}"
-							 Content="CAPTURE" 
+							 Content="捕获" 
                              Visibility="{Binding IsCompatibleWithRunningOS, Converter={StaticResource FalseToCollapsedConverter}}"/>
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding SingleRecordIsChecked}"
-							 Content="ANALYSIS" />
+							 Content="分析" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding OverlayIsChecked}"
-							 Content="OVERLAY" />
+							 Content="叠加" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding RecordComparisonIsChecked}"
-							 Content="COMPARISON" />
+							 Content="对比" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding AggregationIsChecked}"
-							 Content="AGGREGATION" />
+							 Content="聚合" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
                              IsChecked="{Binding SensorIsChecked}"
-                             Content="SENSOR" />
+                             Content="传感器" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding PmdIsChecked}"
@@ -73,15 +73,15 @@
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding ReportIsChecked}"
-							 Content="REPORT" />
+							 Content="报告" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding SynchronizationIsChecked}"
-							 Content="SYNC" />
+							 Content="同步" />
 					<RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
                              IsChecked="{Binding CloudIsChecked}"
-                             Content="CLOUD" />
+                             Content="云" />
 				</StackPanel>
 
                 <materialDesign:PopupBox Grid.Column="1" Margin="0 0 235 0" DataContext="{Binding Path=DataContext, ElementName=ColorbarViewName}"

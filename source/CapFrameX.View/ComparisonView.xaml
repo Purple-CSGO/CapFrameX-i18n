@@ -63,7 +63,7 @@
 					SelectedItem="{Binding SelectedChartItem}" FocusVisualStyle="{x:Null}">
                 <TabItem Width="75" Foreground="{DynamicResource MaterialDesignBody}">
                     <TabItem.Header>
-                        <Label FontSize="12">Bar charts</Label>
+                        <Label FontSize="12">柱状图</Label>
                     </TabItem.Header>
                     <DockPanel>
                         <TextBlock DockPanel.Dock="Top" Grid.Row="0" Margin="0 10 0 5" FontWeight="Bold" FontSize="18" Text="{Binding CurrentGameName}" HorizontalAlignment="Center"
@@ -119,7 +119,7 @@
                 </TabItem>
                 <TabItem Width="150" Foreground="{DynamicResource MaterialDesignBody}">
                     <TabItem.Header>
-                        <Label FontSize="12">Line charts/ L-shapes</Label>
+                        <Label FontSize="12">折线图</Label>
                     </TabItem.Header>
                     <Grid Name="ChartAndCuttingGrid">
                         <Grid.RowDefinitions>
@@ -283,7 +283,7 @@
                 <!-- Variances Tab -->
                 <TabItem Width="100">
                     <TabItem.Header>
-                        <Label FontSize="12">Variances</Label>
+                        <Label FontSize="12">差异</Label>
                     </TabItem.Header>
                     <DockPanel>
                         <TextBlock DockPanel.Dock="Top" Grid.Row="0" Margin="0 10 0 0" FontWeight="Bold" FontSize="18" Text="{Binding CurrentGameName}" HorizontalAlignment="Center"

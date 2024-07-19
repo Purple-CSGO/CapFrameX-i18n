@@ -431,10 +431,10 @@ namespace CapFrameX.View
         {
             _viewModel.AppConfiguration.RecordListHeaderOrder = new int[7]
             {
-                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "Game").DisplayIndex,
-                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "Date / Time").DisplayIndex,
-                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "Comment").DisplayIndex,
-                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "Aggregated").DisplayIndex,
+                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "游戏").DisplayIndex,
+                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "日期 / 时间").DisplayIndex,
+                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "注释").DisplayIndex,
+                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "已合并").DisplayIndex,
                  RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "CPU").DisplayIndex,
                  RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "GPU").DisplayIndex,
                  RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "RAM").DisplayIndex
@@ -445,10 +445,10 @@ namespace CapFrameX.View
         {
             var indices = _viewModel.AppConfiguration.RecordListHeaderOrder;
 
-            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "Game").DisplayIndex = indices[0];
-            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "Date / Time").DisplayIndex = indices[1];
-            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "Comment").DisplayIndex = indices[2];
-            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "Aggregated").DisplayIndex = indices[3];
+            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "游戏").DisplayIndex = indices[0];
+            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "日期 / 时间").DisplayIndex = indices[1];
+            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "注释").DisplayIndex = indices[2];
+            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "已合并").DisplayIndex = indices[3];
             RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "CPU").DisplayIndex = indices[4];
             RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "GPU").DisplayIndex = indices[5];
             RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "RAM").DisplayIndex = indices[6];

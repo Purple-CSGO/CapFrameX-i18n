@@ -38,7 +38,7 @@
         <TabControl x:Name="GraphTab" Margin="0 2 0 0" FocusVisualStyle="{x:Null}" Background="{DynamicResource MaterialDesignBackground}">
             <TabItem Width="100">
                 <TabItem.Header>
-                    <Label FontSize="12">PMD Metrics</Label>
+                    <Label FontSize="12">PMD 指标</Label>
                 </TabItem.Header>
                 <Grid>
                     <Grid.RowDefinitions>
@@ -320,11 +320,11 @@
                         <Border Grid.Row="1" Height="50" Margin="5 -10 5 0" BorderThickness="0.2" BorderBrush="{DynamicResource MaterialDesignBody}" HorizontalAlignment="Stretch">
                             <StackPanel Orientation="Vertical">
                                 <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
-                                    <Label Content="Lost Packets:" FontSize="13"/>
+                                    <Label Content="丢失的数据包：" FontSize="13"/>
                                     <TextBlock Text="{Binding LostPackets}" Width="60" VerticalAlignment="Center" FontSize="13"/>
                                 </StackPanel>
                                 <StackPanel Margin="5 0 0 0" Orientation="Horizontal">
-                                    <Label Content="Sample Rate:" FontSize="13"/>
+                                    <Label Content="采样率：" FontSize="13"/>
                                     <TextBlock Text="{Binding SampleRate}" Width="60" VerticalAlignment="Center" FontSize="13"/>
                                 </StackPanel>
                             </StackPanel>
@@ -335,7 +335,7 @@
             <!--PMD Analysis-->
             <TabItem Width="100">
                 <TabItem.Header>
-                    <Label FontSize="12">PMD Analysis</Label>
+                    <Label FontSize="12">PMD 分析</Label>
                 </TabItem.Header>
                 <Grid x:Name="AnalysisChartGrid">
                     <Grid.RowDefinitions>

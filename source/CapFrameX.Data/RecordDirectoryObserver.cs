@@ -62,14 +62,14 @@ namespace CapFrameX.Data
             var directory = new DirectoryInfo(dir);
             if (!directory.Exists)
             {
-                _logger.LogWarning("Cannot observe directory {path}: Does not exist", directory);
+                _logger.LogWarning("无法监控保存文件夹 {path}：不存在", directory);
                 _observingDirectorySubject.OnNext(directory);
                 return;
             }
 
             if (_watcher is FileSystemWatcher)
             {
-                _logger.LogDebug("Changing observed directory");
+                _logger.LogDebug("修改保存文件夹");
                 _watcher.Dispose();
             }
 

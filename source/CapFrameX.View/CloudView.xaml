@@ -56,7 +56,7 @@
 			</Grid.RowDefinitions>
 			<TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="450" x:Name="DragAndDropInfoTextTextBlock"
                    TextAlignment="Center" TextWrapping="Wrap" FontSize="17" Visibility="{Binding ShowHelpText, Converter={StaticResource TrueToVisibleConverter}}"  Grid.ZIndex="1"                     
-                   Text="Drop items here or double click them in the record list" Foreground="{DynamicResource MaterialDesignBody}"
+                   Text="拖拽项目到这里或者双击添加到记录列表" Foreground="{DynamicResource MaterialDesignBody}"
 				   dragdrop:DragDrop.IsDragSource="False"
 				   dragdrop:DragDrop.IsDropTarget="True"
 				   dragdrop:DragDrop.DropHandler="{Binding}"
@@ -108,7 +108,7 @@
             <TextBox Grid.Row="1" Width="350" wpf:HintAssist.Hint="Download link / ID" materialDesign:HintAssist.HintOpacity=".8" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 					 Margin="50 0 0 0" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center"  Text="{Binding ShareUrl, Mode=OneWay}" PreviewMouseDoubleClick="ShareUrlFocusHandler" IsReadOnly="True" 
                      Visibility="{Binding ShareUrlVisible, Converter={StaticResource TrueToVisibleConverter}}" Foreground="{DynamicResource MaterialDesignBody}"/>
-            <TextBlock Grid.Row="1" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Uploading..." Foreground="{DynamicResource MaterialDesignBody}"
+            <TextBlock Grid.Row="1" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Text="上传中..." Foreground="{DynamicResource MaterialDesignBody}"
                        Visibility="{Binding ShowUploadInfo, Converter={StaticResource TrueToVisibleConverter}}"/>
             <TextBox Name="UploadDescription"  Grid.Row="1" Margin="50 0 0 0" FontSize="16" Width="350" wpf:HintAssist.Hint="(Optional) Upload description" HorizontalAlignment="Center" VerticalAlignment="Center" 
                      Text="{Binding UploadDescription, UpdateSourceTrigger=PropertyChanged}" Visibility="{Binding ShowUploadDescriptionTextBox, Converter={StaticResource TrueToVisibleConverter}}"
@@ -120,18 +120,18 @@
 				<Button.ToolTip>
 					<ToolTip MaxWidth="200">
 						<TextBlock
-                             Text="Upload your records to our server and recieve an ID to share them" 
+                             Text="将您的记录上传到我们的服务器，并获得共享记录的 ID" 
                              TextWrapping="Wrap"/>
 					</ToolTip>
 				</Button.ToolTip>
 			</Button>
             <Button Grid.Row="1" Grid.Column="2" Margin="5" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="45" BorderBrush="Transparent"
 					Command="{Binding CopyURLCommand}" Visibility="{Binding ShareUrlVisible, Converter={StaticResource TrueToVisibleConverter}}">
-                <TextBlock Text="Copy to clipboard" TextWrapping="Wrap" Foreground="White" TextAlignment="Center"/>
+                <TextBlock Text="复制到剪贴板" TextWrapping="Wrap" Foreground="White" TextAlignment="Center"/>
             </Button>
         </Grid>
         <!--Record download-->
-        <TextBlock Grid.Row="2" Grid.Column="1" Margin="0 25 0 0" HorizontalAlignment="Center" Text="Record download" FontSize="16" Foreground="{DynamicResource MaterialDesignBody}"/>
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="0 25 0 0" HorizontalAlignment="Center" Text="记录下载" FontSize="16" Foreground="{DynamicResource MaterialDesignBody}"/>
         <Grid Grid.Row="3" Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -156,19 +156,19 @@
             <Button Grid.Row="0" Grid.RowSpan="2" Grid.Column="2" Foreground="White" Margin="5 0 5 5" VerticalAlignment="Center" HorizontalAlignment="Right" Width="100" Height="45"
 					Command="{Binding DownloadRecordsCommand}" IsEnabled="{Binding EnableDownloadButton}" BorderBrush="Transparent" Background="{DynamicResource MaterialDesignToolBackground}"
                     ToolTipService.ShowDuration="25000">
-                <TextBlock Text="Download records" TextWrapping="Wrap" TextAlignment="Center"/>
+                <TextBlock Text="下载记录" TextWrapping="Wrap" TextAlignment="Center"/>
                 <Button.ToolTip>
                     <ToolTip MaxWidth="200">
                         <TextBlock
-                             Text="Download the records bound to the download ID to your specified download folder" 
+                             Text="将与下载 ID 绑定的记录下载到指定的下载文件夹中" 
                              TextWrapping="Wrap"/>
                     </ToolTip>
                 </Button.ToolTip>
             </Button>
-            <TextBlock Grid.Row="1" Grid.Column="2" Padding="15 30 0 0" FontSize="16" FontWeight="Bold" Text="Downloading..."  Visibility="{Binding ShowDownloadInfo, Converter={StaticResource TrueToVisibleConverter}}"
+            <TextBlock Grid.Row="1" Grid.Column="2" Padding="15 30 0 0" FontSize="16" FontWeight="Bold" Text="下载中..."  Visibility="{Binding ShowDownloadInfo, Converter={StaticResource TrueToVisibleConverter}}"
                        Foreground="{DynamicResource MaterialDesignBody}"/>
 		</Grid>
-		<TextBlock Grid.Row="0" Grid.Column="3" Margin="0 25 0 0" HorizontalAlignment="Center" Text="Process list options" FontSize="16"
+		<TextBlock Grid.Row="0" Grid.Column="3" Margin="0 25 0 0" HorizontalAlignment="Center" Text="进程列表选项" FontSize="16"
                    Foreground="{DynamicResource MaterialDesignBody}"/>
 		<!--Grid lists upload/download-->
 		<Grid Grid.Row="1" Grid.Column="3">
@@ -182,38 +182,38 @@
             </Grid.ColumnDefinitions>
             <Expander Grid.Row="0" Grid.ColumnSpan="2" ExpandDirection="Down" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}" Background="{DynamicResource MaterialDesignBackground}">
                 <Expander.Header>
-                    <TextBlock Margin="50 0 0 0" HorizontalAlignment="Center" FontWeight="Bold" Text="What is the process list?" RenderTransformOrigin=".5,.5">
+                    <TextBlock Margin="50 0 0 0" HorizontalAlignment="Center" FontWeight="Bold" Text="什么是进程列表？" RenderTransformOrigin=".5,.5">
                     </TextBlock>
                 </Expander.Header>
                 <TextBlock  Margin="0 10 0 20" Width="375" TextWrapping="Wrap" TextAlignment="Center"
-                       Text="The process list contains all processes known by CapFrameX.&#10;
-                            &#10;It holds information about the displayed process name and whether or not the process is ingored by the capture service.&#10;
-                            &#10;On first startup your own process list is created and updated from a default list we deliver with every new version of CapFrameX that already contains many game processes with their correct names and other processes that are to be ignored.&#10;
-							&#10;The options below help us to get additional entries for our default list and can also directly provide you with our latest additions." />
+                       Text="进程列表包含 CapFrameX 已知的所有进程。&#10;
+                            &#10;它保存有关显示的进程名称以及该进程是否被捕获服务接收的信息。&#10;
+                            &#10;首次启动时，我们会创建并更新您自己的进程列表，该列表来自我们随每个新版本 CapFrameX 提供的默认列表，其中已包含许多具有正确名称的游戏进程和其他应忽略的进程。&#10;
+							&#10;下面的选项可以帮助我们为默认列表获取更多条目，也可以直接为您提供最新添加的条目。" />
             </Expander>
             <CheckBox Grid.Row="1" Grid.Column="0"  Width="125" IsChecked="{Binding ShareProcessListEntries}" ToolTipService.ShowDuration="25000">
                 <CheckBox.ToolTip>
                     <ToolTip StaysOpen="True" MaxWidth="275">
                         <TextBlock
-                             Text="Any new game name or ignored process you add will be sent to us so that we can add it to our own list" 
+                             Text="您添加的任何新游戏名称或忽略的程序都将发送给我们，以便我们将其添加到自己的列表中" 
                                   TextWrapping="Wrap"/>
                     </ToolTip>
                 </CheckBox.ToolTip>
                 <TextBlock Padding="5 0 0 0" TextWrapping="WrapWithOverflow" Foreground="{DynamicResource MaterialDesignBody}">
-  					     Share new entries
+  					     分享新的条目
                 </TextBlock>
             </CheckBox>
             <CheckBox Grid.Row="1" Grid.Column="1"  Width="125" IsChecked="{Binding AutoUpdateProcessList}" ToolTipService.ShowDuration="25000">
                 <CheckBox.ToolTip>
                     <ToolTip StaysOpen="True" MaxWidth="275">
                         <TextBlock TextWrapping="Wrap"
-                             Text="On startup, your own process list will be compared to our online list and anything that's not on your list will be added.
+                             Text="启动时，您自己的流程列表将与我们的在线列表进行比较，您列表中没有的内容都将添加进来。
 									&#10;
-									&#10;This will not affect the ignored/unignored status or the custom game name of any process that's already on your list"/>
+									&#10;这不会影响已在列表中的任何进程的忽略/未忽略状态或自定义游戏名称"/>
                     </ToolTip>
                 </CheckBox.ToolTip>
                 <TextBlock Padding="5 0 0 0" TextWrapping="WrapWithOverflow" Foreground="{DynamicResource MaterialDesignBody}">
-  					     Auto update list
+  					     自动更新列表
                 </TextBlock>
             </CheckBox>
         </Grid>

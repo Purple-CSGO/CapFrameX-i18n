@@ -138,7 +138,7 @@
 											</Border>
 											<Button Margin="0 10 0 0" HorizontalAlignment="Right" BorderThickness="0" Width="120" Height="45" 
 												Command="{Binding AddToIgonreListCommand}" IsEnabled="{Binding AreButtonsActive}" Foreground="White" Background="{DynamicResource MaterialDesignToolBackground}">
-												<TextBlock Text="移动到忽略列表" TextWrapping="Wrap" TextAlignment="Center"/>
+												<TextBlock Text="忽略进程" TextWrapping="Wrap" TextAlignment="Center"/>
 											</Button>
 										</StackPanel>
 									</Grid>
@@ -146,7 +146,7 @@
 								<Border Grid.Column="1" Margin="20 0 0 0" BorderThickness="0.2" BorderBrush="{DynamicResource MaterialDesignBody}">
 									<Grid Margin="0 25 0 20">
 										<StackPanel  Orientation="Vertical" Width="190">
-											<TextBlock Margin="0 0 0 -3" FontSize="18" Foreground="{DynamicResource MaterialDesignBody}">进程忽略列表</TextBlock>
+											<TextBlock Margin="0 0 0 -3" FontSize="18" Foreground="{DynamicResource MaterialDesignBody}">忽略的进程</TextBlock>
 											<Border Margin="0 10 0 0" BorderThickness="0.1" BorderBrush="{DynamicResource MaterialDesignBody}"
                                                 Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
 												<ListView IsSynchronizedWithCurrentItem="False" ItemsSource="{Binding ProcessesToIgnore}" SelectedItem="{Binding SelectedProcessToIgnore}"
@@ -155,7 +155,7 @@
 											</Border>
 											<Button Margin="0 10 0 0" HorizontalAlignment="Right" BorderThickness="0" Width="120" Height="45"
 												Command="{Binding AddToProcessListCommand}" IsEnabled="{Binding AreButtonsActive}" Foreground="White" Background="{DynamicResource MaterialDesignToolBackground}">
-												<TextBlock Text="从忽略列表移除" TextWrapping="Wrap" TextAlignment="Center"/>
+												<TextBlock Text="取消忽略" TextWrapping="Wrap" TextAlignment="Center"/>
 											</Button>
 										</StackPanel>
 									</Grid>
@@ -177,7 +177,7 @@
 						<ColumnDefinition Width="1*"/>
 						<ColumnDefinition Width="1*"/>
 					</Grid.ColumnDefinitions>
-					<TextBox Grid.Row="0" Grid.Column="0" Width="110" wpf:HintAssist.Hint="Capture hotkey" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+					<TextBox Grid.Row="0" Grid.Column="0" Width="110" wpf:HintAssist.Hint="捕获快捷键" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 						 Margin="0" FontSize="14" Foreground="{DynamicResource MaterialDesignBody}" wpf:HintAssist.HintOpacity=".8"
 						 IsReadOnly="True" IsReadOnlyCaretVisible="False" IsUndoEnabled="False" PreviewKeyDown="CaptureHotkeyTextBox_PreviewKeyDown"
 						 ToolTip="Hotkey combinable with up to two modifier keys (Ctrl, Shift or Alt)">
@@ -191,12 +191,12 @@
 						</Binding>
 					</TextBox>
 
-					<TextBox Grid.Row="0" Grid.Column="1" Width="110" wpf:HintAssist.Hint="Capture time [s]" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+					<TextBox Grid.Row="0" Grid.Column="1" Width="110" wpf:HintAssist.Hint="捕获时间 [秒]" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 					 Margin="30 0 0 0" FontSize="14" Text="{Binding CaptureTimeString, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding AreButtonsActive}"
                      PreviewMouseDown="TextBox_PreviewMouseDown" PreviewKeyDown="TextBox_PreviewKeyDown" MouseLeave="TextBox_MouseLeave" ToolTip="0 = no limit"
                      PreviewTextInput="NumberValidationTextBox" Foreground="{DynamicResource MaterialDesignBody}" wpf:HintAssist.HintOpacity=".8"/>
 					<Button Grid.Row="0" Grid.Column="1" Panel.ZIndex="1" HorizontalAlignment="Right" Margin="0 15 5 0" Width="18" Height="18" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
-                            ToolTip="Save capture time for current process" Command="{Binding SaveCaptureTimeCommand}" Visibility="{Binding ShowCaptureTimeSave, Converter={StaticResource FalseToCollapsedConverter}}"
+                            ToolTip="保存当前进程的捕获时间" Command="{Binding SaveCaptureTimeCommand}" Visibility="{Binding ShowCaptureTimeSave, Converter={StaticResource FalseToCollapsedConverter}}"
                             materialDesign:RippleAssist.Feedback="#DD000000">
 						<materialDesign:PackIcon Kind="ContentSaveSettings" Height="15" Width="15" />
 					</Button>
@@ -209,12 +209,12 @@
 						</StackPanel.ToolTip>
 					</StackPanel>
 
-					<TextBox Grid.Row="0" Grid.Column="2" Width="110" wpf:HintAssist.Hint="Capture delay [s]" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+					<TextBox Grid.Row="0" Grid.Column="2" Width="110" wpf:HintAssist.Hint="捕获延迟时间 [秒]" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 					 Margin="30 0 0 0" FontSize="14" Text="{Binding CaptureDelayString, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding AreButtonsActive}"
                      PreviewMouseDown="TextBox_PreviewMouseDown" PreviewKeyDown="TextBox_PreviewKeyDown" MouseLeave="TextBox_MouseLeave" ToolTip="0 = no delay"
                      PreviewTextInput="NumberValidationTextBox" Foreground="{DynamicResource MaterialDesignBody}" wpf:HintAssist.HintOpacity=".8"/>
 
-					<ComboBox Grid.Row="0" Grid.Column="3" Width="102" Height="40" materialDesign:HintAssist.Hint="Hotkey sound" Style="{StaticResource MaterialDesignComboBox}"                          
+					<ComboBox Grid.Row="0" Grid.Column="3" Width="102" Height="40" materialDesign:HintAssist.Hint="快捷键提示音" Style="{StaticResource MaterialDesignComboBox}"                          
 						  Margin="30 0 0 0" MaxDropDownHeight="200" FontSize="14" materialDesign:HintAssist.IsFloating="True" materialDesign:HintAssist.HintOpacity=".8"
 						  ItemsSource="{Binding SoundModes}" HorizontalAlignment="Left" HorizontalContentAlignment="Left" VerticalAlignment="Bottom" Foreground="{DynamicResource MaterialDesignBody}">
 						<ComboBox.Text>
@@ -240,7 +240,7 @@
 			<TabControl Grid.Column="1" Margin="20 14 20 20" Background="Transparent" BorderThickness="0.3" BorderBrush="{DynamicResource MaterialDesignBody}">
 				<TabItem Width="200" Foreground="{DynamicResource MaterialDesignBody}">
 					<TabItem.Header>
-						<Label FontSize="12">Run history and aggregation</Label>
+						<Label FontSize="12">运行历史和聚合</Label>
 					</TabItem.Header>
 					<StackPanel Grid.Column="1" Width="380" Height="460">
 						<Grid>
@@ -335,9 +335,9 @@
                                   ToolTipService.ShowDuration="25000">
 									<ToggleButton.ToolTip>
 										<ToolTip MaxWidth="350">
-											<TextBlock Text="Once the run history is full, combine and save all frametime data into a new single record file.
-                                                    &#10;&#10;This is NOT the same as calculating average parameters from multiple single record files. It simulates running the same scene multiple times in one single benchmark. 
-                                                    Performance parameters are calculated once, using all of the frametime data." 
+											<TextBlock Text="当运行历史已满，合并保存所有帧生成时间数据到一条新的记录。
+                                                    &#10;&#10;这和计算不同记录文件的平均参数不同。它模拟了一次基准测试的同场景多次测试。 
+                                                    性能参数由所有帧生成时间数据一次计算得到。" 
                                                  TextWrapping="Wrap"/>
 										</ToolTip>
 									</ToggleButton.ToolTip>
@@ -362,11 +362,11 @@
 										<ComboBox.ToolTip>
 											<ToolTip MaxWidth="350">
 												<TextBlock
-                                                Text="If the selected metric of a run differs more than the set percentage from the median of all runs, it will be marked as an outlier.
-                                                        &#10;&#10;Mark &amp; use&#10;All runs will be aggregated once the history is full.
+                                                Text="如果某个运行的选定指标与所有运行的中位数相差超过设定的百分比，则该运行将被标记为离群值。
+                                                        &#10;&#10;Mark &amp; use&#10;历史记录满后，所有运行将被汇总。
                                    
-                                                    &#10;&#10;Mark &amp; replace&#10;Marked runs have to be replaced by additional runs.
-                                                    &#10;Runs will be aggregated once the history contains no more outliers."
+                                                    &#10;&#10;Mark &amp; 替换&#10;已标记的运行必须由额外的运行来替代。
+                                                    &#10;一旦历史记录中不再包含异常值，就会对运行进行汇总。"
                                             TextWrapping="Wrap"/>
 											</ToolTip>
 										</ComboBox.ToolTip>
@@ -381,12 +381,12 @@
 										<CheckBox.ToolTip>
 											<ToolTip StaysOpen="True" MaxWidth="275">
 												<TextBlock 
-                                                Text="If checked, the single runs will not be saved in addition to the aggregated result." 
+                                                Text="如果选中此项，则除汇总结果外，不会保存单次运行结果。" 
                                                 TextWrapping="Wrap"/>
 											</ToolTip>
 										</CheckBox.ToolTip>
 										<TextBlock Padding="5 0 0 0" TextWrapping="WrapWithOverflow">
-  					                            Save aggregated result only
+  					                            只保存合并结果
 										</TextBlock>
 									</CheckBox>
 									<!--Outlier metric-->
@@ -397,7 +397,7 @@
 										<ComboBox.ToolTip>
 											<ToolTip MaxWidth="350">
 												<TextBlock
-                                                    Text="Metric used to determine outliers" 
+                                                    Text="用于决定离群值的指标" 
                                                     TextWrapping="Wrap"/>
 											</ToolTip>
 										</ComboBox.ToolTip>
@@ -410,7 +410,7 @@
 										<ComboBox.ToolTip>
 											<ToolTip MaxWidth="350">
 												<TextBlock
-                                                    Text="The max percentage the FPS of a run can differ from the median of all runs before being counted as an outlier" 
+                                                    Text="某次运行的 FPS 与所有运行的中位数相差的最大百分比，才会被视为离群值" 
                                                     TextWrapping="Wrap"/>
 											</ToolTip>
 										</ComboBox.ToolTip>
@@ -422,11 +422,11 @@
 				</TabItem>
 				<TabItem Width="120" Foreground="{DynamicResource MaterialDesignBody}">
 					<TabItem.Header>
-						<Label FontSize="12">Capture Logger</Label>
+						<Label FontSize="12">捕获日志</Label>
 					</TabItem.Header>
 					<StackPanel Grid.Column="1" Width="380" Height="460">
 						<Grid Background="{DynamicResource MaterialDesignTextFieldBoxBackground}" Height="415" VerticalAlignment="Top">
-							<TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Capture service logger output..." FontSize="14" Margin="10 10 0 0" 
+							<TextBlock Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Text="捕获服务的日志输出..." FontSize="14" Margin="10 10 0 0" 
                        Foreground="{DynamicResource MaterialDesignBody}" Visibility="{Binding IsLoggerOutputEmpty, Converter={StaticResource FalseToCollapsedConverter}}"></TextBlock>
 							<ItemsControl ItemsSource="{Binding LoggerOutput}" Style="{StaticResource LogViewerStyle}">
 								<ItemsControl.Template>
@@ -453,13 +453,13 @@
 								<materialDesign:PackIcon Kind="PlaylistRemove"  Height="20" Width="20" />
 								<Button.ToolTip>
 									<ToolTip>
-										<TextBlock Text="Clear logger output">
+										<TextBlock Text="清空日志输出">
 										</TextBlock>
 									</ToolTip>
 								</Button.ToolTip>
 							</Button>
 							<StackPanel Margin="25 0 0 0" Orientation="Horizontal">
-								<TextBlock Text="Message filter" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
+								<TextBlock Text="消息过滤" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
 								<materialDesign:PopupBox StaysOpen="True" Foreground="{DynamicResource MaterialDesignBody}">
 									<materialDesign:Card  Margin="0 0 0 -10">
 										<StackPanel>
@@ -473,9 +473,9 @@
 													<ColumnDefinition Width="90"/>
 													<ColumnDefinition Width="30"/>
 												</Grid.ColumnDefinitions>
-												<TextBlock Grid.Row="0" Grid.Column="0" Text="Basic Info"></TextBlock>
-												<TextBlock Grid.Row="1" Grid.Column="0" Text="Advanced Info"></TextBlock>
-												<TextBlock Grid.Row="2" Grid.Column="0" Text="Errors"></TextBlock>
+												<TextBlock Grid.Row="0" Grid.Column="0" Text="基础信息"></TextBlock>
+												<TextBlock Grid.Row="1" Grid.Column="0" Text="高级信息"></TextBlock>
+												<TextBlock Grid.Row="2" Grid.Column="0" Text="错误"></TextBlock>
 
 												<CheckBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Top" IsChecked="{Binding ShowBasicInfo}"></CheckBox>
 												<CheckBox Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" IsChecked="{Binding ShowAdvancedInfo}"></CheckBox>

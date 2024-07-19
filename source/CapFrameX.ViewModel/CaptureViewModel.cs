@@ -927,27 +927,27 @@ namespace CapFrameX.ViewModel
             {
                 if (!ProcessesToCapture.Any())
                 {
-                    CaptureStateInfo = "Process list clear." + Environment.NewLine + $"Start any game / application and press \"{CaptureHotkeyString}\" to start capture.";
-                    _overlayService.SetCaptureServiceStatus("Scanning for process...");
+                    CaptureStateInfo = "进程列表为空." + Environment.NewLine + $"启动任意应用并按下 \"{CaptureHotkeyString}\" 开始捕获。";
+                    _overlayService.SetCaptureServiceStatus("扫描进程中...");
                 }
                 else if (ProcessesToCapture.Count == 1 && !_captureManager.DelayCountdownRunning)
                 {
-                    CaptureStateInfo = $"\"{_currentGameNameToCapture}\" auto-detected." + Environment.NewLine + $"Press \"{CaptureHotkeyString}\" to start capture.";
-                    _overlayService.SetCaptureServiceStatus($"\"{_currentGameNameToCapture}\" ready to capture...");
+                    CaptureStateInfo = $"自动检测到\"{_currentGameNameToCapture}\"。" + Environment.NewLine + $"按下 \"{CaptureHotkeyString}\" 开始捕获。";
+                    _overlayService.SetCaptureServiceStatus($"\"{_currentGameNameToCapture}\" 已准备好捕获...");
                 }
                 else if (ProcessesToCapture.Count > 1)
                 {
                     //Multiple processes detected, select the one to capture or move unwanted processes to ignore list.
-                    CaptureStateInfo = "Multiple processes detected." + Environment.NewLine + "Select one or move unwanted processes to ignore list.";
-                    _overlayService.SetCaptureServiceStatus("Multiple processes detected");
+                    CaptureStateInfo = "检测到多个进程。" + Environment.NewLine + "请忽略掉不想要的进程。";
+                    _overlayService.SetCaptureServiceStatus("检测到多个进程");
                 }
                 return;
             }
 
             if (!_captureManager.DelayCountdownRunning)
             {
-                CaptureStateInfo = $"\"{_currentGameNameToCapture}\" selected." + Environment.NewLine + $"Press \"{CaptureHotkeyString}\" to start capture.";
-                _overlayService.SetCaptureServiceStatus($"\"{_currentGameNameToCapture}\" ready to capture...");
+                CaptureStateInfo = $"已选中\"{_currentGameNameToCapture}\"。" + Environment.NewLine + $"按下 \"{CaptureHotkeyString}\" 开始捕获。";
+                _overlayService.SetCaptureServiceStatus($"\"{_currentGameNameToCapture}\" 已准备好捕获");
             }
         }
 

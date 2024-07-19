@@ -101,7 +101,7 @@
                         <TabControl x:Name="GraphTab" Grid.Row="0" SelectedItem="{Binding SelectedChartItem}" FocusVisualStyle="{x:Null}" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
                             <TabItem>
                                 <TabItem.Header>
-                                    <Label FontSize="12">Frametimes</Label>
+                                    <Label FontSize="12">帧生成时间</Label>
                                 </TabItem.Header>
                                 <Grid>
                                     <Grid Margin="0 0 0 0" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
@@ -144,7 +144,7 @@
                             </TabItem>
                             <TabItem>
                                 <TabItem.Header>
-                                    <Label FontSize="12">L-shape</Label>
+                                    <Label FontSize="12">折线</Label>
                                 </TabItem.Header>
                                 <Grid>
                                     <Grid Margin="-15 0 0 1" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
@@ -274,7 +274,7 @@
                         <TabControl Background="{DynamicResource MaterialDesignTextFieldBoxBackground}" FocusVisualStyle="{x:Null}" x:Name="StatisticsTabControl" >
                             <TabItem Width="75">
                                 <TabItem.Header>
-                                    <Label FontSize="12">Stuttering</Label>
+                                    <Label FontSize="12">卡顿</Label>
                                 </TabItem.Header>
                                 <Grid>
                                     <lvc:PieChart Margin="10 5 200 5" MaxHeight="250" Hoverable="False" Series="{Binding StutteringStatisticCollection}" 
@@ -337,7 +337,7 @@
                             </TabItem>
                             <TabItem Width="75">
                                 <TabItem.Header>
-                                    <Label FontSize="12">Variances</Label>
+                                    <Label FontSize="12">差异</Label>
                                 </TabItem.Header>
                                 <Grid>
                                     <TextBlock Margin="10 3 0 0" Text="Time differences between two&#xA;consecutive frametime values"></TextBlock>
@@ -351,7 +351,7 @@
                             </TabItem>
                             <TabItem Width="105" x:Name="ThresholdTab">
                                 <TabItem.Header>
-                                    <Label FontSize="12">FPS thresholds</Label>
+                                    <Label FontSize="12">FPS 阈值</Label>
                                 </TabItem.Header>
                                 <Grid Margin="0 5 0 0">
                                     <RadioButton Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Top"
@@ -418,7 +418,7 @@
                             </TabItem>
                             <TabItem Width="75" x:Name="SensorDataTab" IsEnabled="{Binding AdditionalGraphsEnabled}">
                                 <TabItem.Header>
-                                    <Label FontSize="12">Sensor data</Label>
+                                    <Label FontSize="12">传感器数据</Label>
                                 </TabItem.Header>
                                 <DataGrid FontSize="13" ItemsSource="{Binding SensorReportItems}" ColumnHeaderHeight="25" SelectionUnit="FullRow"
 										CanUserSortColumns="False" CanUserAddRows="False" AutoGenerateColumns="False"
@@ -494,7 +494,7 @@
                         <TabControl Background="{DynamicResource MaterialDesignTextFieldBoxBackground}" FocusVisualStyle="{x:Null}" >
                             <TabItem Width="75" IsEnabled="{Binding AdditionalGraphsEnabled}">
                                 <TabItem.Header>
-                                    <Label FontSize="12">Sensor data</Label>
+                                    <Label FontSize="12">传感器数据</Label>
                                 </TabItem.Header>
                                 <DataGrid FontSize="13" ItemsSource="{Binding SensorReportItems}" ColumnHeaderHeight="25" SelectionUnit="FullRow"
 										CanUserSortColumns="False" CanUserAddRows="False" AutoGenerateColumns="False"
@@ -571,7 +571,7 @@
                         <TabControl Background="{DynamicResource MaterialDesignTextFieldBoxBackground}" FocusVisualStyle="{x:Null}" >
                             <TabItem Width="105">
                                 <TabItem.Header>
-                                    <Label FontSize="12">FPS thresholds</Label>
+                                    <Label FontSize="12">FPS 阈值</Label>
                                 </TabItem.Header>
                                 <Grid Margin="0 5 0 0">
                                     <RadioButton Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Top"

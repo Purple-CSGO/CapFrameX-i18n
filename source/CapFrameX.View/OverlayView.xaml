@@ -74,21 +74,21 @@
 							<TextBlock Margin="0 0 10 0" Text="Overlay Items" FontSize="18" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
 							<materialDesign:PackIcon Width="20" Height="20" Kind="Information" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTipService.ShowDuration="25000" ToolTipService.Placement="Top">
 								<materialDesign:PackIcon.ToolTip>
-									<TextBlock Width="275" Text="Special CX Overlay items:&#xA;
-                                                        &#xA;Capture service status:
-                                                        &#xA;Current state of capture service(process found, multiple processes found, running benchmark...) &#xA;
-                                                        &#xA;Capture timer:
-                                                        &#xA;Remaining time for currently active capture(time set) or current capture time(unlimited)&#xA;
-                                                        &#xA;Run history:
-                                                        &#xA;Displays the data of previous runs and aggregated results(settings on capture page) &#xA;
-                                                        &#xA;Real-time FPS metrics:
-                                                        &#xA;Averaged values for average and percentiles FPS&#xA;
-                                                        &#xA;Stuttering Time:
-                                                        &#xA;Time percentage of frames above the stuttering threshold &#xA;
-                                                        &#xA;Application Latency:
-                                                        &#xA;Averaged approximated input lag &#xA;
-                                                        &#xA;PMD Powers:
-                                                        &#xA;Power values for use with Powernetics v2 tool &#xA;"
+									<TextBlock Width="275" Text="特殊 CX 叠加项目：&#xA;
+                                                        &#xA;捕获服务状态：
+                                                        &#xA;捕获服务的当前状态（发现进程、发现多个进程、运行基准......）。&#xA;
+                                                        &#xA;捕获计时器：
+                                                        &#xA;当前活动捕捉的剩余时间（设定时间）或当前捕捉时间（无限制）&#xA;
+                                                        &#xA;运行历史：
+                                                        &#xA;显示以前的运行数据和汇总结果（在捕获页面上进行设置） &#xA;
+                                                        &#xA;实时 FPS 指标:
+                                                        &#xA;平均值和百分位数的平均值 FPS&#xA;
+                                                        &#xA;卡顿时间：
+                                                        &#xA;帧数超过卡顿阈值的时间百分比 &#xA;
+                                                        &#xA;应用延迟：
+                                                        &#xA;平均近似输入延迟 &#xA;
+                                                        &#xA;PMD 功率:
+                                                        &#xA;用于 Powernetics v2 工具的功率值 &#xA;"
 										   TextWrapping="Wrap"/>
 								</materialDesign:PackIcon.ToolTip>
 							</materialDesign:PackIcon>
@@ -310,11 +310,11 @@
 						<StackPanel Grid.Row="2" Orientation="Vertical">
 							<Border Margin="10 5 10 0" BorderThickness="0.4" BorderBrush="{DynamicResource MaterialDesignBody}">
 								<StackPanel Margin="5 5 0 5" Orientation="Horizontal">
-									<TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">Group Control:</TextBlock>
+									<TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">分组控制：</TextBlock>
 									<materialDesign:PopupBox StaysOpen="True" ToolTipService.ShowDuration="25000" Foreground="{DynamicResource MaterialDesignBody}">
 										<materialDesign:PopupBox.ToolTip>
 											<ToolTip MaxWidth="275" Placement="Top">
-												<TextBlock Text="OSD parameter group control" 
+												<TextBlock Text="OSD 参数分组控制" 
 										   TextWrapping="Wrap"/>
 											</ToolTip>
 										</materialDesign:PopupBox.ToolTip>
@@ -349,135 +349,135 @@
 														<ColumnDefinition Width="1*"/>
 														<ColumnDefinition Width="1*"/>
 													</Grid.ColumnDefinitions>
-													<TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="Capture Items" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="捕获项目" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="0" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckCaptureItems}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check Capture Items" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中捕获项目" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="0" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckCaptureItems}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck Capture Items" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中捕获项目" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="System Infos" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="系统信息" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="1" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckSystemInfo}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check System Info" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中系统信息" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="1" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckSystemInfo}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck System Info" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中系统信息" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="Real-time Metrics" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="实时指标" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="2" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckOnlineMetrics}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check real-time Metrics" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中实时指标" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="2" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckOnlineMetrics}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck real-time Metrics" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中实时指标" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="GPU Basics" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="GPU基础" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="3" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckGpuBasics}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check GPU Basics" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中实时指标" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="3" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckGpuBasics}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck GPU Basics" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中实时指标" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="CPU Core Loads" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="CPU核心负载" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="4" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckCpuLoads}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check CPU Loads" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中CPU核心负载" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="4" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckCpuLoads}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck CPU Loads" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中CPU核心负载" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="CPU Core Clocks" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="CPU核心频率" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="5" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckCpuClocks}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check CPU Clocks" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中CPU核心频率" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="5" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckCpuClocks}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck CPU Clocks" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中CPU核心频率" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="6" Grid.Column="0" Text="CPU Core Powers" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="6" Grid.Column="0" Text="CPU核心功耗" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="6" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckCpuPowers}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check CPU Clocks" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中CPU核心功耗" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="6" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckCpuPowers}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck CPU Clocks" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中CPU核心功耗" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="7" Grid.Column="0" Text="CPU Core Temps" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="7" Grid.Column="0" Text="CPU核心温度" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="7" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckCpuTemps}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check CPU Core Temps" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中CPU核心温度" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="7" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckCpuTemps}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck CPU Core Temps" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中CPU核心温度" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
 													<!--CPU voltages-->
-													<TextBlock Margin="5" Grid.Row="8" Grid.Column="0" Text="CPU Core Voltages" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="8" Grid.Column="0" Text="CPU核心电压" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="8" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckCpuVoltages}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check CPU Core Voltages" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中CPU核心电压" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="8" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckCpuVoltages}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck CPU Core Voltages" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中CPU核心电压" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="9" Grid.Column="0" Text="RAM Items" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="9" Grid.Column="0" Text="内存项目" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="9" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckRamItems}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="Check RAM Items" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中内存项目" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 
 													<Button Margin="5" Grid.Row="9" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckRamItems}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="Uncheck RAM Items" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中内存项目" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 												</Grid>
 											</StackPanel>
 										</materialDesign:Card>
 									</materialDesign:PopupBox>
-									<TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">Min OSD</TextBlock>
+									<TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">最小 OSD</TextBlock>
 									<Button Margin="10 0 0 0" Width="20" Height="20" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
                                             Command="{Binding SetToMinOsdCommand}" materialDesign:RippleAssist.Feedback="#DD000000">
 										<materialDesign:PackIcon Kind="FlipToFront" Height="15" Width="15" />
 										<Button.ToolTip>
 											<ToolTip>
-												<TextBlock Width="275" Text="Set OSD items to minimum. Only framerate and frametime are shown." TextWrapping="Wrap">
+												<TextBlock Width="275" Text="将 OSD 项目设置为最小。只显示帧速率和帧时间。" TextWrapping="Wrap">
 												</TextBlock>
 											</ToolTip>
 										</Button.ToolTip>
 									</Button>
-									<TextBlock Margin="10 0 0 0"  VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">Resync Perfmon</TextBlock>
+									<TextBlock Margin="10 0 0 0"  VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">重启性能监控</TextBlock>
 									<Button Margin="10 0 0 0" Width="20" Height="20" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
                                             Command="{Binding ResyncPerfmonCommand}" materialDesign:RippleAssist.Feedback="#DD000000">
 										<materialDesign:PackIcon Kind="Update" Height="15" Width="15" />
 										<Button.ToolTip>
 											<ToolTip>
-												<TextBlock Width="275" Text="Resync Windows performance monitor when you have issues with 0 memory counter. Restart CX after execution." TextWrapping="Wrap">
+												<TextBlock Width="275" Text="当内存计数器为 0 时，重新同步 Windows 性能监控器。执行后重启 CapframeX。" TextWrapping="Wrap">
 												</TextBlock>
 											</ToolTip>
 										</Button.ToolTip>
 									</Button>
 									<StackPanel Margin="20 0 0 0" Orientation="Horizontal">
-										<TextBlock Text="OSD Options" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
+										<TextBlock Text="OSD选项" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
 										<materialDesign:PopupBox StaysOpen="True" Foreground="{DynamicResource MaterialDesignBody}">
 											<materialDesign:Card  Margin="0 0 0 -10">
 												<StackPanel>
@@ -494,11 +494,11 @@
 															<ColumnDefinition Width="65"/>
 														</Grid.ColumnDefinitions>
 
-														<TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="CX overlay toggle" VerticalAlignment="Center"/>
+														<TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="切换 CX 覆盖" VerticalAlignment="Center"/>
 														<ToggleButton Margin="0 0 0 0" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" IsChecked="{Binding IsOverlayActive, Mode=TwoWay}" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTipService.ShowDuration="25000">
 															<ToggleButton.ToolTip>
 																<ToolTip>
-																	<TextBlock Width="275" Text="Activates or deactivates the CX overlay, same funtionality as the overlay hotkey." TextWrapping="Wrap">
+																	<TextBlock Width="275" Text="激活或关闭覆盖，功能与覆盖热键相同。" TextWrapping="Wrap">
 																	</TextBlock>
 																</ToolTip>
 															</ToggleButton.ToolTip>
@@ -514,31 +514,31 @@
                                                         </CheckBox.ToolTip>
                                                     </CheckBox>-->
 
-														<TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="Auto-disable OSD" VerticalAlignment="Center"/>
+														<TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="自动禁用 OSD" VerticalAlignment="Center"/>
 														<CheckBox Margin="5 0 0 0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" IsChecked="{Binding AutoDisableOverlay, Mode=TwoWay}" Style="{StaticResource MaterialDesignCheckBox}" ToolTipService.ShowDuration="25000">
 															<CheckBox.ToolTip>
 																<ToolTip>
-																	<TextBlock Width="275" Text="If checked, the global RTSS OSD will be disabled while running a benchmark. For 32bit applications, only the CX overlay items will be disabled." TextWrapping="Wrap">
+																	<TextBlock Width="275" Text="如果选中此选项，则在运行基准时将禁用全局 RTSS OSD。对于 32 位应用程序，将仅禁用 CX 叠加项目。" TextWrapping="Wrap">
 																	</TextBlock>
 																</ToolTip>
 															</CheckBox.ToolTip>
 														</CheckBox>
 
-														<TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="System time seconds" VerticalAlignment="Center"/>
+														<TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="系统时间（秒）" VerticalAlignment="Center"/>
 														<CheckBox Margin="5 0 0 0" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center"  IsChecked="{Binding ShowSystemTimeSeconds, Mode=TwoWay}" Style="{StaticResource MaterialDesignCheckBox}" ToolTip="Show seconds for the system time overlay entry"/>
 
-														<TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="Custom position" VerticalAlignment="Center"/>
+														<TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="自定义位置" VerticalAlignment="Center"/>
 														<CheckBox Margin="5 0 0 0" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" IsChecked="{Binding OSDCustomPosition, Mode=TwoWay}" Style="{StaticResource MaterialDesignCheckBox}" ToolTipService.ShowDuration="25000">
 															<CheckBox.ToolTip>
 																<ToolTip>
-																	<TextBlock Width="275" Text="Adds options to manually set the position of the CX overlay items (not of the global OSD)" TextWrapping="Wrap">
+																	<TextBlock Width="275" Text="增加手动设置 CX 叠加项目（非全局 OSD）位置的选项" TextWrapping="Wrap">
 																	</TextBlock>
 																</ToolTip>
 															</CheckBox.ToolTip>
 														</CheckBox>
 
-														<TextBlock Grid.Row="4" Grid.Column="0" Margin="5 0 0 0" VerticalAlignment="Center" Text="CX overlay position" Visibility="{Binding OSDCustomPosition, Converter={StaticResource TrueToVisibleConverter}}"></TextBlock>
-														<StackPanel Grid.Row="4" Grid.Column="1" Margin="8 0 0 0" Orientation="Horizontal" ToolTip="Changes position of the CX overlay items (not of the global OSD)" Visibility="{Binding OSDCustomPosition, Converter={StaticResource TrueToVisibleConverter}}">
+														<TextBlock Grid.Row="4" Grid.Column="0" Margin="5 0 0 0" VerticalAlignment="Center" Text="CX 叠加位置" Visibility="{Binding OSDCustomPosition, Converter={StaticResource TrueToVisibleConverter}}"></TextBlock>
+														<StackPanel Grid.Row="4" Grid.Column="1" Margin="8 0 0 0" Orientation="Horizontal" ToolTip="更改 CX 叠加项目的位置（而非全局 OSD 的位置）" Visibility="{Binding OSDCustomPosition, Converter={StaticResource TrueToVisibleConverter}}">
 															<TextBox Width="30" Height="25" Text="{Binding OSDPositionX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" PreviewTextInput="IntegerNumberValidationTextBox"></TextBox>
 															<TextBlock VerticalAlignment="Center" Margin="5 0 5 0" Text="x"></TextBlock>
 															<TextBox Width="30" Height="25" Text="{Binding OSDPositionY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" PreviewTextInput="IntegerNumberValidationTextBox"></TextBox>
@@ -646,13 +646,13 @@
 								<ColumnDefinition Width="40"/>
 								<ColumnDefinition Width="1*"/>
 							</Grid.ColumnDefinitions>
-							<TextBlock Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Colors and Limits" FontSize="16"/>
+							<TextBlock Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="颜色和限制" FontSize="16"/>
 							<Button Grid.Row="0" Grid.Column="2" Width="20" Height="20" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
-                                        ToolTip="Reset to defaults" Command="{Binding ResetColorAndLimitDefaultsCommand}"
+                                        ToolTip="重置为默认" Command="{Binding ResetColorAndLimitDefaultsCommand}"
                                         materialDesign:RippleAssist.Feedback="#DD000000">
 								<materialDesign:PackIcon Kind="Restore" Height="15" Width="15" />
 							</Button>
-							<TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Text="Group color:"/>
+							<TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Text="群组颜色："/>
 							<ctrls:CXColorPicker Grid.Row="1" Grid.Column="2" Width="25" Height="25" Margin="0 0 0 0" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}" SelectedColor="{Binding SelectedOverlayEntry.GroupColor, Converter={StaticResource StringColorConverter}}" 
 										SelectedColorChanged="SelectedColorChanged" DisplayColorAndName="False" AvailableColorsSortingMode="HueSaturationBrightness">
 								<ctrls:CXColorPicker.ButtonStyle>
@@ -680,7 +680,7 @@
 									</Style>
 								</ctrls:CXColorPicker.ButtonStyle>
 							</ctrls:CXColorPicker>
-							<TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Text="Standard value color:"/>
+							<TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Text="基础数值颜色："/>
 							<ctrls:CXColorPicker Grid.Row="2" Grid.Column="2" Width="25" Height="25" Margin="0 0 0 0" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}" SelectedColor="{Binding SelectedOverlayEntry.Color, Converter={StaticResource StringColorConverter}}" 
 										SelectedColorChanged="SelectedColorChanged" DisplayColorAndName="False" AvailableColorsSortingMode="HueSaturationBrightness">
 								<ctrls:CXColorPicker.ButtonStyle>
@@ -806,7 +806,7 @@
                                          Text="{Binding SelectedOverlayEntry.GroupFontSize, UpdateSourceTrigger=LostFocus}">
 							</TextBox>
 							<Label Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Content="%"/>
-							<TextBlock Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center" Text="Value font size"></TextBlock>
+							<TextBlock Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center" Text="数值字号"></TextBlock>
 							<TextBox Grid.Row="2" Grid.Column="1" Width="25" VerticalAlignment="Center" PreviewKeyDown="LostFocus_PreviewKeyDown" PreviewTextInput="NumberValidationTextBox" 
                                          ToolTip="Positive percentage = superscript&#10;Negative percentage = subscript"
                                          Text="{Binding SelectedOverlayEntry.ValueFontSize, UpdateSourceTrigger=LostFocus}">
