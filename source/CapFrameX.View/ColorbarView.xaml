@@ -61,7 +61,7 @@
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding AggregationIsChecked}"
-							 Content="聚合" />
+							 Content="合并" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
                              Margin="4"
                              IsChecked="{Binding SensorIsChecked}"
@@ -91,7 +91,7 @@
                         <Button Style="{StaticResource MaterialDesignFloatingActionMiniButton}"
 						        VerticalAlignment="Center"
 						        HorizontalAlignment="Right"
-						        ToolTip="Take a screenshot"
+						        ToolTip="截图"
 						        materialDesign:RippleAssist.Feedback="#DD000000"
                                 Background="{DynamicResource MaterialDesignToolBackground}"
                                 BorderBrush="Transparent"
@@ -105,13 +105,13 @@
                                 Background="{DynamicResource MaterialDesignToolBackground}" Foreground="White"
                                 BorderBrush="Transparent"
                                 HorizontalContentAlignment="Center" Padding="0"
-                                Content="Save" Click="SaveScreenShotButton_Click"/>
+                                Content="保存" Click="SaveScreenShotButton_Click"/>
                         <Button Width="70" Height="40" VerticalContentAlignment="Center"
                                 Style="{StaticResource MaterialDesignRaisedButton}"
                                 Background="{DynamicResource MaterialDesignToolBackground}" Foreground="White" 
                                 BorderBrush="Transparent"
                                 HorizontalContentAlignment="Center" Padding="0"
-                                Content="Copy" Click="CopyScreenShotButton_Click"/>
+                                Content="复制" Click="CopyScreenShotButton_Click"/>
                     </UniformGrid>
                 </materialDesign:PopupBox>
 

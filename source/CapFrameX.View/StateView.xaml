@@ -100,7 +100,7 @@
                 </Grid.ToolTip>
             </Grid>
 
-            <TextBlock Margin="15 0 5 0" Visibility="{Binding IsGameModeStatusValid, Converter={StaticResource FalseToCollapsedConverter}}" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}" >Win Game Mode:</TextBlock>
+            <TextBlock Margin="15 0 5 0" Visibility="{Binding IsGameModeStatusValid, Converter={StaticResource FalseToCollapsedConverter}}" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}" >Windows游戏模式:</TextBlock>
             <TextBlock Width="Auto" Visibility="{Binding IsGameModeStatusValid, Converter={StaticResource FalseToCollapsedConverter}}" VerticalAlignment="Center" Text="{Binding IsGameModeEnabled, Converter={StaticResource ModeDescriptionConverter}, ConverterParameter= On|Off}" 
                        FontWeight="Bold" Foreground="{Binding IsGameModeEnabled, Converter={StaticResource ModeColorConverter}}"></TextBlock>
 
@@ -122,7 +122,7 @@
                     <TextBlock Text="{Binding InfoToolTipText, UpdateSourceTrigger=Default}" Foreground="{DynamicResource MaterialDesignBody}"/>
                 </materialDesign:PackIcon.ToolTip>
             </materialDesign:PackIcon>
-            <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}" >Version:</TextBlock>
+            <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}" >版本：</TextBlock>
             <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"  Text="{Binding VersionString, Mode=OneWay}"/>
         </StackPanel>
     </Grid>
