@@ -153,16 +153,16 @@
                         <StackPanel Margin="10" DockPanel.Dock="Top" Orientation="Horizontal">
                             <RadioButton Margin="18 0 0 0" Style="{StaticResource MaterialDesignTabRadioButton}"
 										 IsChecked="{Binding OptionsViewSelected}"
-										 Content="OPTIONS" />
+										 Content="选项" />
                             <RadioButton Margin="18 0 0 0" Style="{StaticResource MaterialDesignTabRadioButton}"
 										 IsChecked="{Binding AppViewSelected}"
-										 Content="APP" />
+										 Content="应用" />
                             <RadioButton Margin="18 0 0 0" Style="{StaticResource MaterialDesignTabRadioButton}"
 										 IsChecked="{Binding RemoteViewSelected}"
-										 Content="REMOTE" />
+										 Content="远程控制" />
                             <RadioButton Margin="20 0 0 0" Style="{StaticResource MaterialDesignTabRadioButton}"
 										 IsChecked="{Binding HelpViewSelected}"
-										 Content="HELP" />
+										 Content="帮助" />
                         </StackPanel>
                         <ContentPresenter x:Name="ContentPresenterSwitchView" Content="{Binding}">
                             <ContentPresenter.Resources>
@@ -192,7 +192,7 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <ComboBox Grid.Row="0" Grid.Column="0" materialDesign:HintAssist.Hint="FPS graph filter(ms)" HorizontalAlignment="Left"
+                                        <ComboBox Grid.Row="0" Grid.Column="0" materialDesign:HintAssist.Hint="FPS 图表过滤(ms)" HorizontalAlignment="Left"
                                                   ToolTip="Sets the time window for the interval of the average FPS graphs"
 												  materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="100" Width="145" Height="40" Margin="20 15 10 15"
 												  ItemsSource="{Binding Path=DataContext.AverageTimeWindows, ElementName=ColorbarViewName}">
@@ -203,7 +203,7 @@
                                                 </Binding>
                                             </ComboBox.Text>
                                         </ComboBox>
-                                        <ComboBox Grid.Row="0" Grid.Column="1" materialDesign:HintAssist.Hint="FPS values decimals" HorizontalAlignment="Center"
+                                        <ComboBox Grid.Row="0" Grid.Column="1" materialDesign:HintAssist.Hint="FPS 小数值" HorizontalAlignment="Center"
                                                   ToolTip="Sets the number of decimal points for displayed FPS values"
 												  materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="100" Width="120" Height="40" Margin="0 15 15 15"
 												  ItemsSource="{Binding Path=DataContext.RoundingDigits, ElementName=ColorbarViewName}">
@@ -217,7 +217,7 @@
 
                                         <StackPanel Grid.Row="0" Grid.Column="2" Margin="0 5 0 5" Orientation="Horizontal"
                                             ToolTip="Select resolution for graph export(via context menu)">
-                                            <TextBlock Margin="0 0 10 0" VerticalAlignment="Center" HorizontalAlignment="Center"> Graph export res.</TextBlock>
+                                            <TextBlock Margin="0 0 10 0" VerticalAlignment="Center" HorizontalAlignment="Center"> 导出图表分辨率</TextBlock>
                                             <materialDesign:PopupBox StaysOpen="True" ToolTipService.ShowDuration="25000" PlacementMode="TopAndAlignCentres">
                                                 <materialDesign:Card Width="270" Margin="0 0 0 -10">
                                                     <StackPanel>
@@ -265,16 +265,16 @@
 										</StackPanel>
 
 										<StackPanel Grid.Row="3" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Left"  Margin="10 5 0 5">
-                                            <TextBox Width="350" IsReadOnly="True" materialDesign:HintAssist.Hint="Screenshot directory" Text="{Binding ScreenshotDirectory, Mode=OneWay}" />
-                                            <Button Margin="15 0 0 0" Height="35" Width="35" Command="{Binding Path=DataContext.SelectScreenshotFolderCommand, ElementName=ColorbarViewName}" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Select screenshot folder">
+                                            <TextBox Width="350" IsReadOnly="True" materialDesign:HintAssist.Hint="截图文件夹" Text="{Binding ScreenshotDirectory, Mode=OneWay}" />
+                                            <Button Margin="15 0 0 0" Height="35" Width="35" Command="{Binding Path=DataContext.SelectScreenshotFolderCommand, ElementName=ColorbarViewName}" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="选择截图文件夹">
                                                 <materialDesign:PackIcon Kind="Folder" Height="25" Width="25" />
                                             </Button>
-                                            <Button Margin="15 0 0 0" Height="35" Width="35" Command="{Binding Path=DataContext.OpenScreenshotFolderCommand, ElementName=ColorbarViewName}" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="Open screenshot folder">
+                                            <Button Margin="15 0 0 0" Height="35" Width="35" Command="{Binding Path=DataContext.OpenScreenshotFolderCommand, ElementName=ColorbarViewName}" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" ToolTip="打开截图文件夹">
                                                 <materialDesign:PackIcon Kind="Forward" Height="25" Width="25" />
                                             </Button>
                                         </StackPanel>
 
-                                        <ComboBox Grid.Row="4" Grid.Column="0" materialDesign:HintAssist.Hint="Hardware info source"
+                                        <ComboBox Grid.Row="4" Grid.Column="0" materialDesign:HintAssist.Hint="硬件信息来源"
 												  materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="100" Margin="0 10 0 0" Width="145" Height="40"
 												  ItemsSource="{Binding Path=DataContext.HardwareInfoSourceItems, ElementName=ColorbarViewName}" 
 												  SelectedItem="{Binding Path=DataContext.SelectedHardwareInfoSource, ElementName=ColorbarViewName}">
@@ -284,7 +284,7 @@
                                                 </DataTemplate>
                                             </ComboBox.ItemTemplate>
                                         </ComboBox>
-                                        <ComboBox Grid.Row="4" Grid.Column="1" materialDesign:HintAssist.Hint="Capture file mode" ToolTipService.ShowDuration="25000"
+                                        <ComboBox Grid.Row="4" Grid.Column="1" materialDesign:HintAssist.Hint="捕获文件模式" ToolTipService.ShowDuration="25000"
 												  materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="100" Margin="0 15 0 0" Width="120" Height="40"
 												  ItemsSource="{Binding Path=DataContext.CaptureFileModeItems, ElementName=ColorbarViewName}" 
 												  SelectedItem="{Binding Path=DataContext.SelectedCaptureFileMode, ElementName=ColorbarViewName}">
@@ -358,20 +358,20 @@
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
                                         <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 5 0 5">
-                                            <TextBlock Text="Dark mode"/>
+                                            <TextBlock Text="深色模式"/>
                                             <ToggleButton Margin="68 0 0 0" Click="MenuDarkModeButton_Click" IsChecked="{Binding IsDarkModeToggleChecked}"/>
                                         </StackPanel>
                                         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="15 5 0 5" ToolTip="Allow to recieve important messages from CX Team on app start">
-                                            <TextBlock Text="Recieve notifications"/>
+                                            <TextBlock Text="接收通知"/>
                                             <ToggleButton Margin="15 0 0 0" IsChecked="{Binding AppNotificationsActive, Mode=TwoWay}"/>
                                         </StackPanel>
                                         <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="20 5 0 5">
-                                            <TextBlock Margin="0 0 0 0" Text="Start with Windows" TextAlignment="Left" TextWrapping="Wrap" Width="80"/>
+                                            <TextBlock Margin="0 0 0 0" Text="开机启动" TextAlignment="Left" TextWrapping="Wrap" Width="80"/>
                                             <CheckBox Margin="0 0 0 0" IsChecked="{Binding Autostart, Mode=TwoWay}">
                                             </CheckBox>
                                         </StackPanel>
                                         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="20 5 0 5" >
-                                            <TextBlock Margin="0 0 0 0" Text="Start minimized" TextAlignment="Left" TextWrapping="Wrap" Width="80"/>
+                                            <TextBlock Margin="0 0 0 0" Text="启动时最小化" TextAlignment="Left" TextWrapping="Wrap" Width="80"/>
                                             <CheckBox Margin="0 0 0 0" IsChecked="{Binding StartMinimized, Mode=TwoWay}">
                                             </CheckBox>
                                         </StackPanel>
@@ -423,9 +423,9 @@
                                                  Foreground="DarkGray" materialDesign:HintAssist.Hint="CX Remote Service info URL"></TextBox>
 
                                         <TextBox Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Margin="15 5 0 5" Text="{Binding WebservicePort, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="175" PreviewTextInput="IntegerValidationTextBox"
-                                                 materialDesign:HintAssist.Hint="Webservice port (restart CX)"></TextBox>
+                                                 materialDesign:HintAssist.Hint="网络服务端口（需要重启CX）"></TextBox>
                                         <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="15 5 0 5" VerticalAlignment="Center" Orientation="Horizontal">
-                                            <TextBlock Text="Hide OSD on RTSS"></TextBlock>
+                                            <TextBlock Text="隐藏 RTSS 的 OSD"></TextBlock>
                                             <CheckBox IsChecked="{Binding HideOverlay, Mode=TwoWay}" Margin="10 -3 0 0">
                                                 <CheckBox.ToolTip>
                                                     <ToolTip StaysOpen="True" MaxWidth="275">

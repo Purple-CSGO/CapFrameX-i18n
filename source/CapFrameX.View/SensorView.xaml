@@ -229,7 +229,7 @@
                                                 <ColumnDefinition Width="1*"/>
                                                 <ColumnDefinition Width="1*"/>
                                             </Grid.ColumnDefinitions>
-                                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="CPU basics" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="CPU 基础项" VerticalAlignment="Center"/>
                                             <Button Margin="5" Grid.Row="0" Grid.Column="1" Command="{Binding Path=SensorSubModelGroupControl.CheckCpuBasics}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
                                                     Width="20" Height="20" ToolTip="Check CPU basics" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
                                                 <materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
@@ -239,7 +239,7 @@
                                                 <materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
                                             </Button>
 
-                                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="GPU basics" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="GPU 基础项" VerticalAlignment="Center"/>
                                             <Button Margin="5" Grid.Row="1" Grid.Column="1" Command="{Binding Path=SensorSubModelGroupControl.CheckGpuBasics}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
                                                     Width="20" Height="20" ToolTip="Check GPU basics" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
                                                 <materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
@@ -249,7 +249,7 @@
                                                 <materialDesign:PackIcon Kind="Remove" Height="20" Width="15" />
                                             </Button>
                                             
-                                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="CPU thread loads" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="CPU 线程负载" VerticalAlignment="Center"/>
                                             <Button Margin="5" Grid.Row="2" Grid.Column="1" Command="{Binding Path=SensorSubModelGroupControl.CheckCpuThreadLoads}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
                                                     Width="20" Height="20" ToolTip="Check CPU thread loads" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
                                                 <materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
@@ -259,7 +259,7 @@
                                                 <materialDesign:PackIcon Kind="Remove" Height="15" Width="15" />
                                             </Button>
 
-                                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="CPU core clocks" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="CPU 核心频率" VerticalAlignment="Center"/>
                                             <Button Margin="5" Grid.Row="3" Grid.Column="1" Command="{Binding Path=SensorSubModelGroupControl.CheckCpuCoreClocks}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
                                                     Width="20" Height="20" ToolTip="Check CPU core clocks" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
                                                 <materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
@@ -269,7 +269,7 @@
                                                 <materialDesign:PackIcon Kind="Remove" Height="15" Width="15" />
                                             </Button>
 
-                                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="All sensors" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="所有传感器" VerticalAlignment="Center"/>
                                             <Button Margin="5" Grid.Row="4" Grid.Column="1" Command="{Binding Path=SensorSubModelGroupControl.CheckAll}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
                                                     Width="20" Height="20" ToolTip="Check all sensors" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
                                                 <materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
@@ -346,22 +346,22 @@
                         </DataGrid.Resources>
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding Name, Mode=OneWay}"                                                           
-                                            Header="Sensor"                 
+                                            Header="传感器"                 
                                             MinWidth="180"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                             <DataGridTextColumn Binding="{Binding MinValue, Mode=OneWay}"
-                                            Header="Min"
+                                            Header="最小值"
                                             MinWidth="75"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                             <DataGridTextColumn Binding="{Binding AverageValue, Mode=OneWay}"
-                                            Header="Avg"
+                                            Header="平均值"
                                             MinWidth="75"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                             <DataGridTextColumn Binding="{Binding MaxValue, Mode=OneWay}"
-                                            Header="Max"
+                                            Header="最大值"
                                             MinWidth="75"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
