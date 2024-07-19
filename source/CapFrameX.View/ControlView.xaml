@@ -349,7 +349,7 @@
                         <DataGrid.Columns>
                             <DataGridTextColumn Binding="{Binding GameName, Mode=OneWay}"
                                         Width="Auto"
-                                        Header="Game"
+                                        Header="游戏"
                                         FontSize="13"
                                         IsReadOnly="True">
                                 <DataGridTextColumn.ElementStyle>
@@ -361,7 +361,7 @@
                             <DataGridTextColumn Binding="{Binding CreationTimestamp, Mode=OneWay}"
                                         Width="Auto"
                                         MinWidth="95"
-                                        Header="Date / Time"
+                                        Header="日期 / 时间"
                                         IsReadOnly="True"
                                         Visibility="{Binding DataContext.ShowCreationDate, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}">
                                 <DataGridTextColumn.ElementStyle>
@@ -373,7 +373,7 @@
                             </DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding Comment, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
 										Width="100"
-                                        Header="Comment"
+                                        Header="注释"
                                         IsReadOnly="False"
                                         Visibility="{Binding DataContext.ShowComment, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}">
                                 <DataGridTextColumn.ElementStyle>
@@ -384,7 +384,7 @@
                             </DataGridTextColumn>
                             <DataGridCheckBoxColumn Binding="{Binding IsAggregated, Mode=OneWay}"
                                         Width="Auto"
-                                        Header="Aggregated"
+                                        Header="已合并"
                                         IsReadOnly="True" 
                                         MinWidth="40"
                                         Visibility="{Binding DataContext.ShowIsAggregated, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}">
