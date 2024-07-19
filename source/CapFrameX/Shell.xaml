@@ -12,7 +12,7 @@
         Title="CapFrameX"
         Height="800" Width="1400" MinHeight="740" MinWidth="1360" Icon="Icons/CX_Icon.png"
         Background="{DynamicResource MaterialDesignPaper}"
-        FontFamily="{materialDesign:MaterialDesignFont}">
+        FontFamily="{StaticResource SarasaFont}">
     <Window.Resources>
         <ResourceDictionary>
             <converter:AddValueConverter x:Key="AddValueConverter" Offset="-1000"/>

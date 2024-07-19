@@ -164,6 +164,10 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="CapFrameXViewRegion.cs" />
     <Compile Include="WindowStateService.cs" />
+    <Page Include="Fonts\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Shell.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -210,6 +214,9 @@
     <None Include="Files\bf0822e8-2e55-4b99-82ee-939d8ac2384e.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Resource Include="Fonts\SarasaGothicSC-Regular.ttf" >
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -406,6 +413,7 @@
       <Version>4.3.2</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>
