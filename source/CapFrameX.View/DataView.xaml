@@ -105,7 +105,7 @@
                                 </TabItem.Header>
                                 <Grid>
                                     <Grid Margin="0 0 0 0" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                                        <ComboBox Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0 0 10" materialDesign:HintAssist.Hint="Y-Axis scale"
+                                        <ComboBox Width="85" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0 0 10" materialDesign:HintAssist.Hint="Y轴缩放"
 										          materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="240" materialDesign:HintAssist.HintOpacity=".8"
 										          ItemsSource="{Binding ChartYAxisSettings}" SelectedItem="{Binding SelecetedChartYAxisSetting}">
                                             <ComboBox.ItemTemplate>
@@ -300,7 +300,7 @@
                                                     <RowDefinition Height="*" />
                                                     <RowDefinition Height="*" />
                                                 </Grid.RowDefinitions>
-                                                <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Low FPS threshold" materialDesign:HintAssist.IsFloating="True" Width="100"
+                                                <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="低FPS阈值" materialDesign:HintAssist.IsFloating="True" Width="100"
                                                          HorizontalContentAlignment="Center" Text="{Binding StutteringLowFPSThreshold}" materialDesign:HintAssist.HintOpacity=".8"
                                                  PreviewKeyDown="StutteringThreshold_PreviewKeyDown" PreviewTextInput="NumberValidationTextBox" ToolTipService.ShowDuration="25000">
                                                     <TextBox.ToolTip>
@@ -310,7 +310,7 @@
                                                         </ToolTip>
                                                     </TextBox.ToolTip>
                                                 </TextBox>
-                                                <TextBox Grid.Row="1" Margin="0 20 0 0" materialDesign:HintAssist.Hint="Stuttering factor" materialDesign:HintAssist.IsFloating="True" Width="100"
+                                                <TextBox Grid.Row="1" Margin="0 20 0 0" materialDesign:HintAssist.Hint="卡顿参数" materialDesign:HintAssist.IsFloating="True" Width="100"
                                                  HorizontalContentAlignment="Center" Text="{Binding StutteringFactor}" materialDesign:HintAssist.HintOpacity=".8" 
                                                  PreviewKeyDown="StutteringFactor_PreviewKeyDown" PreviewTextInput="NumberValidationTextBox" ToolTipService.ShowDuration="25000">
                                                     <TextBox.ToolTip>
@@ -321,13 +321,13 @@
                                                     </TextBox.ToolTip>
                                                 </TextBox>
                                                 <StackPanel Grid.Row="2" Margin="0 10 0 0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Orientation="Vertical">
-                                                    <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="Show in charts"/></TextBlock>
+                                                    <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="在图表中显示"/></TextBlock>
                                                     <ToggleButton VerticalAlignment="Center" Margin="0 8 0 0" Style="{StaticResource MaterialDesignSwitchToggleButton}" IsChecked="{Binding ShowStutteringThresholds}"
 								                                    ToolTip="Show threshold lines for stuttering and low FPS in the frametime and FPS charts"/>
                                                 </StackPanel>
                                             </Grid>
                                         </materialDesign:PopupBox>
-                                        <TextBlock VerticalAlignment="Center" Text="Options" FontSize="14"/>
+                                        <TextBlock VerticalAlignment="Center" Text="选项" FontSize="14"/>
                                     </StackPanel>
                                     <Border Margin="12 0 0 20" Width="Auto" HorizontalAlignment="Left" VerticalAlignment="Bottom" BorderBrush="{DynamicResource MaterialDesignBody}" BorderThickness="1"
                                             Visibility="{Binding IsPcLatencyAvailable, Converter={StaticResource TrueToVisibleConverter}}">
@@ -340,7 +340,7 @@
                                     <Label FontSize="12">差异</Label>
                                 </TabItem.Header>
                                 <Grid>
-                                    <TextBlock Margin="10 3 0 0" Text="Time differences between two&#xA;consecutive frametime values"></TextBlock>
+                                    <TextBlock Margin="10 3 0 0" Text="两个&#xA;连续帧时值之间的时间差"></TextBlock>
                                     <lvc:PieChart Margin="10 5 115 5" MaxHeight="250" Hoverable="False" Series="{Binding VarianceStatisticCollection}" 
 								        LegendLocation="Left" DataClick="Chart_OnDataClick" DataTooltip="{x:Null}" StartingRotationAngle="0">
                                         <lvc:PieChart.ChartLegend>
@@ -362,7 +362,7 @@
                                                  MinWidth="80"
                                                  Height="25"
                                                  IsChecked="{Binding ShowThresholdTimes}"
-                                                 Content="Times"
+                                                 Content="时间"
                                                  Command="{Binding ThresholdTimesCommand}"/>
                                     <RadioButton Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Top"
                                                  ToolTip="Show number of frames above or below thresholds"
@@ -372,17 +372,17 @@
                                                  MinWidth="80"
                                                  Height="25"
                                                  IsChecked="{Binding ShowThresholdTimes, Converter={StaticResource InvertBoolConverter}}"
-                                                 Content="Counts"
+                                                 Content="次数"
                                                  Command="{Binding ThresholdCountsCommand}"/>
                                     <Grid Margin="0 0 40 0" Panel.ZIndex="1" HorizontalAlignment="Right" VerticalAlignment="Top">
                                         <ToggleButton Width="25" Height="25" Style="{StaticResource MaterialDesignActionToggleButton}" Foreground="White" 
-												  ToolTip="Toggle between absolute and relative values" IsChecked="{Binding ThresholdShowAbsoluteValues}">
+												  ToolTip="在绝对值和相对值之间切换" IsChecked="{Binding ThresholdShowAbsoluteValues}">
                                             <materialDesign:ToggleButtonAssist.OnContent>#</materialDesign:ToggleButtonAssist.OnContent> %
                                         </ToggleButton>
                                     </Grid>
                                     <Grid Margin="0 0 5 0" Panel.ZIndex="1" HorizontalAlignment="Right" VerticalAlignment="Top">
                                         <ToggleButton Width="25" Height="25" Style="{StaticResource MaterialDesignActionToggleButton}" Foreground="White" 
-												  ToolTip="Change fps thresholds direction" IsChecked="{Binding ThresholdToggleButtonIsChecked}">
+												  ToolTip="更改FPS阈值方向" IsChecked="{Binding ThresholdToggleButtonIsChecked}">
                                             <materialDesign:ToggleButtonAssist.OnContent>
                                                 <materialDesign:PackIcon Width="25" Margin="1 0 0 0"
 												Kind="GreaterThan" />
@@ -395,7 +395,7 @@
 								                        Tag="{Binding DataContext, ElementName=DataViewUserControl}" DataTooltip="{x:Null}">
                                         <lvc:CartesianChart.ContextMenu>
                                             <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                                <MenuItem Header="Copy threshold data" Command="{Binding CopyFPSThresholdDataCommand}"/>
+                                                <MenuItem Header="复制阈值数据" Command="{Binding CopyFPSThresholdDataCommand}"/>
                                             </ContextMenu>
                                         </lvc:CartesianChart.ContextMenu>
                                         <lvc:CartesianChart.AxisX>
@@ -465,22 +465,22 @@
                                     </DataGrid.ContextMenu>
                                     <DataGrid.Columns>
                                         <DataGridTextColumn Binding="{Binding Name, Mode=OneWay}"                                                           
-                                            Header="Sensor"       
+                                            Header="传感器数据"       
                                             MinWidth="175"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                                         <DataGridTextColumn Binding="{Binding MinValue, Mode=OneWay}"
-                                            Header="Min"
+                                            Header="最小值"
                                             Width="72"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                                         <DataGridTextColumn Binding="{Binding AverageValue, Mode=OneWay}"
-                                            Header="Avg"
+                                            Header="平均值"
                                             Width="72"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                                         <DataGridTextColumn Binding="{Binding MaxValue, Mode=OneWay}"
-                                            Header="Max"
+                                            Header="最大值"
                                             Width="72"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
@@ -542,22 +542,22 @@
                                     </DataGrid.ContextMenu>
                                     <DataGrid.Columns>
                                         <DataGridTextColumn Binding="{Binding Name, Mode=OneWay}"                                                           
-                                            Header="Sensor"       
+                                            Header="传感器"       
                                             MinWidth="175"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                                         <DataGridTextColumn Binding="{Binding MinValue, Mode=OneWay}"
-                                            Header="Min"
+                                            Header="最小值"
                                             Width="72"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                                         <DataGridTextColumn Binding="{Binding AverageValue, Mode=OneWay}"
-                                            Header="Average"
+                                            Header="平均值"
                                             Width="72"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
                                         <DataGridTextColumn Binding="{Binding MaxValue, Mode=OneWay}"
-                                            Header="Max"
+                                            Header="最大值"
                                             Width="72"
                                             IsReadOnly="True"
                                             CellStyle="{StaticResource CellStyle}"/>
@@ -652,7 +652,7 @@
                 </Grid.ColumnDefinitions>
                 <!--Statistic parameters for FPS values-->
                 <StackPanel Grid.Column="0" Margin="15 8 0 8" Orientation="Horizontal" Visibility="{Binding UseFrametimeStatisticParameters, Converter={StaticResource TrueToCollapsedConverter}}">
-                    <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"><Run Text="Statistic parameter settings:"/></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"><Run Text="参数设置："/></TextBlock>
                     <materialDesign:PopupBox StaysOpen="True" ToolTipService.ShowDuration="25000"
                                              Foreground="{DynamicResource MaterialDesignBody}">
                         <materialDesign:PopupBox.ToolTip>
@@ -709,17 +709,17 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="Maximum" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="最大值" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="0" Grid.Column="1" IsChecked="{Binding UseMaxStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                                 <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="99% percentile" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="1" Grid.Column="1" IsChecked="{Binding UseP99QuantileStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                                 <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="95% percentile" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="2" Grid.Column="1" IsChecked="{Binding UseP95QuantileStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}" />
-                                <TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="Average" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="平均值" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="3" Grid.Column="1" IsChecked="{Binding UseAverageStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="GPU-Busy Average(only ms)" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="GPU-Busy 平均(only ms)" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="4" Grid.Column="1" IsChecked="{Binding UseGpuActiveAverageStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="Median" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="中位数" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="5" Grid.Column="1" IsChecked="{Binding UseMedianStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                                 <TextBlock Margin="5" Grid.Row="6" Grid.Column="0" Text="5% percentile" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="6" Grid.Column="1" IsChecked="{Binding UseP5QuantileStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
@@ -731,17 +731,17 @@
                                 <ToggleButton Margin="5" Grid.Row="9" Grid.Column="1" IsChecked="{Binding UseP0Dot2QuantileStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                                 <TextBlock Margin="5" Grid.Row="0" Grid.Column="3" Text="0.1% percentile" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="0" Grid.Column="5" IsChecked="{Binding UseP0Dot1QuantileStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="1" Grid.Column="3" Text="1% low average" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="1" Grid.Column="3" Text="1% low 平均" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="1" Grid.Column="4" IsChecked="{Binding UseP1LowAverageStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                                 <TextBlock Margin="5" Grid.Row="2" Grid.Column="3" Text="GPU-Busy 1% high average(only ms)" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="2" Grid.Column="4" IsChecked="{Binding UseGpuActiveP1LowAverageStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="3" Grid.Column="3" Text="0.1% low average" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="3" Grid.Column="3" Text="0.1% low 平均" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="3" Grid.Column="4" IsChecked="{Binding UseP0Dot1LowAverageStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                                 <TextBlock Margin="5" Grid.Row="4" Grid.Column="3" Text="1% low integral" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="4" Grid.Column="4" IsChecked="{Binding UseP1LowIntegralStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                                 <TextBlock Margin="5" Grid.Row="5" Grid.Column="3" Text="0.1% low integral" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="5" Grid.Column="4" IsChecked="{Binding UseP0Dot1LowIntegralStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="6" Grid.Column="3" Text="Minimum" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="6" Grid.Column="3" Text="最小值" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="6" Grid.Column="4" IsChecked="{Binding UseMinStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                                 <TextBlock Margin="5" Grid.Row="7" Grid.Column="3" Text="Adaptive STDEV" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="7" Grid.Column="4" IsChecked="{Binding UseAdaptiveSTDStatisticParameter}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
@@ -755,7 +755,7 @@
                 </StackPanel>
                 <!--Statistic parameters for Frametime values-->
                 <StackPanel Grid.Column="0" Margin="15 8 0 8" Orientation="Horizontal" Visibility="{Binding UseFrametimeStatisticParameters, Converter={StaticResource TrueToVisibleConverter}}">
-                    <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"><Run Text="Statistic parameter settings:"/></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"><Run Text="参数设置："/></TextBlock>
                     <materialDesign:PopupBox StaysOpen="True" ToolTipService.ShowDuration="25000"
                                              Foreground="{DynamicResource MaterialDesignBody}">
                         <materialDesign:PopupBox.ToolTip>
@@ -857,7 +857,7 @@
                     </materialDesign:PopupBox>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Margin="30 8 0 8" Orientation="Horizontal">
-                    <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"><Run Text="Additional graphs:"/></TextBlock>
+                    <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"><Run Text="额外图表信息"/></TextBlock>
                     <materialDesign:PopupBox StaysOpen="True" ToolTipService.ShowDuration="25000" IsEnabled= "{Binding AdditionalGraphsEnabled}"
                                              Foreground="{DynamicResource MaterialDesignBody}">
                         <materialDesign:PopupBox.ToolTip>
@@ -892,17 +892,17 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="Total CPU load" VerticalAlignment="Center"
+                                    <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="CPU整体负载" VerticalAlignment="Center"
                                                Visibility="{Binding IsCpuLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="0" Grid.Column="1" IsChecked="{Binding ShowCpuLoad}" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show CPU usage graph" 
                                                   Visibility="{Binding IsCpuLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
 
-                                    <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="Max. CPU thread load" VerticalAlignment="Center"
+                                    <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="最大CPU线程负载" VerticalAlignment="Center"
                                                Visibility="{Binding IsCpuMaxLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="1" Grid.Column="1" IsChecked="{Binding ShowCpuMaxThreadLoad}" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show max CPU thread usage graph" 
                                                   Visibility="{Binding IsCpuMaxLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
 
-                                    <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="GPU load" VerticalAlignment="Center"
+                                    <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="显卡负载" VerticalAlignment="Center"
                                                Visibility="{Binding IsGpuLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="2" Grid.Column="1" IsChecked="{Binding ShowGpuLoad}" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show GPU usage graph" 
                                                   Visibility="{Binding IsGpuLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
@@ -911,12 +911,12 @@
                                     <ToggleButton Visibility="{Binding IsGpuPowerLimitAvailable, Converter={StaticResource FalseToCollapsedConverter}}" Margin="5" Grid.Row="3" Grid.Column="1" IsChecked="{Binding ShowGpuPowerLimit}" 
                                                   Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show GPU power limit" />
                                     
-                                    <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="PC Latency" VerticalAlignment="Center"
+                                    <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="PC延迟" VerticalAlignment="Center"
                                                Visibility="{Binding IsPcLatencyAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="4" Grid.Column="1" IsChecked="{Binding ShowPcLatency}" Visibility="{Binding IsPcLatencyAvailable, Converter={StaticResource FalseToCollapsedConverter}}"
                                                   Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show PC latency graph" />
                                     
-                                    <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="GPU-Busy times" VerticalAlignment="Center"
+                                    <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="显卡满载时间" VerticalAlignment="Center"
                                                Visibility="{Binding IsGpuActiveChartAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="5" Grid.Column="1" IsChecked="{Binding ShowGpuActiveChart}" Visibility="{Binding IsGpuActiveChartAvailable, Converter={StaticResource FalseToCollapsedConverter}}"
                                                   Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show GPU-Busy time in frametime graphs" />
@@ -927,21 +927,21 @@
                 </StackPanel>
                 <StackPanel Grid.Column="3" HorizontalAlignment="Right" Orientation="Horizontal">
                     <StackPanel Margin="10 0 0 0" VerticalAlignment="Center"  Orientation="Horizontal">
-                        <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="Show aggregation:"/></TextBlock>
+                        <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="展示合并："/></TextBlock>
                         <ToggleButton VerticalAlignment="Center" Margin="10 0 0 0" Style="{StaticResource MaterialDesignSwitchToggleButton}" IsChecked="{Binding ShowAggregationSeparators}"
 								  ToolTip="Show separator lines for the different runs within the session"/>
                     </StackPanel>
                     <StackPanel Margin="10 0 0 0" VerticalAlignment="Center"  Orientation="Horizontal">
-                        <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="Custom title:"/></TextBlock>
+                        <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="自定义标题："/></TextBlock>
                         <ToggleButton x:Name="ShowCustomTitleToggleButton" VerticalAlignment="Center" Margin="10 0 0 0" Style="{StaticResource MaterialDesignSwitchToggleButton}"
 								  ToolTip="Show custom title edit box"/>
                     </StackPanel>
                     <StackPanel  Margin="10 0 0 0" VerticalAlignment="Center" Orientation="Horizontal">
-                        <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="Remove outliers:"/></TextBlock>
+                        <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="去除离群值："/></TextBlock>
                         <ToggleButton Margin="10 0 0 0" VerticalAlignment="Center" IsChecked="{Binding RemoveOutliers}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                     </StackPanel>
                     <StackPanel Margin="10 0 5 0" VerticalAlignment="Center" Orientation="Horizontal">
-                        <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="Range slider:"/></TextBlock>
+                        <TextBlock Foreground="{DynamicResource MaterialDesignBody}"><Run Text="范围滑块："/></TextBlock>
                         <ToggleButton x:Name="RangeSliderActiveToggleButton" VerticalAlignment="Center" Margin="10 0 0 0" Style="{StaticResource MaterialDesignSwitchToggleButton}"
 									  IsChecked="{Binding IsRangeSliderActive}"/>
                     </StackPanel>
@@ -951,7 +951,7 @@
             <Expander Margin="0 -6 0 0" Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" ExpandDirection="Left" materialDesign:ExpanderAssist.VerticalHeaderPadding="5"
                       Foreground="{DynamicResource MaterialDesignBody}" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
                 <Expander.Header>
-                    <TextBlock Text="System Info" RenderTransformOrigin=".5,.5" FontSize="14" HorizontalAlignment="Center">
+                    <TextBlock Text="系统信息" RenderTransformOrigin=".5,.5" FontSize="14" HorizontalAlignment="Center">
                         <TextBlock.LayoutTransform>
                             <RotateTransform Angle="90" />
                         </TextBlock.LayoutTransform>

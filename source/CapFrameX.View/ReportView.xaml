@@ -314,79 +314,103 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="Auto"/>
                             </Grid.ColumnDefinitions>
-                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="Creation date" VerticalAlignment="Center"/>
-                            <ToggleButton Margin="5" Grid.Row="0" Grid.Column="1" IsChecked="{Binding ShowCreationDate}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="Creation time" VerticalAlignment="Center"/>
-                            <ToggleButton Margin="5" Grid.Row="1" Grid.Column="1" IsChecked="{Binding ShowCreationTime}" Style="{StaticResource MaterialDesignSwitchToggleButton}" />
-                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="Samples" VerticalAlignment="Center"/>
-                            <ToggleButton Margin="5" Grid.Row="2" Grid.Column="1" IsChecked="{Binding ShowNumberOfSamples}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="Recording time" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5"
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Text="创建日期"
+                                    VerticalAlignment="Center"/>
+                            <ToggleButton Margin="5"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    IsChecked="{Binding ShowCreationDate}"
+                                    Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
+                            <TextBlock Margin="5"
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    Text="创建时间"
+                                    VerticalAlignment="Center"/>
+                            <ToggleButton Margin="5"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    IsChecked="{Binding ShowCreationTime}"
+                                    Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
+                            <TextBlock Margin="5"
+                                    Grid.Row="2"
+                                    Grid.Column="0"
+                                    Text="样本数"
+                                    VerticalAlignment="Center"/>
+                            <ToggleButton Margin="5"
+                                    Grid.Row="2"
+                                    Grid.Column="1"
+                                    IsChecked="{Binding ShowNumberOfSamples}"
+                                    Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
+                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="录制时间" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="3" Grid.Column="1" IsChecked="{Binding ShowRecordTime}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="CPU name" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="CPU 名称" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="4" Grid.Column="1" IsChecked="{Binding ShowCpuName}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="GPU name" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="GPU 名称" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="5" Grid.Column="1" IsChecked="{Binding ShowGpuName}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="6" Grid.Column="0" Text="RAM name" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="6" Grid.Column="0" Text="RAM 名称" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="6" Grid.Column="1" IsChecked="{Binding ShowRamName}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="7" Grid.Column="0" Text="Comment" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="7" Grid.Column="0" Text="评论" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="7" Grid.Column="1" IsChecked="{Binding ShowComment}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="3" Text="Maximum" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="3" Text="最大值" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="0" Grid.Column="4" IsChecked="{Binding ShowMaxFPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="3" Text="99% percentile" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="3" Text="99% 百分位" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="1" Grid.Column="4" IsChecked="{Binding ShowP99FPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="3" Text="95% percentile" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="3" Text="95% 百分位" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="2" Grid.Column="4" IsChecked="{Binding ShowP95FS}" Style="{StaticResource MaterialDesignSwitchToggleButton}" />
-                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="3" Text="Average" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="3" Text="平均值" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="3" Grid.Column="4" IsChecked="{Binding ShowAverageFPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="3" Text="Median" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="3" Text="中位数" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="4" Grid.Column="4" IsChecked="{Binding ShowMedianFPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="5" Grid.Column="3" Text="5% percentile" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="5" Grid.Column="3" Text="5% 百分位" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="5" Grid.Column="4" IsChecked="{Binding ShowP5FPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="6" Grid.Column="3" Text="1% percentile" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="6" Grid.Column="3" Text="1% 百分位" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="6" Grid.Column="4" IsChecked="{Binding ShowP1FPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="7" Grid.Column="3" Text="0.2% percentile" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="7" Grid.Column="3" Text="0.2% 百分位" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="7" Grid.Column="4" IsChecked="{Binding ShowP0Dot2FPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="8" Grid.Column="3" Text="0.1% percentile" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="8" Grid.Column="3" Text="0.1% 百分位" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="8" Grid.Column="4" IsChecked="{Binding ShowP0Dot1FPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="9" Grid.Column="3" Text="1% low average" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="9" Grid.Column="3" Text="1% 低平均值" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="9" Grid.Column="4" IsChecked="{Binding ShowP1LowAverageFPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="6" Text="0.1% low average" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="6" Text="0.1% 低平均值" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="0" Grid.Column="7" IsChecked="{Binding ShowP0Dot1LowAverageFPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="6" Text="1% low integral" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="6" Text="1% 低积分" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="1" Grid.Column="7" IsChecked="{Binding ShowP1LowIntegralFPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="6" Text="0.1% low integral" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="6" Text="0.1% 低积分" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="2" Grid.Column="7" IsChecked="{Binding ShowP0Dot1LowIntegralFPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="6" Text="Minimum" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="6" Text="最小值" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="3" Grid.Column="7" IsChecked="{Binding ShowMinFPS}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="6" Text="Adaptive STDEV" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="6" Text="自适应标准差" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="4" Grid.Column="7" IsChecked="{Binding ShowAdaptiveSTD}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                             <TextBlock Margin="5" Grid.Row="5" Grid.Column="6" Text="CPU FPS/10W" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="5" Grid.Column="7" IsChecked="{Binding ShowCpuFpsPerWatt}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                             <TextBlock Margin="5" Grid.Row="6" Grid.Column="6" Text="GPU FPS/10W" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="6" Grid.Column="7" IsChecked="{Binding ShowGpuFpsPerWatt}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="7" Grid.Column="6" Text="App latency (ms)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="7" Grid.Column="6" Text="应用延迟 (ms)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="7" Grid.Column="7" IsChecked="{Binding ShowAppLatency}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="8" Grid.Column="6" Text="GPU-Busy Time Avg.(ms)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="8" Grid.Column="6" Text="GPU-Busy 时间平均值 (ms)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="8" Grid.Column="7" IsChecked="{Binding ShowGpuActiveTimeAverage}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="9" Grid.Column="6" Text="GPU-Busy time dev.(%)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="9" Grid.Column="6" Text="GPU-Busy 时间偏差 (%)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="9" Grid.Column="7" IsChecked="{Binding ShowGpuActiveTimeDeviation}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="9" Text="CPU max thread (%)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="9" Text="CPU最大占用 (%)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="0" Grid.Column="10" IsChecked="{Binding ShowCpuMaxUsage}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="9" Text="CPU power (W)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="1" Grid.Column="9" Text="CPU功耗 (W)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="1" Grid.Column="10" IsChecked="{Binding ShowCpuPower}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="9" Text="CPU clock (MHz)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="9" Text="CPU频率 (MHz)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="2" Grid.Column="10" IsChecked="{Binding ShowCpuMaxClock}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="9" Text="CPU temp (°C)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="3" Grid.Column="9" Text="CPU温度 (°C)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="3" Grid.Column="10" IsChecked="{Binding ShowCpuTemp}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="9" Text="GPU usage (%)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="4" Grid.Column="9" Text="显卡使用率 (%)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="4" Grid.Column="10" IsChecked="{Binding ShowGpuUsage}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="5" Grid.Column="9" Text="GPU power (W)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="5" Grid.Column="9" Text="显卡功耗 (W)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="5" Grid.Column="10" IsChecked="{Binding ShowGpuPower}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="6" Grid.Column="9" Text="GPU TBP Sim (W)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="6" Grid.Column="9" Text="显卡TBP Sim (W)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="6" Grid.Column="10" IsChecked="{Binding ShowGpuTBPSim}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="7" Grid.Column="9" Text="GPU clock (MHz)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="7" Grid.Column="9" Text="显卡频率 (MHz)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="7" Grid.Column="10" IsChecked="{Binding ShowGpuClock}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="8" Grid.Column="9" Text="GPU temp (°C)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="8" Grid.Column="9" Text="显卡温度 (°C)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="8" Grid.Column="10" IsChecked="{Binding ShowGpuTemp}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                         </Grid>
                     </materialDesign:Card>

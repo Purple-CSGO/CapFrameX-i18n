@@ -44,8 +44,8 @@ namespace CapFrameX.ViewModel
         private bool _saveButtonIsEnable;
         private bool _isActive;
         private bool _aggregateButtonIsEnable = true;
-        private string _aggregationButtonText = "Evaluate" + Environment.NewLine + "multiple entries";
-        private string _sensorStatisticsText = "Sensor statistics for selected record";
+        private string _aggregationButtonText = "评估" + Environment.NewLine + "多条记录";
+        private string _sensorStatisticsText = "所选记录的传感器数据";
         private bool _selectedRecordChanged;
 
         public IFileRecordInfo RecordInfo { get; private set; }
@@ -228,7 +228,7 @@ namespace CapFrameX.ViewModel
                             AggregateSensorDataOfSessions(sessions);
 
                         AggregateButtonText = "Evaluate" + Environment.NewLine + "multiple entries";
-                        SensorStatisticsText = "Sensor statistics for multiple selected records";
+                        SensorStatisticsText = "多个所选记录的传感器数据";
                         AggregateButtonIsEnable = true;
                     }
                 });
@@ -267,7 +267,7 @@ namespace CapFrameX.ViewModel
                                 UpdateSensorSessionReport(msg.CurrentSession);
                                 CopyRawSensorsEnable = true;
                                 _selectedRecordChanged = true;
-                                SensorStatisticsText = "Sensor statistics for selected record";
+                                SensorStatisticsText = "所选记录的传感器数据";
                             });
         }
 

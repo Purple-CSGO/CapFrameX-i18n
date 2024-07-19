@@ -71,16 +71,16 @@
 							<RowDefinition Height="120"></RowDefinition>
 						</Grid.RowDefinitions>
 						<StackPanel Orientation="Horizontal" Margin="15 0 0 10" HorizontalAlignment="Left">
-							<TextBlock Margin="0 0 10 0" Text="Overlay Items" FontSize="18" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
+							<TextBlock Margin="0 0 10 0" Text="覆盖项目" FontSize="18" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"/>
 							<materialDesign:PackIcon Width="20" Height="20" Kind="Information" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTipService.ShowDuration="25000" ToolTipService.Placement="Top">
 								<materialDesign:PackIcon.ToolTip>
-									<TextBlock Width="275" Text="特殊 CX 叠加项目：&#xA;
+									<TextBlock Width="275" Text="特殊 CX 覆盖项目：&#xA;
                                                         &#xA;捕获服务状态：
                                                         &#xA;捕获服务的当前状态（发现进程、发现多个进程、运行基准......）。&#xA;
                                                         &#xA;捕获计时器：
                                                         &#xA;当前活动捕捉的剩余时间（设定时间）或当前捕捉时间（无限制）&#xA;
                                                         &#xA;运行历史：
-                                                        &#xA;显示以前的运行数据和汇总结果（在捕获页面上进行设置） &#xA;
+                                                        &#xA;显示以前的运行数据和合并结果（在捕获页面上进行设置） &#xA;
                                                         &#xA;实时 FPS 指标:
                                                         &#xA;平均值和百分位数的平均值 FPS&#xA;
                                                         &#xA;卡顿时间：
@@ -96,7 +96,7 @@
 						<StackPanel Grid.Row="0" Margin="0 0 0 10" Orientation="Horizontal" HorizontalAlignment="Right">
 
 							<Button Width="28" Height="28" Margin="0 0 10 0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
-									ToolTip="Save selection to other configs" Click="CopyButton_Click" 
+									ToolTip="将所选保存到其他配置" Click="CopyButton_Click" 
 									materialDesign:RippleAssist.Feedback="#DD000000">
 								<materialDesign:PackIcon Kind="ContentCopy" Height="22" Width="22"/>
 							</Button>
@@ -135,7 +135,7 @@
 							</Popup>
 
 							<Button Width="28" Height="28" Margin="0 0 10 0" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
-                            ToolTip="Save selection to current config" Command="{Binding SaveConfigCommand}" CommandParameter="3" IsEnabled="{Binding SaveButtonIsEnable}"
+                            ToolTip="将所选保存到当前配置" Command="{Binding SaveConfigCommand}" CommandParameter="3" IsEnabled="{Binding SaveButtonIsEnable}"
                             materialDesign:RippleAssist.Feedback="#DD000000">
 								<materialDesign:PackIcon Kind="ContentSaveSettings" Height="22" Width="22" />
 							</Button>
@@ -164,7 +164,7 @@
                                  Foreground="{DynamicResource MaterialDesignBody}"
                                  Command="{Binding ConfigSwitchCommand}" CommandParameter="2"/>
 							<Button Width="28" Height="28" Margin="7 0 10 0" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
-                            ToolTip="Reset to defaults" Command="{Binding OpenResetDialogCommand}"
+                            ToolTip="恢复默认" Command="{Binding OpenResetDialogCommand}"
                             materialDesign:RippleAssist.Feedback="#DD000000">
 								<materialDesign:PackIcon Kind="Restore" Height="22" Width="22" />
 							</Button>
@@ -180,7 +180,7 @@
 					          dragdrop:DragDrop.UseDefaultDragAdorner="True"
 					          dragdrop:DragDrop.DefaultDragAdornerOpacity="0.5"
 					          dragdrop:DragDrop.UseDefaultEffectDataTemplate="False"
-                              ToolTip="Drag &amp; Drop to change order"
+                              ToolTip="拖拽改变顺序"
                               ToolTipService.VerticalOffset="-6"
                               Style="{StaticResource MaterialDesignDataGrid}"
                               Background="{DynamicResource MaterialDesignBackground}">
@@ -277,13 +277,13 @@
 									</DataGridCheckBoxColumn.CellStyle>
 								</DataGridCheckBoxColumn>
 								<DataGridTextColumn Binding="{Binding Description, Mode=TwoWay}"
-                                            Header="Description"
+                                            Header="描述"
                                             IsReadOnly="True"/>
 								<DataGridTextColumn Binding="{Binding GroupName, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
-                                            Header="Group Name"
+                                            Header="分组名"
                                             IsReadOnly="False"/>
 								<DataGridCheckBoxColumn Binding="{Binding ShowGraph, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                            Header="Graph">
+                                            Header="图表">
 									<DataGridCheckBoxColumn.CellStyle>
 										<Style TargetType="DataGridCell">
 											<Setter Property="Visibility" 
@@ -518,7 +518,7 @@
 														<CheckBox Margin="5 0 0 0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" IsChecked="{Binding AutoDisableOverlay, Mode=TwoWay}" Style="{StaticResource MaterialDesignCheckBox}" ToolTipService.ShowDuration="25000">
 															<CheckBox.ToolTip>
 																<ToolTip>
-																	<TextBlock Width="275" Text="如果选中此选项，则在运行基准时将禁用全局 RTSS OSD。对于 32 位应用程序，将仅禁用 CX 叠加项目。" TextWrapping="Wrap">
+																	<TextBlock Width="275" Text="如果选中此选项，则在运行基准时将禁用全局 RTSS OSD。对于 32 位应用程序，将仅禁用 CX 覆盖项目。" TextWrapping="Wrap">
 																	</TextBlock>
 																</ToolTip>
 															</CheckBox.ToolTip>
@@ -531,14 +531,14 @@
 														<CheckBox Margin="5 0 0 0" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" IsChecked="{Binding OSDCustomPosition, Mode=TwoWay}" Style="{StaticResource MaterialDesignCheckBox}" ToolTipService.ShowDuration="25000">
 															<CheckBox.ToolTip>
 																<ToolTip>
-																	<TextBlock Width="275" Text="增加手动设置 CX 叠加项目（非全局 OSD）位置的选项" TextWrapping="Wrap">
+																	<TextBlock Width="275" Text="增加手动设置 CX 覆盖项目（非全局 OSD）位置的选项" TextWrapping="Wrap">
 																	</TextBlock>
 																</ToolTip>
 															</CheckBox.ToolTip>
 														</CheckBox>
 
-														<TextBlock Grid.Row="4" Grid.Column="0" Margin="5 0 0 0" VerticalAlignment="Center" Text="CX 叠加位置" Visibility="{Binding OSDCustomPosition, Converter={StaticResource TrueToVisibleConverter}}"></TextBlock>
-														<StackPanel Grid.Row="4" Grid.Column="1" Margin="8 0 0 0" Orientation="Horizontal" ToolTip="更改 CX 叠加项目的位置（而非全局 OSD 的位置）" Visibility="{Binding OSDCustomPosition, Converter={StaticResource TrueToVisibleConverter}}">
+														<TextBlock Grid.Row="4" Grid.Column="0" Margin="5 0 0 0" VerticalAlignment="Center" Text="CX 覆盖位置" Visibility="{Binding OSDCustomPosition, Converter={StaticResource TrueToVisibleConverter}}"></TextBlock>
+														<StackPanel Grid.Row="4" Grid.Column="1" Margin="8 0 0 0" Orientation="Horizontal" ToolTip="更改 CX 覆盖项目的位置（而非全局 OSD 的位置）" Visibility="{Binding OSDCustomPosition, Converter={StaticResource TrueToVisibleConverter}}">
 															<TextBox Width="30" Height="25" Text="{Binding OSDPositionX, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" PreviewTextInput="IntegerNumberValidationTextBox"></TextBox>
 															<TextBlock VerticalAlignment="Center" Margin="5 0 5 0" Text="x"></TextBlock>
 															<TextBox Width="30" Height="25" Text="{Binding OSDPositionY, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalContentAlignment="Center" PreviewTextInput="IntegerNumberValidationTextBox"></TextBox>
@@ -558,7 +558,7 @@
 								<RowDefinition Height="*"/>
 							</Grid.RowDefinitions>
 							<StackPanel Grid.Row="0" Orientation="Horizontal">
-								<TextBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="Toggle Overlay Hotkey" Width="140" Height="45" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" FontSize="14"
+								<TextBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="覆盖切换快捷键" Width="140" Height="45" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" FontSize="14"
 										 IsReadOnly="True" IsReadOnlyCaretVisible="False" IsUndoEnabled="False" PreviewKeyDown="OverlayHotkeyTextBox_PreviewKeyDown" materialDesign:HintAssist.HintOpacity=".8"
 										 ToolTip="Hotkey combinable with up to two modifier keys (Ctrl, Shift or Alt)" Foreground="{DynamicResource MaterialDesignBody}">
 									<Binding Path="OverlayHotkey" ElementName="OverlayViewControl" Mode="OneWay" TargetNullValue="&lt; not set &gt;">
@@ -567,7 +567,7 @@
 										</Binding.ValidationRules>
 									</Binding>
 								</TextBox>
-								<TextBox Margin="25 0 0 0" materialDesign:HintAssist.Hint="Toggle Config Hotkey" Width="132" Height="45" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" FontSize="14"
+								<TextBox Margin="25 0 0 0" materialDesign:HintAssist.Hint="设置切换快捷键" Width="132" Height="45" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" FontSize="14"
 								IsReadOnly="True" IsReadOnlyCaretVisible="False" IsUndoEnabled="False" PreviewKeyDown="ConfigHotkeyTextBox_PreviewKeyDown" materialDesign:HintAssist.HintOpacity=".8"
 								ToolTip="Hotkey combinable with up to two modifier keys (Ctrl, Shift or Alt)" Foreground="{DynamicResource MaterialDesignBody}">
 									<Binding Path="OverlayConfigHotkey" ElementName="OverlayViewControl" Mode="OneWay" TargetNullValue="&lt; not set &gt;">
@@ -578,7 +578,7 @@
 								</TextBox>
 								<ComboBox Margin="25 5 0 0" 
 											materialDesign:ComboBoxAssist.ClassicMode="True"
-											materialDesign:HintAssist.Hint="Refresh Period (ms)" materialDesign:HintAssist.HintOpacity=".8"
+											materialDesign:HintAssist.Hint="刷新区间 (ms)" materialDesign:HintAssist.HintOpacity=".8"
 											materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="200" Width="110" Height="40"
 											MouseLeave="OSDRefreshPeriodComboBox_MouseLeave" FontSize="14"
                                             ToolTip="Overlay refresh period in ms"
@@ -590,7 +590,7 @@
 								</ComboBox>
 							</StackPanel>
 							<StackPanel Grid.Row="1" Orientation="Horizontal">
-								<TextBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="Reset Metrics Hotkey" Width="140" Height="45" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" FontSize="14"
+								<TextBox Margin="0 0 0 0" materialDesign:HintAssist.Hint="指标重置快捷键" Width="140" Height="45" Style="{DynamicResource MaterialDesignFloatingHintTextBox}" FontSize="14"
 										IsReadOnly="True" IsReadOnlyCaretVisible="False" IsUndoEnabled="False" PreviewKeyDown="ResetMetricsHotkeyTextBox_PreviewKeyDown" materialDesign:HintAssist.HintOpacity=".8"
 										ToolTip="Hotkey combinable with up to two modifier keys (Ctrl, Shift or Alt)" Foreground="{DynamicResource MaterialDesignBody}">
 									<Binding Path="ResetMetricsHotkey" ElementName="OverlayViewControl" Mode="OneWay" TargetNullValue="&lt; not set &gt;">
@@ -601,7 +601,7 @@
 								</TextBox>
 								<ComboBox Margin="25 5 0 0" 
 											materialDesign:ComboBoxAssist.ClassicMode="True"
-											materialDesign:HintAssist.Hint="Metric Interval (s)" materialDesign:HintAssist.HintOpacity=".8"
+											materialDesign:HintAssist.Hint="指标时间 (s)" materialDesign:HintAssist.HintOpacity=".8"
 											materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="200" Width="135" Height="40"
 											MouseLeave="MetricIntervalComboBox_MouseLeave" FontSize="14"
                                             ToolTip="Real-time metrics calculation time frame in s"
@@ -799,8 +799,8 @@
 								<ColumnDefinition Width="40"/>
 								<ColumnDefinition Width="20"/>
 							</Grid.ColumnDefinitions>
-							<TextBlock Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="Format Options" FontSize="16"/>
-							<TextBlock Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center" Text="Group name font size"></TextBlock>
+							<TextBlock Grid.Row="0" Grid.ColumnSpan="3" VerticalAlignment="Center" HorizontalAlignment="Center" Text="格式选项" FontSize="16"/>
+							<TextBlock Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center" Text="组名字号"></TextBlock>
 							<TextBox Grid.Row="1" Grid.Column="1" Width="25" VerticalAlignment="Center" PreviewKeyDown="LostFocus_PreviewKeyDown" PreviewTextInput="NumberValidationTextBox" 
                                          ToolTip="Positive percentage = superscript&#10;Negative percentage = subscript"
                                          Text="{Binding SelectedOverlayEntry.GroupFontSize, UpdateSourceTrigger=LostFocus}">
@@ -895,10 +895,10 @@
 						</DataGrid.Resources>
 						<DataGrid.Columns>
 							<DataGridTextColumn Binding="{Binding GroupName, Mode=OneWay}"
-                                            Header="Group name"
+                                            Header="分组名"
                                             IsReadOnly="True"/>
 							<DataGridTextColumn Binding="{Binding GroupSeparators, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
-                                            Header="Separators"
+                                            Header="分割器"
                                             IsReadOnly="False"/>
 						</DataGrid.Columns>
 					</DataGrid>
@@ -913,21 +913,21 @@
 							<RowDefinition Height="20"></RowDefinition>
 							<RowDefinition Height="1*"></RowDefinition>
 						</Grid.RowDefinitions>
-						<TextBlock Grid.Row="0" Margin="5" HorizontalAlignment="Center" Text="Apply to multiple Entries" Width="180" 
+						<TextBlock Grid.Row="0" Margin="5" HorizontalAlignment="Center" Text="应用到多个条目" Width="180" 
                                        TextWrapping="Wrap" TextAlignment="Center" FontSize="16">
 						</TextBlock>
 						<StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
 							<CheckBox IsChecked="{Binding Checkboxes.Colors}" Margin="5">
-								<TextBlock>Colors</TextBlock>
+								<TextBlock>颜色</TextBlock>
 							</CheckBox>
 							<CheckBox IsChecked="{Binding Checkboxes.Limits}" Margin="5">
-								<TextBlock>Limits</TextBlock>
+								<TextBlock>限制</TextBlock>
 							</CheckBox>
 							<CheckBox IsChecked="{Binding Checkboxes.Format}" Margin="5">
-								<TextBlock>Format</TextBlock>
+								<TextBlock>格式</TextBlock>
 							</CheckBox>
 						</StackPanel>
-						<TextBlock Grid.Row="2"  Text="Group Name" TextAlignment="Left" Margin="10 5 0 0">
+						<TextBlock Grid.Row="2"  Text="分组名" TextAlignment="Left" Margin="10 5 0 0">
 						</TextBlock>
 						<StackPanel Grid.Row="3" Margin="10 0 0 0" Orientation="Horizontal" VerticalAlignment="Center">
 							<Button Width="28" Height="28" Margin="5 0 10 0" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
@@ -937,7 +937,7 @@
 							</Button>
 							<TextBlock Margin="0 7 0 0" Text="{Binding SelectedOverlayItemGroupName}" Width="140" TextAlignment="Left" TextWrapping="Wrap" FontWeight="Bold"/>
 						</StackPanel>
-						<TextBlock Grid.Row="4" TextAlignment="Left" Text="Sensor Type" Margin="10 5 0 0">
+						<TextBlock Grid.Row="4" TextAlignment="Left" Text="传感器类型" Margin="10 5 0 0">
 						</TextBlock>
 						<StackPanel Grid.Row="5" Margin="10 0 0 0" Orientation="Horizontal" VerticalAlignment="Center">
 							<Button Width="28" Height="28" Margin="5 0 10 0" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
@@ -952,7 +952,7 @@
                 <Grid  Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Top" Height="105">
 					<Border Margin="5" Background="Transparent" BorderThickness="0.3" BorderBrush="{DynamicResource MaterialDesignBody}">
 						<Grid>
-							<TextBlock Margin="0 10 0 0" HorizontalAlignment="Center" Text="Hardware Controller" FontSize="16"/>
+							<TextBlock Margin="0 10 0 0" HorizontalAlignment="Center" Text="硬件控制器" FontSize="16"/>
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 20 0 0">
 							<StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
 								<TextBlock Text="Thread Affinity Controller"/>

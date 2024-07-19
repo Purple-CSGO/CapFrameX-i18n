@@ -56,7 +56,7 @@
 			</Grid.RowDefinitions>
 			<TextBlock Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="450" x:Name="DragAndDropInfoTextTextBlock"
                    TextAlignment="Center" TextWrapping="Wrap" FontSize="17" Visibility="{Binding ShowHelpText, Converter={StaticResource TrueToVisibleConverter}}"  Grid.ZIndex="1"                     
-                   Text="拖拽项目到这里或者双击添加到记录列表" Foreground="{DynamicResource MaterialDesignBody}"
+                   Text="拖拽项目到这里或者双击添加" Foreground="{DynamicResource MaterialDesignBody}"
 				   dragdrop:DragDrop.IsDragSource="False"
 				   dragdrop:DragDrop.IsDropTarget="True"
 				   dragdrop:DragDrop.DropHandler="{Binding}"

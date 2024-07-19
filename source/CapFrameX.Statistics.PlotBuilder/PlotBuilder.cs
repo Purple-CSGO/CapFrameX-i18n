@@ -30,7 +30,7 @@ namespace CapFrameX.Statistics.PlotBuilder
                 {
                     Key = EPlotAxis.YAXISPERCENTAGE.GetDescription(),
                     Position = AxisPosition.Right,
-                    Title = "Percentage [%]",
+                    Title = "百分比 [%]",
                     FontSize = 13,
                     MajorGridlineStyle = LineStyle.None,
                     MajorStep = 10,
@@ -47,7 +47,7 @@ namespace CapFrameX.Statistics.PlotBuilder
                 {
                     Key = EPlotAxis.YAXISPOWER.GetDescription(),
                     Position = AxisPosition.Right,
-                    Title = "Power [W]",
+                    Title = "功耗 [W]",
                     FontSize = 13,
                     MajorGridlineStyle = LineStyle.None,
                     MinorTickSize = 0,
@@ -61,7 +61,7 @@ namespace CapFrameX.Statistics.PlotBuilder
                 {
                     Key = EPlotAxis.YAXISCLOCK.GetDescription(),
                     Position = AxisPosition.Right,
-                    Title = "Clock [MHz]",
+                    Title = "频率 [MHz]",
                     FontSize = 13,
                     MajorGridlineStyle = LineStyle.None,
                     MinorTickSize = 0,
@@ -75,7 +75,7 @@ namespace CapFrameX.Statistics.PlotBuilder
                 {
                     Key = EPlotAxis.YAXISTEMPERATURE.GetDescription(),
                     Position = AxisPosition.Right,
-                    Title = "Temperature [°C]",
+                    Title = "温度 [°C]",
                     FontSize = 13,
                     MajorGridlineStyle = LineStyle.None,
                     MinorTickSize = 0,
@@ -89,7 +89,7 @@ namespace CapFrameX.Statistics.PlotBuilder
                 {
                     Key = EPlotAxis.YAXISVOLTAGE.GetDescription(),
                     Position = AxisPosition.Right,
-                    Title = "Voltage [V]",
+                    Title = "电压 [V]",
                     FontSize = 13,
                     MajorGridlineStyle = LineStyle.None,
                     MinorTickSize = 0,
@@ -103,7 +103,7 @@ namespace CapFrameX.Statistics.PlotBuilder
                 {
                     Key = EPlotAxis.YAXISDATA.GetDescription(),
                     Position = AxisPosition.Right,
-                    Title = "Data [GB]",
+                    Title = "数据 [GB]",
                     FontSize = 13,
                     MajorGridlineStyle = LineStyle.None,
                     MinorTickSize = 0,
@@ -118,7 +118,7 @@ namespace CapFrameX.Statistics.PlotBuilder
                 {
                     Key = EPlotAxis.XAXIS.GetDescription(),
                     Position = AxisPosition.Bottom,
-                    Title = "Recording time [s]",
+                    Title = "录制时间 [s]",
                     FontSize = 13,
                     MajorGridlineStyle = LineStyle.Solid,
                     MajorGridlineThickness = 1,
@@ -149,7 +149,7 @@ namespace CapFrameX.Statistics.PlotBuilder
                 {
                     Key = EPlotAxis.YAXISFRAMETIMES.GetDescription(),
                     Position = AxisPosition.Left,
-                    Title = "Frametime [ms]",
+                    Title = "帧生成时间 [ms]",
                     FontSize = 13,
                     MajorGridlineStyle = LineStyle.Solid,
                     MajorGridlineThickness = 1,
@@ -197,7 +197,7 @@ namespace CapFrameX.Statistics.PlotBuilder
         {
             var series = new LineSeries
             {
-                Title = "GPU load",
+                Title = "显卡负载",
                 StrokeThickness = 2.5,
                 LegendStrokeThickness = 4,
                 Color = OxyColor.FromArgb(175, 156, 210, 0),
@@ -211,7 +211,7 @@ namespace CapFrameX.Statistics.PlotBuilder
         {
             var series = new LineSeries
             {
-                Title = "CPU total load",
+                Title = "CPU整体负载",
                 StrokeThickness = 2.5,
                 LegendStrokeThickness = 4,
                 Color = OxyColor.FromArgb(175, 241, 125, 32),
@@ -240,7 +240,7 @@ namespace CapFrameX.Statistics.PlotBuilder
         {
             var series = new LineSeries
             {
-                Title = "GPU power limit",
+                Title = "GPU功耗限制",
                 LineStyle = LineStyle.None,
                 MarkerType = MarkerType.Square,
                 MarkerSize = 3,
@@ -256,7 +256,7 @@ namespace CapFrameX.Statistics.PlotBuilder
         {
             var series = new LineSeries
             {
-                Title = "PC Latency",
+                Title = "PC延迟",
                 StrokeThickness = 1,
                 LegendStrokeThickness = 4,
                 Color = OxyColor.FromArgb(255, 128, 128, 128),

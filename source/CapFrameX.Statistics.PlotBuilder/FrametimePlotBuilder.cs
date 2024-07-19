@@ -85,7 +85,7 @@ namespace CapFrameX.Statistics.PlotBuilder
 
             var frametimeSeries = new LineSeries
             {
-                Title = "Frametimes",
+                Title = "帧生成时间",
                 StrokeThickness = 1.5,
                 LegendStrokeThickness = 4,
                 Color = Constants.FrametimeColor,
@@ -94,7 +94,7 @@ namespace CapFrameX.Statistics.PlotBuilder
 
             var GpuActiveTimeSeries = new LineSeries
             {
-                Title = "GPU-Busy times",
+                Title = "显卡满载时间",
                 StrokeThickness = 1.5,
                 LegendStrokeThickness = 4,
                 Color = Constants.GpuActiveTimeColor,
@@ -103,7 +103,7 @@ namespace CapFrameX.Statistics.PlotBuilder
 
             var movingAverageSeries = new LineSeries
             {
-                Title = "Moving average",
+                Title = "移动平均",
                 StrokeThickness = 3,
                 LegendStrokeThickness = 4,
                 Color = Constants.FrametimeMovingAverageColor,
@@ -112,7 +112,7 @@ namespace CapFrameX.Statistics.PlotBuilder
 
             var stutteringSeries = new LineSeries
             {
-                Title = "Stuttering",
+                Title = "卡顿",
                 StrokeThickness = 2,
                 LegendStrokeThickness = 4,
                 LineStyle = LineStyle.Dash,
@@ -122,7 +122,7 @@ namespace CapFrameX.Statistics.PlotBuilder
 
             var lowFPSSeries = new LineSeries
             {
-                Title = "Low FPS",
+                Title = "低FPS",
                 StrokeThickness = 3,
                 LegendStrokeThickness = 4,
                 LineStyle = LineStyle.LongDash,

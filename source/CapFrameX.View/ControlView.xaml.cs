@@ -436,8 +436,8 @@ namespace CapFrameX.View
                  RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "注释").DisplayIndex,
                  RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "已合并").DisplayIndex,
                  RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "CPU").DisplayIndex,
-                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "GPU").DisplayIndex,
-                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "RAM").DisplayIndex
+                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "显卡").DisplayIndex,
+                 RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "内存").DisplayIndex
             };
         }
 
@@ -450,8 +450,8 @@ namespace CapFrameX.View
             RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "注释").DisplayIndex = indices[2];
             RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "已合并").DisplayIndex = indices[3];
             RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "CPU").DisplayIndex = indices[4];
-            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "GPU").DisplayIndex = indices[5];
-            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "RAM").DisplayIndex = indices[6];
+            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "显卡").DisplayIndex = indices[5];
+            RecordDataGrid.Columns.FirstOrDefault(c => c.Header.ToString() == "内存").DisplayIndex = indices[6];
         }
 
         // TreeView Drag & Drop from record list

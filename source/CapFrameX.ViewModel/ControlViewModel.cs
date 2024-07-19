@@ -267,7 +267,7 @@ namespace CapFrameX.ViewModel
             }
         }
 
-        public string SearchBarText => $" 在 \"{new DirectoryInfo(_appConfiguration.ObservedDirectory).Name} 中搜索\" ({RecordInfoList.Count} items)";
+        public string SearchBarText => $" 在 \"{new DirectoryInfo(_appConfiguration.ObservedDirectory).Name}\" 中搜索（{RecordInfoList.Count} 个项目）";
 
         public string ObservedDirectory { get; private set; }
 

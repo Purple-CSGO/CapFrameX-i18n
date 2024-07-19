@@ -4,9 +4,9 @@ namespace CapFrameX.ViewModel
 {
 	public enum EChartYAxisSetting
 	{
-		[Description("Full fit")]
+		[Description("占满")]
 		FullFit = 1,
-		[Description("Interquartile range")]
+		[Description("四分位距")]
 		IQR = 2,
 		[Description("0-10ms")]
 		Zero_Ten = 3,

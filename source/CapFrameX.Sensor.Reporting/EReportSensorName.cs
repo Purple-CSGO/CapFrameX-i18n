@@ -4,33 +4,33 @@ namespace CapFrameX.Sensor.Reporting
 {
 	public enum EReportSensorName
 	{
-		[Description("CPU load (%)")]
+		[Description("CPU负载 (%)")]
 		CpuUsage,
-		[Description("CPU max thread load (%)")]
+		[Description("CPU最大线程负载 (%)")]
 		CpuMaxThreadUsage,
-		[Description("CPU max clock (MHz)")]
+		[Description("CPU最大频率 (MHz)")]
 		CpuMaxClock,
-		[Description("CPU power (W)")]
+		[Description("CPU功耗 (W)")]
 		CpuPower,
-		[Description("CPU temp (°C)")]
+		[Description("CPU温度 (°C)")]
 		CpuTemp,
-		[Description("GPU load (%)")]
+		[Description("GPU温度 (%)")]
 		GpuUsage,
-		[Description("Time in GPU load limit (%)")]
+		[Description("显卡满载时间 (%)")]
 		GpuLoadLimit,
-		[Description("GPU clock (MHz)")]
+		[Description("显卡频率 (MHz)")]
 		GpuClock,
-		[Description("GPU power (W)")]
+		[Description("显卡功耗 (W)")]
 		GpuPower,
 		[Description("GPU TBP Sim (W)")]
 		GpuTBPSim,
-		[Description("GPU temp. (°C)")]
+		[Description("显卡温度 (°C)")]
 		GpuTemp,
-		[Description("GPU VRAM usage (MB)")]
+		[Description("显存占用 (MB)")]
 		VRamUsage,
-		[Description("GPU VRAM usage (GB)")]
+		[Description("显存占用 (GB)")]
 		VRamUsageGB,
-		[Description("RAM usage (GB)")]
+		[Description("内存占用 (GB)")]
 		RamUsage,
 	}
 }

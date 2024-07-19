@@ -927,7 +927,7 @@ namespace CapFrameX.ViewModel
             {
                 if (!ProcessesToCapture.Any())
                 {
-                    CaptureStateInfo = "进程列表为空." + Environment.NewLine + $"启动任意应用并按下 \"{CaptureHotkeyString}\" 开始捕获。";
+                    CaptureStateInfo = "进程列表为空" + Environment.NewLine + $"启动任意应用并按下 \"{CaptureHotkeyString}\" 开始捕获";
                     _overlayService.SetCaptureServiceStatus("扫描进程中...");
                 }
                 else if (ProcessesToCapture.Count == 1 && !_captureManager.DelayCountdownRunning)

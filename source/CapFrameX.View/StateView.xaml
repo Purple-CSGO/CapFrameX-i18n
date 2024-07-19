@@ -39,7 +39,7 @@
             <TextBlock Width="Auto" VerticalAlignment="Center" Text="{Binding IsCaptureModeActive, Converter={StaticResource ModeDescriptionConverter}, ConverterParameter=Capturing|Ready}" 
                        FontWeight="Bold" Foreground="{Binding IsCaptureModeActive, Converter={StaticResource ModeColorConverterReverse}}"></TextBlock>
 
-            <TextBlock Margin="20 0 5 0" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}" >叠加：</TextBlock>
+            <TextBlock Margin="20 0 5 0" VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}" >覆盖：</TextBlock>
             <TextBlock Width="Auto" VerticalAlignment="Center" Text="{Binding IsOverlayActive, Converter={StaticResource ModeDescriptionConverter}, ConverterParameter=On|Off}" 
                        FontWeight="Bold" Foreground="{Binding IsOverlayActive, Converter={StaticResource ModeColorConverter}}"></TextBlock>
 

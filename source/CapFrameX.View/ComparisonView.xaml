@@ -172,7 +172,7 @@
                                         <DataTemplate x:Key="FpsChartContent">
                                             <Grid>
                                                 <Grid Margin="0 0 50 0" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                                                    <ComboBox  Width="100" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150 0 0 15" materialDesign:HintAssist.Hint="Filter mode"
+                                                    <ComboBox  Width="100" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="150 0 0 15" materialDesign:HintAssist.Hint="过滤模式"
 										                      materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="240"
                                                               SelectedItem="{Binding SelectedFilterMode}" SelectedIndex="1" ItemsSource="{Binding FilterModes}">
                                                         <ComboBox.ItemTemplate>
@@ -291,7 +291,7 @@
                         <TextBox DockPanel.Dock="Top" Grid.Row="0" HorizontalAlignment="Center" Visibility="{Binding Path=IsChecked, ElementName=ShowCustomTitleToggleButton, Converter={StaticResource TrueToVisibleConverter}}"
                                  Text="Type your title here..." Height="30" MinWidth="50" 
                                  FontSize="18" PreviewKeyDown="CustomTitle_PreviewKeyDown" />
-                        <TextBlock Margin="0 5 0 0" DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="16" Text="Time differences between two consecutive frametime values"
+                        <TextBlock Margin="0 5 0 0" DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="16" Text="两个连续帧生成时间的时间差"
                                    Visibility="{Binding HasComparisonItems, Converter={StaticResource TrueToVisibleConverter}}"></TextBlock>
                         <ScrollViewer VerticalScrollBarVisibility="Auto">
                             <lvc:CartesianChart VerticalAlignment="Top" MaxWidth="1050" Margin="20" Height="{Binding VarianceChartHeight}"  Hoverable="False" Series="{Binding VarianceStatisticCollection}" 
@@ -335,14 +335,14 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10 0 10 0" Orientation="Horizontal">
-                <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">Custom title:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">自定义标题：</TextBlock>
                 <ToggleButton x:Name="ShowCustomTitleToggleButton" Margin="10 0 0 0" Style="{StaticResource MaterialDesignSwitchToggleButton}"
 								  ToolTip="Show custom title edit box" IsChecked="{Binding ShowCustomTitle}"/>
             </StackPanel>
 
             <StackPanel Grid.Column="1" Margin="10 5 5 5" Orientation="Horizontal"
                         ToolTip="Select up to 2 labels to be shown for each record" IsEnabled="{Binding MetricAndLabelOptionsEnabled}">
-                <TextBlock Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">Labels</TextBlock>
+                <TextBlock Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">标签</TextBlock>
                 <materialDesign:PopupBox Foreground="{DynamicResource MaterialDesignBody}" StaysOpen="True" ToolTipService.ShowDuration="25000" PlacementMode="TopAndAlignCentres">
                     <materialDesign:Card Width="325" Margin="0 0 0 -10">
                         <StackPanel>
@@ -380,7 +380,7 @@
 
             <StackPanel Grid.Column="2" Margin="10 5 5 5" Orientation="Horizontal" Visibility="{Binding IsBarChartTabActive, Converter={StaticResource TrueToVisibleConverter}}"
                         ToolTip="Select metrics to be shown" IsEnabled="{Binding MetricAndLabelOptionsEnabled}">
-                <TextBlock Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"> Metrics</TextBlock>
+                <TextBlock Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}"> 指标</TextBlock>
                 <materialDesign:PopupBox Foreground="{DynamicResource MaterialDesignBody}" StaysOpen="True" ToolTipService.ShowDuration="25000" PlacementMode="TopAndAlignCentres">
                     <materialDesign:Card Width="Auto" Margin="0 0 0 0">
                         <StackPanel>
@@ -396,7 +396,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                <ComboBox Grid.Column="0" Width="125" Height="40" VerticalAlignment="Center" Margin="5 5 5 5" materialDesign:HintAssist.Hint="First metric"
+                                <ComboBox Grid.Column="0" Width="125" Height="40" VerticalAlignment="Center" Margin="5 5 5 5" materialDesign:HintAssist.Hint="第一指标"
 					                Visibility="{Binding IsBarChartTabActive, Converter={StaticResource TrueToVisibleConverter}}"
 					                materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="330" materialDesign:HintAssist.HintOpacity=".8" materialDesign:ComboBoxAssist.ClassicMode="True"
 					                ItemsSource="{Binding FirstMetricItems}" SelectedItem="{Binding SelectedFirstMetric}">
@@ -434,7 +434,7 @@
                                     </ctrls:CXColorPicker.ButtonStyle>
                                 </ctrls:CXColorPicker>
                                 
-                                <ComboBox Grid.Column="1" Width="125" Height="40" VerticalAlignment="Center" Margin="15 5 5 5" materialDesign:HintAssist.Hint="Second metric"
+                                <ComboBox Grid.Column="1" Width="125" Height="40" VerticalAlignment="Center" Margin="15 5 5 5" materialDesign:HintAssist.Hint="第二指标"
 					                Visibility="{Binding IsBarChartTabActive, Converter={StaticResource TrueToVisibleConverter}}"
 					                materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="330" materialDesign:HintAssist.HintOpacity=".8" materialDesign:ComboBoxAssist.ClassicMode="True"
 					                ItemsSource="{Binding SecondMetricItems}" SelectedItem="{Binding SelectedSecondMetric}">
@@ -472,7 +472,7 @@
                                     </ctrls:CXColorPicker.ButtonStyle>
                                 </ctrls:CXColorPicker>
                                 
-                                <ComboBox Grid.Column="2" Width="125" Height="40" VerticalAlignment="Center" Margin="15 5 5 5" materialDesign:HintAssist.Hint="Third metric"
+                                <ComboBox Grid.Column="2" Width="125" Height="40" VerticalAlignment="Center" Margin="15 5 5 5" materialDesign:HintAssist.Hint="第三指标"
 					                materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="360" materialDesign:HintAssist.HintOpacity=".8" materialDesign:ComboBoxAssist.ClassicMode="True"
 					                ItemsSource="{Binding ThirdMetricItems}" SelectedItem="{Binding SelectedThirdMetric}">
                                     <ComboBox.ItemTemplate>
@@ -542,14 +542,14 @@
 
             <StackPanel Grid.Column="2" Margin="10 0 0 0" VerticalAlignment="Center" Orientation="Horizontal"
 						Visibility="{Binding IsLineChartTabActive, Converter={StaticResource TrueToVisibleConverter}}">
-                <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">Range slider:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">区间滑块：</TextBlock>
                 <ToggleButton Name="RangeSliderActiveToggleButton" Margin="10 0 0 0" Style="{StaticResource MaterialDesignSwitchToggleButton}"
 							  IsChecked="{Binding IsRangeSliderActive}"/>
             </StackPanel>
 
             <StackPanel Grid.Column="3" Margin="10 0 0 0" VerticalAlignment="Center" Orientation="Horizontal"
 						Visibility="{Binding IsLineChartTabActive, Converter={StaticResource TrueToCollapsedConverter}}">
-                <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">Grouping:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">分组：</TextBlock>
                 <ToggleButton Margin="10 0 0 0" Style="{StaticResource MaterialDesignSwitchToggleButton}"
 							  ToolTip="Sort entries by game first" IsChecked="{Binding UseComparisonGrouping}"/>
             </StackPanel>
@@ -616,7 +616,7 @@
         <!-- Copmparison List -->
         <StackPanel Margin="5 10 5 0" Grid.Column="1" Grid.RowSpan="2" Orientation="Vertical">
             <TextBox IsReadOnly="True" Foreground="{DynamicResource MaterialDesignBody}"
-                     materialDesign:HintAssist.Hint="Comparisons" />
+                     materialDesign:HintAssist.Hint="对比数据" />
             <Border Margin="0 5 0 5" BorderThickness="1" BorderBrush="#CCC" VerticalAlignment="Stretch">
                 <Grid>
                     <Grid.RowDefinitions>
@@ -627,7 +627,7 @@
                     <Grid Grid.Row="0">
                         <Border VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ZIndex="1">
                             <TextBlock Visibility="{Binding HasComparisonItems, Converter={StaticResource TrueToCollapsedConverter}}"
-                                   Text="Drop items here or double click them in the record list." Foreground="{DynamicResource MaterialDesignBody}"
+                                   Text="拖拽项目到这里或者双击添加" Foreground="{DynamicResource MaterialDesignBody}"
                                    FontSize="18" Width="250" TextAlignment="Center" TextWrapping="Wrap"/>
                         </Border>
                         <DockPanel Height="{Binding ElementName=ComparisonAreaGrid, Path=ActualHeight, Converter={StaticResource AddValueConverter}}"
@@ -739,7 +739,7 @@
 								HorizontalAlignment="Center"
 								VerticalAlignment="Center"
 								Width="35" Height="35"
-								ToolTip="Remove all comparisons"
+								ToolTip="移除所有对比数据"
 								Command="{Binding RemoveAllComparisonsCommand}"
                                 Foreground="White"
                                 Background="{DynamicResource MaterialDesignToolBackground}"

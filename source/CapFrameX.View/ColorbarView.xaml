@@ -53,7 +53,7 @@
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding OverlayIsChecked}"
-							 Content="叠加" />
+							 Content="覆盖" />
                     <RadioButton Style="{StaticResource MaterialDesignTabRadioButton}"
 							 Margin="4"
 							 IsChecked="{Binding RecordComparisonIsChecked}"

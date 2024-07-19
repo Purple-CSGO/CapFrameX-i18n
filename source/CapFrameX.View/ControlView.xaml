@@ -164,9 +164,9 @@
                                 <ToggleButton Margin="5" Grid.Row="2" Grid.Column="1" IsChecked="{Binding ShowIsAggregated}" Style="{StaticResource MaterialDesignSwitchToggleButton}" />
                                 <TextBlock Margin="5" Grid.Row="3" Grid.Column="0" Text="CPU" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="3" Grid.Column="1" IsChecked="{Binding ShowCpuName}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="GPU" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="显卡" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="4" Grid.Column="1" IsChecked="{Binding ShowGpuName}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                                <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="RAM" VerticalAlignment="Center"/>
+                                <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="内存" VerticalAlignment="Center"/>
                                 <ToggleButton Margin="5" Grid.Row="5" Grid.Column="1" IsChecked="{Binding ShowRamName}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                             </Grid>
                         </materialDesign:Card>
@@ -410,7 +410,7 @@
                             </DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding GraphicCardName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
 										Width="Auto"
-                                        Header="GPU"
+                                        Header="显卡"
                                         IsReadOnly="False"
                                         Visibility="{Binding DataContext.ShowGpuName, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}">
                                 <DataGridTextColumn.ElementStyle>
@@ -421,7 +421,7 @@
                             </DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding SystemRamInfo, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
 										Width="Auto"
-                                        Header="RAM"
+                                        Header="内存"
                                         IsReadOnly="False"
                                         Visibility="{Binding DataContext.ShowRamName, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}">
                                 <DataGridTextColumn.ElementStyle>
@@ -438,7 +438,7 @@
                       IsExpanded="False" wpf:ExpanderAssist.HorizontalHeaderPadding="5" Expanded="RecordInfoExpander_Change" Collapsed="RecordInfoExpander_Change"
                   Foreground="{DynamicResource MaterialDesignBody}" Background="{DynamicResource MaterialDesignTextFieldBoxBackground}">
                 <Expander.Header>
-                    <TextBlock Text="Record Info" RenderTransformOrigin=".5,.5" FontSize="16" HorizontalAlignment="Center" Margin="35 0 0 0"></TextBlock>
+                    <TextBlock Text="录制信息" RenderTransformOrigin=".5,.5" FontSize="16" HorizontalAlignment="Center" Margin="35 0 0 0"></TextBlock>
                 </Expander.Header>
                 <Grid Grid.Row="1" Grid.Column="1" Margin="0 5 5 0" HorizontalAlignment="Left">
                     <Grid.RowDefinitions>
@@ -453,27 +453,27 @@
                         <ColumnDefinition Width="340"/>
                     </Grid.ColumnDefinitions>
                     <!--CPU-->
-                    <TextBox Grid.Row="0" Grid.Column="0" wpf:HintAssist.Hint="Custom CPU description" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                    <TextBox Grid.Row="0" Grid.Column="0" wpf:HintAssist.Hint="自定义CPU描述" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 						 Margin="5 -5 5 0" FontSize="14" Text="{Binding CustomCpuDescription, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Stretch"
                          KeyDown="TextBox_KeyDown" Foreground="{DynamicResource MaterialDesignBody}" wpf:HintAssist.HintOpacity=".8"/>
                     <!--GPU-->
-                    <TextBox Grid.Row="1" Grid.Column="0" wpf:HintAssist.Hint="Custom GPU description" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                    <TextBox Grid.Row="1" Grid.Column="0" wpf:HintAssist.Hint="自定义显卡描述" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 						 Margin="5 0 5 0" FontSize="14" Text="{Binding CustomGpuDescription, UpdateSourceTrigger=PropertyChanged}"
                          KeyDown="TextBox_KeyDown" Foreground="{DynamicResource MaterialDesignBody}" wpf:HintAssist.HintOpacity=".8"/>
                     <!--RAM-->
-                    <TextBox Grid.Row="2" Grid.Column="0" wpf:HintAssist.Hint="Custom RAM description" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                    <TextBox Grid.Row="2" Grid.Column="0" wpf:HintAssist.Hint="自定义内存描述" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 						 Margin="5 0 5 0" FontSize="14" Text="{Binding CustomRamDescription, UpdateSourceTrigger=PropertyChanged}"
                          KeyDown="TextBox_KeyDown" Foreground="{DynamicResource MaterialDesignBody}" wpf:HintAssist.HintOpacity=".8"/>
 
-                    <TextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" wpf:HintAssist.Hint="Game" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                    <TextBox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" wpf:HintAssist.Hint="游戏" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 						 Margin="5 0 5 0" FontSize="14" Text="{Binding CustomGameName, UpdateSourceTrigger=PropertyChanged}"
                          KeyDown="TextBox_KeyDown" Foreground="{DynamicResource MaterialDesignBody}" wpf:HintAssist.HintOpacity=".8"/>
-                    <TextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" wpf:HintAssist.Hint="Comment" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
+                    <TextBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" wpf:HintAssist.Hint="注释" Style="{DynamicResource MaterialDesignFloatingHintTextBox}"
 						 Margin="5 0 5 0" FontSize="14" Text="{Binding CustomComment, UpdateSourceTrigger=PropertyChanged}"
                          KeyDown="TextBox_KeyDown" Foreground="{DynamicResource MaterialDesignBody}" wpf:HintAssist.HintOpacity=".8"/>
                     <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0 0 0 0" Width="80" HorizontalAlignment="Center"
                     Style="{DynamicResource MaterialDesignFlatButton}" Command="{Binding AcceptEditingDialogCommand}" FontSize="16">
-                        SAVE
+                        保存
                     </Button>
                 </Grid>
             </Expander>

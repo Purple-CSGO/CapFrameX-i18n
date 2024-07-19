@@ -26,7 +26,7 @@ namespace CapFrameX.Data
 		public double NinetyNinePercentQuantileFps { get; set; }
 		[DisplayName("P95 FPS")]
 		public double NinetyFivePercentQuantileFps { get; set; }
-		[DisplayName("Average FPS")]
+		[DisplayName("平均FPS")]
 		public double AverageFps { get; set; }
         [DisplayName("GPU Active Time Avg.")]
         public double GpuActiveTimeAverage { get; set; }
@@ -36,7 +36,7 @@ namespace CapFrameX.Data
 		public double FivePercentQuantileFps { get; set; }
 		[DisplayName("P1 FPS")]
 		public double OnePercentQuantileFps { get; set; }
-        [DisplayName("1% low average FPS")]
+        [DisplayName("1% low 平均 FPS")]
         public double OnePercentLowAverageFps { get; set; }
         [DisplayName("1% low integral FPS")]
         public double OnePercentLowIntegralFps { get; set; }
@@ -44,7 +44,7 @@ namespace CapFrameX.Data
 		public double ZeroDotTwoPercentQuantileFps { get; set; }
 		[DisplayName("P0.1 FPS")]
         public double ZeroDotOnePercentQuantileFps { get; set; }
-		[DisplayName("0.1% low average FPS")]
+		[DisplayName("0.1% low 平均 FPS")]
 		public double ZeroDotOnePercentLowAverageFps { get; set; }
         [DisplayName("0.1% low integral FPS")]
         public double ZeroDotOnePercentLowIntegralFps { get; set; }

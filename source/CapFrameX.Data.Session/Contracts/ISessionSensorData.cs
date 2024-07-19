@@ -4,35 +4,35 @@ namespace CapFrameX.Data.Session.Contracts
 {
 	public interface ISessionSensorData
 	{
-		[SensorDataExport("Time(s)")]
+		[SensorDataExport("时间(s)")]
 		double[] MeasureTime { get; set; }
-		[SensorDataExport("CPU load(%)")]
+		[SensorDataExport("CPU负载(%)")]
 		int[] CpuUsage { get; set; }
-		[SensorDataExport("CPU max thread load(%)")]
+		[SensorDataExport("CPU最大线程负载(%)")]
 		int[] CpuMaxThreadUsage { get; set; }
-		[SensorDataExport("CPU max clock(MHz)")]
+		[SensorDataExport("CPU最大频率(MHz)")]
 		int[] CpuMaxClock { get; set; }
-		[SensorDataExport("CPU power(W)")]
+		[SensorDataExport("CPU功耗(W)")]
 		int[] CpuPower { get; set; }
-		[SensorDataExport("CPU temp(°C)")]
+		[SensorDataExport("CPU温度(°C)")]
 		int[] CpuTemp { get; set; }
-		[SensorDataExport("GPU load(%)")]
+		[SensorDataExport("显卡负载(%)")]
 		int[] GpuUsage { get; set; }
-		[SensorDataExport("GPU clock (MHz)")]
+		[SensorDataExport("显卡频率 (MHz)")]
 		int[] GpuClock { get; set; }
-		[SensorDataExport("GPU power (W)")]
+		[SensorDataExport("显卡功耗 (W)")]
 		int[] GpuPower { get; set; }
 		[SensorDataExport("GPU TBP Sim (W)")]
 		int[] GpuTBPSim { get; set; }
-		[SensorDataExport("GPU temp(°C)")]
+		[SensorDataExport("显卡温度(°C)")]
 		int[] GpuTemp { get; set; }
-		[SensorDataExport("RAM usage(GB)")]
+		[SensorDataExport("内存占用(GB)")]
 		double[] RamUsage { get; set; }
-		[SensorDataExport("VRAM usage(MB)")]
+		[SensorDataExport("显存占用(MB)")]
 		int[] VRamUsage { get; set; }
-		[SensorDataExport("VRAM usage(GB)")]
+		[SensorDataExport("显存占用(GB)")]
 		double[] VRamUsageGB { get; set; }
-		[SensorDataExport("GPU power limit")]
+		[SensorDataExport("显卡功耗限制")]
 		int[] GPUPowerLimit { get; set; }
 		double[] BetweenMeasureTimes { get; set; }
 	}

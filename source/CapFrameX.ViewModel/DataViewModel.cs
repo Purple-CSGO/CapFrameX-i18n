@@ -1609,7 +1609,7 @@ namespace CapFrameX.ViewModel
                 {
                     new PieSeries
                     {
-                        Title = $"Smooth:  { smoothTotalTime.ToString(CultureInfo.InvariantCulture) }s ({ Math.Round(100 - (stutteringTimePercentage + lowFPSTimePercentage), 1).ToString(CultureInfo.InvariantCulture) }%)",
+                        Title = $"流畅：  { smoothTotalTime.ToString(CultureInfo.InvariantCulture) }s ({ Math.Round(100 - (stutteringTimePercentage + lowFPSTimePercentage), 1).ToString(CultureInfo.InvariantCulture) }%)",
                         Values = new ChartValues<double>(){ smoothTotalTime },
                         DataLabels = false,
                         Fill = ColorRessource.PieChartSmoothFill,
@@ -1618,7 +1618,7 @@ namespace CapFrameX.ViewModel
 
                     new PieSeries
                     {
-                        Title = $"Low FPS:  { lowFPSTotalTime.ToString(CultureInfo.InvariantCulture) }s ({ Math.Round(lowFPSTimePercentage, 1).ToString(CultureInfo.InvariantCulture) }%)",
+                        Title = $"低FPS：  { lowFPSTotalTime.ToString(CultureInfo.InvariantCulture) }s ({ Math.Round(lowFPSTimePercentage, 1).ToString(CultureInfo.InvariantCulture) }%)",
                         Values = new ChartValues<double>(){ lowFPSTotalTime },
                         DataLabels = false,
                         Fill = ColorRessource.PieChartLowFPSFill,
@@ -1627,7 +1627,7 @@ namespace CapFrameX.ViewModel
 
                     new PieSeries
                     {
-                        Title = $"Stuttering:  { stutteringTotalTime.ToString(CultureInfo.InvariantCulture) }s ({ Math.Round(stutteringTimePercentage, 1).ToString(CultureInfo.InvariantCulture) }%)",
+                        Title = $"卡顿： { stutteringTotalTime.ToString(CultureInfo.InvariantCulture) }s ({ Math.Round(stutteringTimePercentage, 1).ToString(CultureInfo.InvariantCulture) }%)",
                         Values = new ChartValues<double>(){ stutteringTotalTime },
                         DataLabels = false,
                         Fill = ColorRessource.PieChartStutterFill,
