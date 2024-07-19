@@ -106,7 +106,7 @@ namespace CapFrameX.ViewModel
 			get
 			{
 				var version = _appVersionProvider.GetAppVersion();
-				var versionString = $"{version.Major}.{version.Minor}.{version.Build}";
+				var versionString = $"{version.Major}.{version.Minor}.{version.Build}  by Purp1e";
 
 				return IsBeta ? $"{versionString} Beta" : versionString;
 			}

@@ -971,7 +971,7 @@ namespace CapFrameX.ViewModel
             {
                 Key = "xAxis",
                 Position = AxisPosition.Bottom,
-                Title = "Samples",
+                Title = "样本",
                 MajorGridlineStyle = LineStyle.Solid,
                 MajorGridlineThickness = 1,
                 MajorGridlineColor = OxyColor.FromArgb(64, 204, 204, 204),
@@ -984,7 +984,7 @@ namespace CapFrameX.ViewModel
             {
                 Key = "yAxis",
                 Position = AxisPosition.Left,
-                Title = "Frametime [ms]",
+                Title = "帧生成时间 [ms]",
                 MajorGridlineStyle = LineStyle.Solid,
                 MajorGridlineThickness = 1,
                 MajorGridlineColor = OxyColor.FromArgb(64, 204, 204, 204),
