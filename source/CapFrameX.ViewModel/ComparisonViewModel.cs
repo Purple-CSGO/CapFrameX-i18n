@@ -710,17 +710,17 @@ namespace CapFrameX.ViewModel
 
 		public bool IsBarChartTabActive
 		{
-			get { return SelectedChartItem?.Header.ToString().Contains("Bar charts") ?? false; }
+			get { return SelectedChartItem?.Header.ToString().Contains("柱状图") ?? false; }
 		}
 
 		public bool IsLineChartTabActive
 		{
-			get { return SelectedChartItem?.Header.ToString().Contains("Line") ?? false; }
+			get { return SelectedChartItem?.Header.ToString().Contains("折线图") ?? false; }
 		}
 
 		public bool IsVarianceChartTabActive
 		{
-			get { return SelectedChartItem?.Header.ToString().Contains("Variances") ?? false; }
+			get { return SelectedChartItem?.Header.ToString().Contains("差异") ?? false; }
 		}
 
 		public ICommand RemoveAllComparisonsCommand { get; }
@@ -802,7 +802,7 @@ namespace CapFrameX.ViewModel
 			{
 				Key = "xAxis",
 				Position = OxyPlot.Axes.AxisPosition.Bottom,
-				Title = "Recording time [s]",
+				Title = "录制时间 [s]",
 				AxisTitleDistance = 10,
 				FontSize = 13,
 				MajorGridlineStyle = LineStyle.Solid,
@@ -818,7 +818,7 @@ namespace CapFrameX.ViewModel
 			{
 				Key = "yAxis",
 				Position = OxyPlot.Axes.AxisPosition.Left,
-				Title = "Frametime [ms]",
+				Title = "帧生成时间 [ms]",
 				AxisTitleDistance = 10,
 				FontSize = 13,
 				MajorGridlineStyle = LineStyle.Solid,
@@ -851,7 +851,7 @@ namespace CapFrameX.ViewModel
 			{
 				Key = "xAxis",
 				Position = OxyPlot.Axes.AxisPosition.Bottom,
-				Title = "Recording time [s]",
+				Title = "录制时间 [s]",
 				AxisTitleDistance = 10,
 				FontSize = 13,
 				MajorGridlineStyle = LineStyle.Solid,
@@ -1071,9 +1071,9 @@ namespace CapFrameX.ViewModel
 			ComparisonFrametimesModel.ResetAllAxes();
 			ComparisonFpsModel.ResetAllAxes();
 
-			if (SelectedChartItem?.Header.ToString().Contains("Bar charts") ?? false)
+			if (SelectedChartItem?.Header.ToString().Contains("柱状图") ?? false)
 				SetColumnChart();
-			else if (SelectedChartItem?.Header.ToString().Contains("Variances") ?? false)
+			else if (SelectedChartItem?.Header.ToString().Contains("差异") ?? false)
 				SetVarianceChart();
 			else
 			{

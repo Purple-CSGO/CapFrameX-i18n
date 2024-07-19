@@ -30,7 +30,7 @@
             </controls:MarkupTextBlock>
             <Button Margin="10" BorderThickness="0" Width="100" Height="25"
 					Command="{Binding CloseNotificationCommand}" Foreground="White" Background="LimeGreen" ToolTip="Close this message and not show it again until there's a new one">
-                <TextBlock Text="Close" TextWrapping="Wrap" TextAlignment="Center"/>
+                <TextBlock Text="关闭" TextWrapping="Wrap" TextAlignment="Center"/>
             </Button>
         </StackPanel>
         <materialDesign:ColorZone Mode="PrimaryMid" Foreground="White" Background="{DynamicResource MaterialDesignToolBackground}">

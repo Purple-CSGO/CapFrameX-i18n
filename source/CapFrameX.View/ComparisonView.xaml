@@ -136,9 +136,9 @@
                         <Grid Grid.Row="1" Margin="0 0 0 0">
                             <Grid>
                                 <Grid Margin="0 0 50 0" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                                    <ComboBox Grid.Column="5" Margin="45 0 0 15" HorizontalAlignment="Left" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="Values"
+                                    <ComboBox Grid.Column="5" Margin="45 0 0 15" HorizontalAlignment="Left" VerticalAlignment="Bottom" materialDesign:HintAssist.Hint="数值"
 					                    materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="100" Width="80" Height="40">
-                                        <ComboBoxItem IsSelected="True">Frametimes</ComboBoxItem>
+                                        <ComboBoxItem IsSelected="True">帧生成时间</ComboBoxItem>
                                         <ComboBoxItem>FPS</ComboBoxItem>
                                         <ComboBox.Text>
                                             <Binding Path="SelectedChartView"
@@ -555,7 +555,7 @@
             </StackPanel>
 
             <StackPanel Grid.Column="4" VerticalAlignment="Center" Margin="15 0 0 0" Orientation="Horizontal">
-                <ComboBox Width="80" Height="40" Margin="0 0 0 10" materialDesign:HintAssist.Hint="Sort metric" materialDesign:HintAssist.HintOpacity=".8" materialDesign:HintAssist.IsFloating="True"
+                <ComboBox Width="80" Height="40" Margin="0 0 0 10" materialDesign:HintAssist.Hint="排序指标" materialDesign:HintAssist.HintOpacity=".8" materialDesign:HintAssist.IsFloating="True"
                           ItemsSource="{Binding SortMetricItemsSource}" SelectedItem="{Binding SelectedSortMetric}" Foreground="{DynamicResource MaterialDesignBody}"
                           Visibility="{Binding IsBarChartTabActive, Converter={StaticResource TrueToVisibleConverter}}"> 
                 </ComboBox>
@@ -600,7 +600,7 @@
 
             <StackPanel Grid.Column="5" Margin="10 0 0 0" VerticalAlignment="Center" Orientation="Horizontal"
 						Visibility="{Binding IsBarChartTabActive, Converter={StaticResource TrueToVisibleConverter}}">
-                <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">Relative Mode:</TextBlock>
+                <TextBlock VerticalAlignment="Center" Foreground="{DynamicResource MaterialDesignBody}">相对模式：</TextBlock>
                 <ToggleButton Margin="10 0 0 0" Style="{StaticResource MaterialDesignSwitchToggleButton}"
 							  ToolTip="Toggle fixed relative mode. Target value selectable by mouse click." IsChecked="{Binding UseComparisonRelativeMode}"/>
             </StackPanel>

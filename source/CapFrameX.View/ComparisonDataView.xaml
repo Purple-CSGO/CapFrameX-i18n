@@ -89,10 +89,10 @@
 									<materialDesign:PackIcon Kind="Pencil" Width="24" Height="24" />
 								</materialDesign:PopupBox.ToggleCheckedContent>
 								<StackPanel>
-									<Button FontSize="9" Command="{Binding AbsoluteModeCommand}" ToolTip="Absolute mode">
-										Absolute
+									<Button FontSize="9" Command="{Binding AbsoluteModeCommand}" ToolTip="绝对模式">
+										绝对
 									</Button>
-									<Button Command="{Binding RelativeModeCommand}" Content="{materialDesign:PackIcon FilePercent, Size=24}" ToolTip="Relative mode"/>
+									<Button Command="{Binding RelativeModeCommand}" Content="{materialDesign:PackIcon FilePercent, Size=24}" ToolTip="相对模式"/>
 								</StackPanel>
 							</materialDesign:PopupBox>
 						</StackPanel>

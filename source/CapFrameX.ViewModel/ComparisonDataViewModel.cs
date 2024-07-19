@@ -301,7 +301,7 @@ namespace CapFrameX.ViewModel
 			{
 				Key = "xAxis",
 				Position = OxyPlot.Axes.AxisPosition.Bottom,
-				Title = "Recording time [s]",
+				Title = "录制时间 [s]",
 				MajorGridlineStyle = LineStyle.Solid,
 				MajorGridlineThickness = 1,
 				MajorGridlineColor = OxyColor.FromArgb(64, 204, 204, 204),
@@ -314,7 +314,7 @@ namespace CapFrameX.ViewModel
 			{
 				Key = "yAxis",
 				Position = OxyPlot.Axes.AxisPosition.Left,
-				Title = "Frametime [ms]",
+				Title = "帧生成时间 [ms]",
 				MajorGridlineStyle = LineStyle.Solid,
 				MajorGridlineThickness = 1,
 				MajorGridlineColor = OxyColor.FromArgb(64, 204, 204, 204),

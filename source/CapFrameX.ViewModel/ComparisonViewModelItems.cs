@@ -15,8 +15,8 @@ namespace CapFrameX.ViewModel
         {
             if (CheckListContains(recordInfo))
             {
-                MessageText = $"The list already contains this record and therefore cannot be inserted. " +
-                    $"Select a different record for the comparison.";
+                MessageText = $"列表中已包含此记录，因此无法插入。 " +
+                    $"请选择不同的记录进行比较。";
                 MessageDialogContentIsOpen = true;
                 return;
             }
