@@ -928,18 +928,18 @@ namespace CapFrameX.ViewModel
                 if (!ProcessesToCapture.Any())
                 {
                     CaptureStateInfo = "进程列表为空" + Environment.NewLine + $"启动任意应用并按下 \"{CaptureHotkeyString}\" 开始捕获";
-                    _overlayService.SetCaptureServiceStatus("扫描进程中...");
+                    _overlayService.SetCaptureServiceStatus("Scanning for process...");
                 }
                 else if (ProcessesToCapture.Count == 1 && !_captureManager.DelayCountdownRunning)
                 {
                     CaptureStateInfo = $"自动检测到\"{_currentGameNameToCapture}\"。" + Environment.NewLine + $"按下 \"{CaptureHotkeyString}\" 开始捕获。";
-                    _overlayService.SetCaptureServiceStatus($"\"{_currentGameNameToCapture}\" 已准备好捕获...");
+                    _overlayService.SetCaptureServiceStatus($"\"{_currentGameNameToCapture}\"  ready to capture...");
                 }
                 else if (ProcessesToCapture.Count > 1)
                 {
                     //Multiple processes detected, select the one to capture or move unwanted processes to ignore list.
                     CaptureStateInfo = "检测到多个进程。" + Environment.NewLine + "请忽略掉不想要的进程。";
-                    _overlayService.SetCaptureServiceStatus("检测到多个进程");
+                    _overlayService.SetCaptureServiceStatus("Multiple processes detected");
                 }
                 return;
             }
@@ -947,7 +947,7 @@ namespace CapFrameX.ViewModel
             if (!_captureManager.DelayCountdownRunning)
             {
                 CaptureStateInfo = $"已选中\"{_currentGameNameToCapture}\"。" + Environment.NewLine + $"按下 \"{CaptureHotkeyString}\" 开始捕获。";
-                _overlayService.SetCaptureServiceStatus($"\"{_currentGameNameToCapture}\" 已准备好捕获");
+                _overlayService.SetCaptureServiceStatus($"\"{_currentGameNameToCapture}\"  ready to capture");
             }
         }
 
