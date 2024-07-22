@@ -458,7 +458,7 @@
                                         <StaticResource ResourceKey="MaterialDesignDataGrid"/>
                                     </DataGrid.Style>
                                     <DataGrid.ContextMenu>
-                                        <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
+                                        <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}" FontFamily="{StaticResource SarasaFont}">
                                             <MenuItem Header="复制传感器数据（最小，平均，最大）" Command="{Binding CopySensorInfoCommand}"/>
                                             <MenuItem Header="复制原始传感器数据" Command="{Binding CopyRawSensorInfoCommand}"/>
                                         </ContextMenu>
@@ -535,7 +535,7 @@
                                         <StaticResource ResourceKey="MaterialDesignDataGrid"/>
                                     </DataGrid.Style>
                                     <DataGrid.ContextMenu>
-                                        <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
+                                        <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}" FontFamily="{StaticResource SarasaFont}">
                                             <MenuItem Header="复制传感器数据（最小，平均，最大" Command="{Binding CopySensorInfoCommand}"/>
                                             <MenuItem Header="复制原始传感器数据" Command="{Binding CopyRawSensorInfoCommand}"/>
                                         </ContextMenu>
