@@ -75,11 +75,11 @@
                     <Button Grid.Row="1" Margin="5 0 0 5" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
 							VerticalAlignment="Bottom" HorizontalAlignment="Left"
 							Width="20" Height="20"
-							ToolTip="Reload root folder"
+							ToolTip="刷新根目录"
 							Command="{Binding ReloadRootFolderCommand}">
                         <materialDesign:PackIcon Kind="Cached" Width="15" Height="15"/>
                     </Button>
-                    <ScrollViewer Margin="0 20 0 0" Width="300" Grid.Row="2" Height="{Binding ElementName=ControlViewControl, Path=ActualHeight, Converter={StaticResource AddValueConverterExpander}}" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel" >
+                    <ScrollViewer Margin="0 20 0 0" Width="300" Grid.Row="2" Height="{Binding ElementName=ControlViewControl, Path=ActualHeight, Converter={StaticResource AddValueConverterExpander}}" PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
                         <TreeView Name="TrvStructure" Padding="5" TreeViewItem.Selected="TreeViewItem_Selected" PreviewMouseRightButtonDown="TreeView_PreviewMouseRightButtonDown"
                                   Tag="{Binding ElementName=ControlViewControl, Path=DataContext}" FontSize="13"  
                                   AllowDrop="True" 
@@ -119,7 +119,7 @@
                     
                     <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Loading records..." FontSize="16" Panel.ZIndex="1" Visibility="{Binding DirectoryLoading, Converter={StaticResource TrueToVisibleConverter}}"
                            Foreground="{DynamicResource MaterialDesignBody}"/>
-                    <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="Directory doesn't contain any valid records. Start a game and then press the capture key to create records..." TextWrapping="Wrap" Width="200" TextAlignment="Center" FontSize="16" Panel.ZIndex="1"
+                    <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Text="暂无测试记录。请启动游戏按下捕获快捷键以完成一次记录" TextWrapping="Wrap" Width="200" TextAlignment="Center" FontSize="16" Panel.ZIndex="1"
                                Visibility="{Binding DirectoryIsEmpty, Converter={StaticResource TrueToVisibleConverter}}"
                            Foreground="{DynamicResource MaterialDesignBody}"/>
 
@@ -272,10 +272,10 @@
                             <KeyBinding Key="Delete" Command="{Binding Path=DeleteRecordCommand}" />
                         </DataGrid.InputBindings>
                         <DataGrid.ContextMenu>
-                            <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                <MenuItem Header="Delete recording file(s)" Command="{Binding DeleteRecordFileCommand}"/>
-                                <MenuItem Header="Move recording file(s)" Command="{Binding MoveRecordFileCommand}"/>
-                                <MenuItem Header="Copy/paste recording file(s)" Command="{Binding DuplicateRecordFileCommand}"/>
+                            <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}" FontFamily="{StaticResource SarasaFont}">
+                                <MenuItem Header="删除录制文件" Command="{Binding DeleteRecordFileCommand}"/>
+                                <MenuItem Header="移动录制文件" Command="{Binding MoveRecordFileCommand}"/>
+                                <MenuItem Header="复制/粘贴录制文件" Command="{Binding DuplicateRecordFileCommand}"/>
                             </ContextMenu>
                         </DataGrid.ContextMenu>
                         <DataGrid.ColumnHeaderStyle>

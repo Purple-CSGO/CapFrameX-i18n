@@ -58,32 +58,32 @@
                   Background="{DynamicResource MaterialDesignBackground}">
 			<DataGrid.ContextMenu>
 				<ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-					<MenuItem Header="Copy table" Command="{Binding CopyTableDataCommand}"/>
+					<MenuItem Header="复制表格" Command="{Binding CopyTableDataCommand}"/>
 				</ContextMenu>
 			</DataGrid.ContextMenu>
 			<DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Game, Mode=OneWay}"
-                                            Header="Game Name"
+                                            Header="游戏名称"
                                             Width="Auto"
                                             MinWidth="150"
                                             IsReadOnly="True"/>
                     <DataGridTextColumn Binding="{Binding Date, Mode=OneWay}"
-                                            Header="Creation Date"
+                                            Header="创建日期"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowCreationDate, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding Time, Mode=OneWay}"
-                                            Header="Creation Time"
+                                            Header="创建时间"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowCreationTime, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding NumberOfSamples, Mode=OneWay}"
-                                            Header="Samples"
+                                            Header="样本数"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowNumberOfSamples, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding RecordTime, Mode=OneWay}"
-                                            Header="Record Time (s)"
+                                            Header="录制时间 (s)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowRecordTime, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -93,22 +93,22 @@
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowCpuName, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding GraphicCard, Mode=OneWay}"
-                                            Header="GPU"
+                                            Header="显卡"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuName, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding Ram, Mode=OneWay}"
-                                            Header="RAM"
+                                            Header="内存"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowRamName, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding CustomComment, Mode=OneWay}"
-                                            Header="Comment"
+                                            Header="注释"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowComment, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding MaxFps, Mode=OneWay}"
-                                            Header="Max FPS"
+                                            Header="最大FPS"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowMaxFPS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -123,7 +123,7 @@
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowP95FS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding AverageFps, Mode=OneWay}"
-                                            Header="Average FPS"
+                                            Header="平均 FPS"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowAverageFPS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -143,7 +143,7 @@
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowP1FPS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding OnePercentLowAverageFps, Mode=OneWay}"
-                                            Header="1% low average FPS"
+                                            Header="1% low 平均 FPS"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowP1LowAverageFPS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -163,7 +163,7 @@
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowP0Dot1FPS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding ZeroDotOnePercentLowAverageFps, Mode=OneWay}"
-                                            Header="0.1% low average FPS"
+                                            Header="0.1% low 平均 FPS"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowP0Dot1LowAverageFPS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -173,7 +173,7 @@
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowP0Dot1LowIntegralFPS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding MinFps, Mode=OneWay}"
-                                            Header="Min FPS"
+                                            Header="最小 FPS"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowMinFPS, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -193,7 +193,7 @@
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuFpsPerWatt, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding AppLatency, Mode=OneWay}"
-                                            Header="App Latency (ms)"
+                                            Header="应用延迟 (ms)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowAppLatency, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -208,47 +208,47 @@
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuActiveTimeDeviation, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding CpuMaxUsage, Mode=OneWay}"
-                                            Header="CPU max Thread (%)"
+                                            Header="CPU最大占用 (%)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowCpuMaxUsage, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding CpuPower, Mode=OneWay}"
-                                            Header="CPU Power (W)"
+                                            Header="CPU功耗 (W)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowCpuPower, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding CpuMaxClock, Mode=OneWay}"
-                                            Header="CPU Clock (MHz)"
+                                            Header="CPU频率 (MHz)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowCpuMaxClock, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding CpuTemp, Mode=OneWay}"
-                                            Header="CPU Temp (°C)"
+                                            Header="CPU温度 (°C)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowCpuTemp, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding GpuUsage, Mode=OneWay}"
-                                            Header="GPU Usage (%)"
+                                            Header="显卡占用 (%)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuUsage, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding GpuPower, Mode=OneWay}"
-                                            Header="GPU Power (W)"
+                                            Header="显卡功耗 (W)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuPower, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding GpuTBPSim, Mode=OneWay}"
-                                            Header="GPU TBP Sim (W)"
+                                            Header="显卡 TBP Sim (W)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuTBPSim, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding GpuClock, Mode=OneWay}"
-                                            Header="GPU Clock (MHz)"
+                                            Header="显卡频率 (MHz)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuClock, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding GpuTemp, Mode=OneWay}"
-                                            Header="GPU Temp (°C)"
+                                            Header="显卡温度 (°C)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuTemp, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -421,7 +421,7 @@
 				HorizontalAlignment="Center"
 				VerticalAlignment="Center"
 				Width="35" Height="35"
-				ToolTip="Remove all report entries"
+				ToolTip="清空所有报告项目"
                 Foreground="White"
                 BorderBrush="Transparent"
 				Command="{Binding RemoveAllReportEntriesCommand}"

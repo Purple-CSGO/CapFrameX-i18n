@@ -129,7 +129,7 @@
                                 </TabItem.Header>
                                 <Grid>
                                     <Grid Margin="-15 0 0 1" Panel.ZIndex="1" HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                                        <ComboBox Width="96" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25 8 0 8" materialDesign:HintAssist.Hint="Filter Mode"
+                                        <ComboBox Width="96" Height="40" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25 8 0 8" materialDesign:HintAssist.Hint="过滤模式"
 										      materialDesign:HintAssist.IsFloating="True" MaxDropDownHeight="240" materialDesign:HintAssist.HintOpacity=".8"
                                               SelectedItem="{Binding SelectedFilterMode}" SelectedIndex="1" ItemsSource="{Binding FilterModes}">
                                             <ComboBox.ItemTemplate>
@@ -161,8 +161,8 @@
                                     <lvc:CartesianChart Margin="20 10 10 40" MouseDoubleClick="ResetChart_MouseDoubleClick" Series="{Binding LShapeCollection}" Zoom="Y" 
 										Tag="{Binding DataContext, ElementName=DataViewUserControl}" DataTooltip="{x:Null}">
                                         <lvc:CartesianChart.ContextMenu>
-                                            <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                                <MenuItem Header="Copy quantiles" Command="{Binding CopyLShapeQuantilesCommand}"/>
+                                            <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}" FontFamily="{StaticResource SarasaFont}">
+                                                <MenuItem Header="复制量化值" Command="{Binding CopyLShapeQuantilesCommand}" />
                                             </ContextMenu>
                                         </lvc:CartesianChart.ContextMenu>
                                         <lvc:CartesianChart.AxisX>
@@ -243,7 +243,7 @@
 									Tag="{Binding DataContext, ElementName=DataViewUserControl}" DataTooltip="{x:Null}" Foreground="{DynamicResource MaterialDesignBody}">
                             <lvc:CartesianChart.ContextMenu>
                                 <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                    <MenuItem Header="Copy statistical parameter" Command="{Binding CopyStatisticalParameterCommand}"/>
+                                    <MenuItem Header="复制数据参数" Command="{Binding CopyStatisticalParameterCommand}"/>
                                 </ContextMenu>
                             </lvc:CartesianChart.ContextMenu>
                             <lvc:CartesianChart.AxisX>
@@ -459,8 +459,8 @@
                                     </DataGrid.Style>
                                     <DataGrid.ContextMenu>
                                         <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                            <MenuItem Header="Copy sensor data(min, avg, max)" Command="{Binding CopySensorInfoCommand}"/>
-                                            <MenuItem Header="Copy raw sensor data" Command="{Binding CopyRawSensorInfoCommand}"/>
+                                            <MenuItem Header="复制传感器数据（最小，平均，最大）" Command="{Binding CopySensorInfoCommand}"/>
+                                            <MenuItem Header="复制原始传感器数据" Command="{Binding CopyRawSensorInfoCommand}"/>
                                         </ContextMenu>
                                     </DataGrid.ContextMenu>
                                     <DataGrid.Columns>
@@ -536,8 +536,8 @@
                                     </DataGrid.Style>
                                     <DataGrid.ContextMenu>
                                         <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                            <MenuItem Header="Copy sensor data(min, avg, max)" Command="{Binding CopySensorInfoCommand}"/>
-                                            <MenuItem Header="Copy raw sensor data" Command="{Binding CopyRawSensorInfoCommand}"/>
+                                            <MenuItem Header="复制传感器数据（最小，平均，最大" Command="{Binding CopySensorInfoCommand}"/>
+                                            <MenuItem Header="复制原始传感器数据" Command="{Binding CopyRawSensorInfoCommand}"/>
                                         </ContextMenu>
                                     </DataGrid.ContextMenu>
                                     <DataGrid.Columns>
@@ -615,7 +615,7 @@
 								                        Tag="{Binding DataContext, ElementName=DataViewUserControl}" DataTooltip="{x:Null}">
                                         <lvc:CartesianChart.ContextMenu>
                                             <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                                <MenuItem Header="Copy threshold data" Command="{Binding CopyFPSThresholdDataCommand}"/>
+                                                <MenuItem Header="复制阈值数据" Command="{Binding CopyFPSThresholdDataCommand}"/>
                                             </ContextMenu>
                                         </lvc:CartesianChart.ContextMenu>
                                         <lvc:CartesianChart.AxisX>
@@ -965,7 +965,7 @@
 										  Tag="{Binding DataContext, ElementName=DataViewUserControl}">
                         <ItemsControl.ContextMenu>
                             <ContextMenu DataContext="{Binding PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                <MenuItem Header="Copy system info" Command="{Binding CopySystemInfoCommand}"/>
+                                <MenuItem Header="复制系统信息" Command="{Binding CopySystemInfoCommand}"/>
                             </ContextMenu>
                         </ItemsControl.ContextMenu>
                         <ItemsControl.ItemTemplate>

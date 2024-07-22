@@ -310,8 +310,8 @@
                                 Background="{DynamicResource MaterialDesignBackground}">
                         <DataGrid.ContextMenu>
                             <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                <MenuItem Header="Copy sensor data(min, avg, max)" Command="{Binding CopySensorInfoCommand}"/>
-                                <MenuItem Header="Copy raw sensor data" Command="{Binding CopyRawSensorInfoCommand}" IsEnabled="{Binding CopyRawSensorsEnable}"/>
+                                <MenuItem Header="复制传感器数据（最小，平均，最大）" Command="{Binding CopySensorInfoCommand}"/>
+                                <MenuItem Header="复制原始传感器数据" Command="{Binding CopyRawSensorInfoCommand}" IsEnabled="{Binding CopyRawSensorsEnable}"/>
                             </ContextMenu>
                         </DataGrid.ContextMenu>
                         <DataGrid.Resources>

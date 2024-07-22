@@ -370,10 +370,11 @@
                                     </ControlTemplate>
                                 </controls:PlotViewCustomZoom.DefaultTrackerTemplate>
 								<controls:PlotViewCustomZoom.ContextMenu>
-									<ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-										<MenuItem Header="Copy GPU power values (f)" Command="{Binding CopyGpuPowerValuesCommand}"/>
-										<MenuItem Header="Copy GPU power points (t, p(t))" Command="{Binding CopyGpuPowerPointsCommand}"/>
-										<MenuItem Header="Copy GPU power/frame times (t, f(t), p(t))" Command="{Binding CopyGpuPowerFrameTimesCommand}"/>
+									<ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}"
+                                            FontFamily="{StaticResource SarasaFont}">
+										<MenuItem Header="复制显卡功耗数值 (f)" Command="{Binding CopyGpuPowerValuesCommand}"/>
+										<MenuItem Header="复制显卡功耗数据点 (t, p(t))" Command="{Binding CopyGpuPowerPointsCommand}"/>
+										<MenuItem Header="复制显卡功耗/帧时间 (t, f(t), p(t))" Command="{Binding CopyGpuPowerFrameTimesCommand}"/>
 									</ContextMenu>
 								</controls:PlotViewCustomZoom.ContextMenu>
 							</controls:PlotViewCustomZoom>
@@ -401,10 +402,11 @@
                                 </ControlTemplate>
                             </controls:PlotViewCustomZoom.DefaultTrackerTemplate>
 							<controls:PlotViewCustomZoom.ContextMenu>
-								<ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-									<MenuItem Header="Copy CPU power values (f)" Command="{Binding CopyCpuPowerValuesCommand}"/>
-									<MenuItem Header="Copy CPU power points (t, p(t))" Command="{Binding CopyCpuPowerPointsCommand}"/>
-									<MenuItem Header="Copy CPU power/frame times (t, f(t), p(t))" Command="{Binding CopyCpuPowerFrameTimesCommand}"/>
+								<ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}"
+                                        FontFamily="{StaticResource SarasaFont}">
+									<MenuItem Header="复制CPU功耗数值 (f)" Command="{Binding CopyCpuPowerValuesCommand}"/>
+									<MenuItem Header="复制CPU功耗数据点 (t, p(t))" Command="{Binding CopyCpuPowerPointsCommand}"/>
+									<MenuItem Header="复制CPU功耗/帧时间 (t, f(t), p(t))" Command="{Binding CopyCpuPowerFrameTimesCommand}"/>
 								</ContextMenu>
 							</controls:PlotViewCustomZoom.ContextMenu>
 						</controls:PlotViewCustomZoom>

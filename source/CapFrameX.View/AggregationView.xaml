@@ -103,7 +103,7 @@
             <Button Grid.Row="0" Grid.Column="4" VerticalAlignment="Top" HorizontalAlignment="Right" Width="40" Height="40"
 					Command="{Binding ClearTableCommand}" IsEnabled="{Binding EnableClearButton}" BorderBrush="Transparent"
                     Style="{StaticResource MaterialDesignFloatingActionMiniButton}" Foreground="White" Background="{DynamicResource MaterialDesignToolBackground}"
-                    ToolTip="Remove all entries">
+                    ToolTip="清空项目">
                 <materialDesign:PackIcon Kind="PlaylistRemove" Height="24" Width="24" />
             </Button>
             <Button Grid.Row="0" Grid.Column="0" VerticalAlignment="Top" Width="150" Height="45" BorderBrush="Transparent"

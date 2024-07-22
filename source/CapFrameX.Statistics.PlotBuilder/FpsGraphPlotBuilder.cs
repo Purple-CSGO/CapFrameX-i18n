@@ -157,7 +157,7 @@ namespace CapFrameX.Statistics.PlotBuilder
 
             var averageSeries = new LineSeries
             {
-                Title = "Avg FPS",
+                Title = "平均FPS",
                 StrokeThickness = 2,
                 LegendStrokeThickness = 4,
                 Color = OxyColor.FromAColor(200, Constants.FpsAverageColor)

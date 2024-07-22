@@ -39,13 +39,13 @@
                     </ControlTemplate>
                 </controls:PlotViewCustomZoom.DefaultTrackerTemplate>
                 <controls:PlotViewCustomZoom.ContextMenu>
-                    <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                        <MenuItem Header="Copy frametime values (f)" Command="{Binding CopyFrametimeValuesCommand}"/>
-                        <MenuItem Header="Copy frametime points (t, f(t))" Command="{Binding CopyFrametimePointsCommand}"/>
-                        <MenuItem Header="Copy frametime + GPU-Busy frametime values (f)" Command="{Binding CopyGpuActiveTimeValuesCommand}" Visibility="{Binding ShowGpuActiveCommands, Converter={StaticResource FalseToCollapsedConverter}}"/>
-                        <MenuItem Header="Copy frametime + GPU-Busy frametime points (t, f(t))" Command="{Binding CopyGpuActiveTimePointsCommand}" Visibility="{Binding ShowGpuActiveCommands, Converter={StaticResource FalseToCollapsedConverter}}"/>
-                        <MenuItem Header="Save plot as SVG" Command="{Binding SavePlotAsSVG }"/>
-                        <MenuItem Header="Save plot as PNG" Command="{Binding SavePlotAsPNG }"/>
+                    <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}" FontFamily="{StaticResource SarasaFont}">
+                        <MenuItem Header="复制帧生成时间 (f)" Command="{Binding CopyFrametimeValuesCommand}"/>
+                        <MenuItem Header="复制帧生成时间点数据 (t, f(t))" Command="{Binding CopyFrametimePointsCommand}"/>
+                        <MenuItem Header="复制帧生成时间 + 显卡忙碌时间 (f)" Command="{Binding CopyGpuActiveTimeValuesCommand}" Visibility="{Binding ShowGpuActiveCommands, Converter={StaticResource FalseToCollapsedConverter}}"/>
+                        <MenuItem Header="复制帧生成时间 + 显卡忙碌时间点数据 (t, f(t))" Command="{Binding CopyGpuActiveTimePointsCommand}" Visibility="{Binding ShowGpuActiveCommands, Converter={StaticResource FalseToCollapsedConverter}}"/>
+                        <MenuItem Header="保存图表为SVG" Command="{Binding SavePlotAsSVG }"/>
+                        <MenuItem Header="保存图表为PNG" Command="{Binding SavePlotAsPNG }"/>
                     </ContextMenu>
                 </controls:PlotViewCustomZoom.ContextMenu>
             </controls:PlotViewCustomZoom>

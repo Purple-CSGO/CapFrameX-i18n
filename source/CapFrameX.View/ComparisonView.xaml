@@ -163,8 +163,8 @@
                                                 </controls:PlotViewCustomZoom.DefaultTrackerTemplate>
                                                 <controls:PlotViewCustomZoom.ContextMenu>
                                                     <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                                        <MenuItem Header="Save plot as SVG" Command="{Binding SaveFrametimePlotAsSVG }"/>
-                                                        <MenuItem Header="Save plot as PNG" Command="{Binding SaveFrametimePlotAsPNG }"/>
+                                                        <MenuItem Header="保存图表为SVG" Command="{Binding SaveFrametimePlotAsSVG }"/>
+                                                        <MenuItem Header="保存图表为PNG" Command="{Binding SaveFrametimePlotAsPNG }"/>
                                                     </ContextMenu>
                                                 </controls:PlotViewCustomZoom.ContextMenu>
                                             </controls:PlotViewCustomZoom>
@@ -194,8 +194,8 @@
                                                     </controls:PlotViewCustomZoom.DefaultTrackerTemplate>
                                                     <controls:PlotViewCustomZoom.ContextMenu>
                                                         <ContextMenu DataContext="{Binding Path=PlacementTarget.Tag, RelativeSource={RelativeSource Self}}">
-                                                            <MenuItem Header="Save plot as SVG" Command="{Binding SaveFPSPlotAsSVG }"/>
-                                                            <MenuItem Header="Save plot as PNG" Command="{Binding SaveFPSPlotAsPNG }"/>
+                                                            <MenuItem Header="保存图表为SVG" Command="{Binding SaveFPSPlotAsSVG }"/>
+                                                            <MenuItem Header="保存图表为PNG" Command="{Binding SaveFPSPlotAsPNG }"/>
                                                         </ContextMenu>
                                                     </controls:PlotViewCustomZoom.ContextMenu>
                                                 </controls:PlotViewCustomZoom>
