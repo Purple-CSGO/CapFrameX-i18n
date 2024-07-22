@@ -6,9 +6,9 @@ namespace CapFrameX.Data.Session.Contracts
 	{
 		[SensorDataExport("时间(s)")]
 		double[] MeasureTime { get; set; }
-		[SensorDataExport("CPU负载(%)")]
+		[SensorDataExport("CPU占用(%)")]
 		int[] CpuUsage { get; set; }
-		[SensorDataExport("CPU最大线程负载(%)")]
+		[SensorDataExport("CPU最大线程占用(%)")]
 		int[] CpuMaxThreadUsage { get; set; }
 		[SensorDataExport("CPU最大频率(MHz)")]
 		int[] CpuMaxClock { get; set; }
@@ -16,7 +16,7 @@ namespace CapFrameX.Data.Session.Contracts
 		int[] CpuPower { get; set; }
 		[SensorDataExport("CPU温度(°C)")]
 		int[] CpuTemp { get; set; }
-		[SensorDataExport("显卡负载(%)")]
+		[SensorDataExport("显卡占用(%)")]
 		int[] GpuUsage { get; set; }
 		[SensorDataExport("显卡频率 (MHz)")]
 		int[] GpuClock { get; set; }
