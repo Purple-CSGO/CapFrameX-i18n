@@ -74,7 +74,7 @@ namespace OpenHardwareMonitor.Hardware.CPU
         private readonly uint[] energyStatusMSRs = { MSR_PKG_ENERY_STATUS,
             MSR_PP0_ENERY_STATUS, MSR_PP1_ENERY_STATUS, MSR_DRAM_ENERGY_STATUS };
         private readonly string[] powerSensorLabels =
-          { "CPU Package", "CPU Cores", "CPU Graphics", "CPU DRAM" };
+          { "CPU功耗", "CPU Cores", "CPU Graphics", "CPU DRAM" };
         private readonly float energyUnitMultiplier = 0;
         private readonly DateTime[] lastEnergyTime;
         private readonly uint[] lastEnergyConsumed;
@@ -384,7 +384,7 @@ namespace OpenHardwareMonitor.Hardware.CPU
               (cpuid[0][0].Data[6, 0] & 0x40) != 0 &&
               microarchitecture != Microarchitecture.Unknown)
             {
-                packageTemperature = new Sensor("CPU Package",
+                packageTemperature = new Sensor("CPU温度",
                   coreTemperatures.Length, SensorType.Temperature, this, new[] {
               new ParameterDescription(
                 "TjMax [°C]", "TjMax temperature of the package sensor.\n" +
@@ -395,7 +395,7 @@ namespace OpenHardwareMonitor.Hardware.CPU
                 ActivateSensor(packageTemperature);
             }
 
-            coreMaxTemp = new Sensor("CPU Max Core Temp", coreTemperatures.Length + 1, SensorType.Temperature, this, settings);
+            coreMaxTemp = new Sensor("CPU最高占用 Core Temp", coreTemperatures.Length + 1, SensorType.Temperature, this, settings);
             ActivateSensor(coreMaxTemp);
 
             busClock = new Sensor("Bus Speed", 0, SensorType.Clock, this, settings);
@@ -408,7 +408,7 @@ namespace OpenHardwareMonitor.Hardware.CPU
                     ActivateSensor(coreClocks[i]);
             }
 
-            coreMaxClock = new Sensor("CPU Max Clock", coreClocks.Length + 1, SensorType.Clock, this, settings);
+            coreMaxClock = new Sensor("CPU最高频率", coreClocks.Length + 1, SensorType.Clock, this, settings);
             ActivateSensor(coreMaxClock);
 
             if (microarchitecture == Microarchitecture.SandyBridge ||

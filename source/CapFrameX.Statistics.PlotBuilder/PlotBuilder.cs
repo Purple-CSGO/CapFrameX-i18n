@@ -197,7 +197,7 @@ namespace CapFrameX.Statistics.PlotBuilder
         {
             var series = new LineSeries
             {
-                Title = "显卡负载",
+                Title = "显卡占用",
                 StrokeThickness = 2.5,
                 LegendStrokeThickness = 4,
                 Color = OxyColor.FromArgb(175, 156, 210, 0),
@@ -211,7 +211,7 @@ namespace CapFrameX.Statistics.PlotBuilder
         {
             var series = new LineSeries
             {
-                Title = "CPU整体负载",
+                Title = "CPU占用",
                 StrokeThickness = 2.5,
                 LegendStrokeThickness = 4,
                 Color = OxyColor.FromArgb(175, 241, 125, 32),
@@ -225,7 +225,7 @@ namespace CapFrameX.Statistics.PlotBuilder
         {
             var series = new LineSeries
             {
-                Title = "CPU max thread load",
+                Title = "CPU最大占用",
                 StrokeThickness = 2.5,
                 LegendStrokeThickness = 4,
                 Color = OxyColor.FromArgb(175, 250, 25, 30),

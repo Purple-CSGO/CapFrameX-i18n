@@ -18,7 +18,7 @@ namespace CapFrameX.Overlay
                         ShowOnOverlayIsEnabled = true,
                         Description = "捕获服务状态",
                         GroupName = "Status:",
-                        Value = "捕获服务就绪...",
+                        Value = "Capture service ready...",
                         ValueFormat = default,
                         ShowGraph = false,
                         ShowGraphIsEnabled = false,

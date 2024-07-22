@@ -137,7 +137,7 @@
                     </Grid>
                     <ScrollViewer Grid.Row="1" Grid.Column="0" Margin="5 5 5 5" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
                         <StackPanel>
-                            <GroupBox Header="CPU Total Power" FontSize="17" Foreground="White" Style="{DynamicResource MaterialDesignGroupBox}">
+                            <GroupBox Header="CPU占用 Power" FontSize="17" Foreground="White" Style="{DynamicResource MaterialDesignGroupBox}">
                                 <StackPanel Orientation="Vertical" Margin="0 -0 0 -0">
                                     <StackPanel Orientation="Horizontal">
                                         <Label Width="55" Height="{StaticResource LabelHeight}" FontSize="{StaticResource FontSizeMetrics}" Content="Cur"/>

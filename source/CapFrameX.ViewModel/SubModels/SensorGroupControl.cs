@@ -40,10 +40,10 @@ namespace CapFrameX.ViewModel.SubModels
         private void ManageCpuBasicEntries(bool logEntry)
         {
             foreach (var entry in _sensorViewModel.SensorEntries
-                   .Where(item => item.Name == "CPU Total"
-                       || item.Name == "CPU Max"
-                       || item.Name == "CPU Max Clock"
-                       || item.Name == "CPU Package"))
+                   .Where(item => item.Name == "CPU占用"
+                       || item.Name == "CPU最高占用"
+                       || item.Name == "CPU最高频率"
+                       || item.Name == "CPU功耗"))
             {
                 entry.UseForLogging = logEntry;
             }
@@ -72,7 +72,7 @@ namespace CapFrameX.ViewModel.SubModels
             foreach (var entry in _sensorViewModel.SensorEntries
                  .Where(item => item.Name.Contains("GPU")))
             {
-                if (entry.Name.Contains("GPU Core") || entry.Name == "GPU Memory Dedicated" || entry.SensorType == "Power")
+                if (entry.Name.Contains("显卡") || entry.Name == "GPU Memory Dedicated" || entry.SensorType == "Power")
                     entry.UseForLogging = logEntry;
             }
         }

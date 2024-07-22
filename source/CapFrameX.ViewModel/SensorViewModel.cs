@@ -44,7 +44,7 @@ namespace CapFrameX.ViewModel
         private bool _saveButtonIsEnable;
         private bool _isActive;
         private bool _aggregateButtonIsEnable = true;
-        private string _aggregationButtonText = "评估" + Environment.NewLine + "多条记录";
+        private string _aggregationButtonText = "评估多条记录";
         private string _sensorStatisticsText = "所选记录的传感器数据";
         private bool _selectedRecordChanged;
 

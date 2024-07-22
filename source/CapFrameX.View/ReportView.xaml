@@ -208,7 +208,7 @@
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowGpuActiveTimeDeviation, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
                     <DataGridTextColumn Binding="{Binding CpuMaxUsage, Mode=OneWay}"
-                                            Header="CPU最大占用 (%)"
+                                            Header="CPU最高占用 (%)"
                                             Width="Auto"
                                             IsReadOnly="True"
                                             Visibility="{Binding DataContext.ShowCpuMaxUsage, Source={x:Reference ColumnHeaders}, Converter={StaticResource TrueToVisibleConverter}}"/>
@@ -394,7 +394,7 @@
                             <ToggleButton Margin="5" Grid.Row="8" Grid.Column="7" IsChecked="{Binding ShowGpuActiveTimeAverage}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                             <TextBlock Margin="5" Grid.Row="9" Grid.Column="6" Text="GPU-Busy 时间偏差 (%)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="9" Grid.Column="7" IsChecked="{Binding ShowGpuActiveTimeDeviation}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
-                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="9" Text="CPU最大占用 (%)" VerticalAlignment="Center"/>
+                            <TextBlock Margin="5" Grid.Row="0" Grid.Column="9" Text="CPU最高占用 (%)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="0" Grid.Column="10" IsChecked="{Binding ShowCpuMaxUsage}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>
                             <TextBlock Margin="5" Grid.Row="1" Grid.Column="9" Text="CPU功耗 (W)" VerticalAlignment="Center"/>
                             <ToggleButton Margin="5" Grid.Row="1" Grid.Column="10" IsChecked="{Binding ShowCpuPower}" Style="{StaticResource MaterialDesignSwitchToggleButton}"/>

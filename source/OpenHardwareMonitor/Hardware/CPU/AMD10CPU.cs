@@ -152,7 +152,7 @@ namespace OpenHardwareMonitor.Hardware.CPU
                     ActivateSensor(coreClocks[i]);
             }
 
-            coreMaxClocks = new Sensor("CPU Max Clock", coreClocks.Length + 1, SensorType.Clock, this, settings);
+            coreMaxClocks = new Sensor("CPU最高频率", coreClocks.Length + 1, SensorType.Clock, this, settings);
             ActivateSensor(coreMaxClocks);
 
             corePerformanceBoostSupport = (cpuid[0][0].ExtData[7, 3] & (1 << 9)) > 0;

@@ -4,9 +4,9 @@ namespace CapFrameX.Sensor.Reporting
 {
 	public enum EReportSensorName
 	{
-		[Description("CPU负载 (%)")]
+		[Description("CPU占用 (%)")]
 		CpuUsage,
-		[Description("CPU最大线程负载 (%)")]
+		[Description("CPU最大线程占用 (%)")]
 		CpuMaxThreadUsage,
 		[Description("CPU最大频率 (MHz)")]
 		CpuMaxClock,
