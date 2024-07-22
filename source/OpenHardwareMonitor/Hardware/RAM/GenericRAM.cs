@@ -113,7 +113,7 @@ namespace OpenHardwareMonitor.Hardware.RAM
               settings);
             ActivateSensor(availableMemory);
 
-            usedMemoryProcess = new Sensor("游戏内存占用", 2, SensorType.Data, this,
+            usedMemoryProcess = new Sensor("Used Memory Game", 2, SensorType.Data, this,
               settings);
             ActivateSensor(usedMemoryProcess);
 

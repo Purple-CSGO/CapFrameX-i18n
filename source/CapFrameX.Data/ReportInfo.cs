@@ -60,7 +60,7 @@ namespace CapFrameX.Data
 		public double AppLatency { get; set; }
         [DisplayName("GPU-Busy Time Dev. (%)")]
         public double GpuActiveTimeDeviation { get; set; }       
-        [DisplayName("CPU最高占用 Thread Usage (%)")]
+        [DisplayName("CPU Max Thread Usage (%)")]
 		public double CpuMaxUsage { get; set; }
 		[DisplayName("CPU Power (W)")]
 		public double CpuPower { get; set; }

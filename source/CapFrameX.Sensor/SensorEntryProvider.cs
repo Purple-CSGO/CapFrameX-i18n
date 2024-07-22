@@ -80,20 +80,20 @@ namespace CapFrameX.Sensor
 
             switch (sensor.Name)
             {
-                case "CPU占用" when hardwareType == HardwareType.CPU:
-                case "CPU最高占用" when hardwareType == HardwareType.CPU:
-                case "CPU最高频率" when sensorType == SensorType.Clock:
-                case "CPU功耗" when sensorType == SensorType.Power:
-                case "CPU温度" when sensorType == SensorType.Temperature:
-                case "显卡占用" when sensorType == SensorType.Load:
-                case "显卡频率" when sensorType == SensorType.Temperature:
-                case "显卡频率" when sensorType == SensorType.Clock:
-                case "显卡功耗" when hardwareType == HardwareType.GpuNvidia:
-                case "显卡功耗限制" when hardwareType == HardwareType.GpuNvidia:
-                case "显卡Total" when hardwareType == HardwareType.GpuAti:
-				case "显卡TBP" when hardwareType == HardwareType.GpuAti:
-				case "显卡TDP" when hardwareType == HardwareType.GpuIntel:
-                case "游戏内存占用" when hardwareType == HardwareType.RAM:
+                case "CPU Total" when hardwareType == HardwareType.CPU:
+                case "CPU Max" when hardwareType == HardwareType.CPU:
+                case "CPU Max Clock" when sensorType == SensorType.Clock:
+                case "CPU Package" when sensorType == SensorType.Power:
+                case "CPU Package" when sensorType == SensorType.Temperature:
+                case "GPU Core" when sensorType == SensorType.Load:
+                case "GPU Core" when sensorType == SensorType.Temperature:
+                case "GPU Core" when sensorType == SensorType.Clock:
+                case "GPU Power" when hardwareType == HardwareType.GpuNvidia:
+                case "GPU Power Limit" when hardwareType == HardwareType.GpuNvidia:
+                case "GPU Total" when hardwareType == HardwareType.GpuAti:
+				case "GPU TBP" when hardwareType == HardwareType.GpuAti:
+				case "GPU TDP" when hardwareType == HardwareType.GpuIntel:
+                case "Used Memory Game" when hardwareType == HardwareType.RAM:
                 case "GPU Memory Dedicated" when sensorType == SensorType.Data:
                     isDefault = true;
                     break;

@@ -134,7 +134,7 @@ namespace OpenHardwareMonitor.Hardware.Nvidia
 
 			fan = new Sensor("GPU Fan", 0, SensorType.Fan, this, settings);
 			control = new Sensor("GPU Fan", 1, SensorType.Control, this, settings);
-			powerLimit = new Sensor("显卡功耗限制", 0, SensorType.Factor, this, settings);
+			powerLimit = new Sensor("GPU Power Limit", 0, SensorType.Factor, this, settings);
 			temperatureLimit = new Sensor("GPU Thermal Limit", 1, SensorType.Factor, this, settings);
 			voltageLimit = new Sensor("GPU Voltage Limit", 2, SensorType.Factor, this, settings);
 			voltage = new Sensor("GPU Voltage", 0, SensorType.Voltage, this, settings);

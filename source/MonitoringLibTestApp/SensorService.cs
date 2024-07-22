@@ -55,15 +55,15 @@ namespace MonitoringLibTestApp
                     {
                         switch (sensor.SensorType)
                         {
-                            case SensorType.Temperature when sensor.Name.Contains("CPU温度"):
+                            case SensorType.Temperature when sensor.Name.Contains("CPU Package"):
                                 CpuTemp = sensor.Value.GetValueOrDefault();
                                 break;
 
-                            case SensorType.Load when sensor.Name.Contains("CPU占用"):
+                            case SensorType.Load when sensor.Name.Contains("CPU Total"):
                                 CpuUsage = (int)sensor.Value.GetValueOrDefault();
                                 break;
 
-                            case SensorType.Power when sensor.Name.Contains("CPU功耗"):
+                            case SensorType.Power when sensor.Name.Contains("CPU Package"):
                                 CpuPPT = (int)sensor.Value.GetValueOrDefault();
                                 break;
 

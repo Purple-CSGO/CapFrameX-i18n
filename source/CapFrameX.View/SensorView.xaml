@@ -249,7 +249,7 @@
                                                 <materialDesign:PackIcon Kind="Remove" Height="20" Width="15" />
                                             </Button>
                                             
-                                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="CPU 线程占用" VerticalAlignment="Center"/>
+                                            <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="CPU 线程负载" VerticalAlignment="Center"/>
                                             <Button Margin="5" Grid.Row="2" Grid.Column="1" Command="{Binding Path=SensorSubModelGroupControl.CheckCpuThreadLoads}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
                                                     Width="20" Height="20" ToolTip="Check CPU thread loads" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
                                                 <materialDesign:PackIcon Kind="Done" Height="15" Width="15" />

@@ -591,11 +591,11 @@ namespace CapFrameX.Overlay
             {
                 name = name.Replace("Core #", "");
             }
-            else if (name.Contains("CPU最高频率"))
+            else if (name.Contains("CPU Max Clock"))
             {
-                name = name.Replace("CPU最高频率", "CPU最高占用");
+                name = name.Replace("CPU Max Clock", "CPU Max");
             }
-            else if (name.Contains("CPU最高占用 Core Temp"))
+            else if (name.Contains("CPU Max Core Temp"))
             {
                 name = name.Replace("Max Core Temp", "Max");
             }

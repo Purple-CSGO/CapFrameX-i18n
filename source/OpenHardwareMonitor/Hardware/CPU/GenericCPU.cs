@@ -147,14 +147,14 @@ namespace OpenHardwareMonitor.Hardware.CPU
 				HasTimeStampCounter = false;
 
 			if (coreCount > 1 || threadCountMap.Values.Max() > 1)
-				totalLoad = new Sensor("CPU占用", 0, SensorType.Load, this, settings);
+				totalLoad = new Sensor("CPU Total", 0, SensorType.Load, this, settings);
 			else
 				totalLoad = null;
 			threadLoads = new Sensor[threadCountMap.Values.Sum()];
 			for (int i = 0; i < threadLoads.Length; i++)
 				threadLoads[i] = new Sensor(BuildCoreThreadString(i), i + 1,
 					SensorType.Load, this, settings);
-			maxLoad = new Sensor("CPU最高占用", threadLoads.Length + 1, SensorType.Load, this, settings);
+			maxLoad = new Sensor("CPU Max", threadLoads.Length + 1, SensorType.Load, this, settings);
 			cpuLoad = new CPULoad(cpuid);
 
 			if (cpuLoad.IsAvailable)

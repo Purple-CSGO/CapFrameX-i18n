@@ -389,13 +389,13 @@
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 
-													<TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="CPU核心占用" VerticalAlignment="Center"/>
+													<TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="CPU核心负载" VerticalAlignment="Center"/>
 													<Button Margin="5" Grid.Row="4" Grid.Column="1" Command="{Binding Path=OverlaySubModelGroupControl.CheckCpuLoads}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}"  
-                                                    Width="20" Height="20" ToolTip="选中CPU核心占用" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="选中CPU核心负载" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Done" Height="15" Width="15" />
 													</Button>
 													<Button Margin="5" Grid.Row="4" Grid.Column="2" Command="{Binding Path=OverlaySubModelGroupControl.UncheckCpuLoads}" Style="{StaticResource MaterialDesignFloatingActionMiniButton}" 
-                                                    Width="20" Height="20" ToolTip="取消选中CPU核心占用" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
+                                                    Width="20" Height="20" ToolTip="取消选中CPU核心负载" materialDesign:RippleAssist.Feedback="#DD000000" Foreground="White">
 														<materialDesign:PackIcon Kind="Remove"  Height="15" Width="15" />
 													</Button>
 

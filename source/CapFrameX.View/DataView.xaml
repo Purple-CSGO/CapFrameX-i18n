@@ -892,34 +892,34 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="CPU占用" VerticalAlignment="Center"
+                                    <TextBlock Margin="5" Grid.Row="0" Grid.Column="0" Text="CPU整体负载" VerticalAlignment="Center"
                                                Visibility="{Binding IsCpuLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="0" Grid.Column="1" IsChecked="{Binding ShowCpuLoad}" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show CPU usage graph" 
                                                   Visibility="{Binding IsCpuLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
 
-                                    <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="最大CPU线程占用" VerticalAlignment="Center"
+                                    <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="最大CPU线程负载" VerticalAlignment="Center"
                                                Visibility="{Binding IsCpuMaxLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="1" Grid.Column="1" IsChecked="{Binding ShowCpuMaxThreadLoad}" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show max CPU thread usage graph" 
                                                   Visibility="{Binding IsCpuMaxLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
 
-                                    <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="显卡占用" VerticalAlignment="Center"
+                                    <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="显卡负载" VerticalAlignment="Center"
                                                Visibility="{Binding IsGpuLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="2" Grid.Column="1" IsChecked="{Binding ShowGpuLoad}" Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show GPU usage graph" 
                                                   Visibility="{Binding IsGpuLoadAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
 
-                                    <TextBlock Visibility="{Binding IsGpuPowerLimitAvailable, Converter={StaticResource FalseToCollapsedConverter}}" Margin="5" Grid.Row="3" Grid.Column="0" Text="显卡功耗限制" VerticalAlignment="Center"/>
+                                    <TextBlock Visibility="{Binding IsGpuPowerLimitAvailable, Converter={StaticResource FalseToCollapsedConverter}}" Margin="5" Grid.Row="3" Grid.Column="0" Text="GPU power limit" VerticalAlignment="Center"/>
                                     <ToggleButton Visibility="{Binding IsGpuPowerLimitAvailable, Converter={StaticResource FalseToCollapsedConverter}}" Margin="5" Grid.Row="3" Grid.Column="1" IsChecked="{Binding ShowGpuPowerLimit}" 
-                                                  Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="显示显卡功耗限制" />
+                                                  Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show GPU power limit" />
                                     
                                     <TextBlock Margin="5" Grid.Row="4" Grid.Column="0" Text="PC延迟" VerticalAlignment="Center"
                                                Visibility="{Binding IsPcLatencyAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="4" Grid.Column="1" IsChecked="{Binding ShowPcLatency}" Visibility="{Binding IsPcLatencyAvailable, Converter={StaticResource FalseToCollapsedConverter}}"
-                                                  Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="显示PC延迟图" />
+                                                  Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show PC latency graph" />
                                     
                                     <TextBlock Margin="5" Grid.Row="5" Grid.Column="0" Text="显卡满载时间" VerticalAlignment="Center"
                                                Visibility="{Binding IsGpuActiveChartAvailable, Converter={StaticResource FalseToCollapsedConverter}}"/>
                                     <ToggleButton Margin="5" Grid.Row="5" Grid.Column="1" IsChecked="{Binding ShowGpuActiveChart}" Visibility="{Binding IsGpuActiveChartAvailable, Converter={StaticResource FalseToCollapsedConverter}}"
-                                                  Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="显示 GPU-Busy time in frametime graphs" />
+                                                  Style="{StaticResource MaterialDesignSwitchToggleButton}" ToolTip="Show GPU-Busy time in frametime graphs" />
                                 </Grid>
                             </StackPanel>
                         </materialDesign:Card>

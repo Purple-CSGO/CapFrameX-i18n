@@ -99,7 +99,7 @@ namespace OpenHardwareMonitor.Hardware.CPU
             //}
 
             coreTemperature = new Sensor(
-              "CPU温度", 0, SensorType.Temperature, this, new[] {
+              "CPU Package", 0, SensorType.Temperature, this, new[] {
             new ParameterDescription("Offset [°C]", "Temperature offset.", 0)
                 }, this.settings);
 
@@ -140,7 +140,7 @@ namespace OpenHardwareMonitor.Hardware.CPU
                     lastEnergyTime = DateTime.UtcNow;
                     lastEnergyConsumed = energyConsumed;
                     packagePowerSensor = new Sensor(
-                      "CPU功耗", 0, SensorType.Power, this, settings);
+                      "CPU Package", 0, SensorType.Power, this, settings);
                     ActivateSensor(packagePowerSensor);
                 }
             }
@@ -170,7 +170,7 @@ namespace OpenHardwareMonitor.Hardware.CPU
                 this.cores[i] = new Core(i, cpuid[i], this, settings);
             }
 
-            coreMaxClocks = new Sensor("CPU最高频率", this.cores.Length + 1, SensorType.Clock, this, settings);
+            coreMaxClocks = new Sensor("CPU Max Clock", this.cores.Length + 1, SensorType.Clock, this, settings);
             ActivateSensor(coreMaxClocks);
         }
 

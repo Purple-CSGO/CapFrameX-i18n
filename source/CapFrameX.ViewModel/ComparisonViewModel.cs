@@ -98,9 +98,9 @@ namespace CapFrameX.ViewModel
 		private double _varianceBarMinValue;
 		private bool _varianceAutoScaling = true;
 		private bool _showCustomTitle;
-		private string _selectedChartView = "Frametimes";
+		private string _selectedChartView = "帧生成时间";
 		private EFilterMode _selectedFilterMode;
-		private string _lShapeYaxisLabel = "Frametimes (ms)" + Environment.NewLine + " ";
+		private string _lShapeYaxisLabel = "帧生成时间 (ms)" + Environment.NewLine + " ";
 		private bool _showGpuActiveLineCharts;
 
 		public Array FirstMetricItems => Enum.GetValues(typeof(EMetric))
